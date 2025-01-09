@@ -19,31 +19,30 @@ nav_exclude:                                            # The following paths ar
   - pages/tags.html
   - pages/404.html
   - pages/index.md
-  - documentation/partials/**                           # For Documentation Only
 
 
 ### Author Info ###
 author:
   name              : Abdullah Alhussni
-  image             : https://i.imgur.com/uyDNQnn.jpg
-  # behance           : your_username
+  image             : /media/temp-logo.png
+# behance           : your_username
 # dribbble          : your_username
   email             : aa10108@nyu.edu
   facebook          : alhussni.aa
   github            : alhussni-aa
 # gitlab            : your_username
 # instagram         : your_username
-# kaggle            : your_username
+  kaggle            : abdullahalhussni
   linkedin          : alhussniaa
   # medium            : your_username
 # soundcloud        : your_username
 # spotify           : your_username
-# stackoverflow     : your_user_id
+  stackoverflow     : 19573902
 # tumblr            : your_username.tumblr.com
 # twitch            : your_username
-  # twitter           : your_username
+# twitter           : your_username
 # vimeo             : your_username
-# youtube           : your_channel_name
+  youtube           : channel/UCjdX6ISTB2BzOA2C_tY_IWQ
 # keybase           : your_username
 
 
@@ -56,8 +55,6 @@ collections:
   projects:
     output: true
     permalink: /projects/:name
-  elements:                                             # For Documentation Only
-    output: true                                        # For Documentation Only
 
 
 ### Disqus ###
@@ -89,11 +86,6 @@ defaults:
       type: "projects"
     values:
       layout: "page"
-  - scope:                                              # For Documentation Only
-      path: ""                                          # For Documentation Only
-      type: "elements"                                  # For Documentation Only
-    values:                                             # For Documentation Only
-      layout: "element"                                 # For Documentation Only
   - scope:
       path: ""
       type: "posts"
