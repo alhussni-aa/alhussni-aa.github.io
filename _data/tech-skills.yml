@@ -1,0 +1,24 @@
+- name: C++
+  percentage: 60
+  color: primary
+  category: Tech
+- name: Python
+  percentage: 75
+  color: secondary
+  category: Tech
+- name: LaTeX
+  percentage: 90
+  color: success
+  category: Tech
+- name: Altium Designer
+  percentage: 65
+  color: warning
+  category: Tech
+- name: Cadence
+  percentage: 70
+  color: info
+  category: Tech
+- name: MATLAB
+  percentage: 90
+  color: primary
+  category: Tech

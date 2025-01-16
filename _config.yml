@@ -1,9 +1,10 @@
 ### Site Settings ###
 title               : Abdullah Alhussni
 description         : >-
-                      I turn coffee :coffee: into work,
-                      use tabs over spaces
-                      and never broke production.
+                      [WORK IN PROGRESS]
+                      Fueled by coffee :coffee:,
+                      driven by equations,
+                      solving problems to power a sustainable future.
 baseurl             : ""            # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
 remote_theme        : yousinix/portfolYOU
 open_new_tab        : false                    # Opens external URLs in new tab (works for posts, projects and navbar only)
@@ -24,7 +25,7 @@ nav_exclude:                                            # The following paths ar
 ### Author Info ###
 author:
   name              : Abdullah Alhussni
-  image             : /media/temp-logo.png
+  image             : /info/media/temp-logo.jpg
 # behance           : your_username
 # dribbble          : your_username
   email             : aa10108@nyu.edu
@@ -42,7 +43,7 @@ author:
 # twitch            : your_username
 # twitter           : your_username
 # vimeo             : your_username
-  youtube           : channel/UCjdX6ISTB2BzOA2C_tY_IWQ
+  youtube           : "@alhussniaa" # channel/UCjdX6ISTB2BzOA2C_tY_IWQ
 # keybase           : your_username
 
 
@@ -58,25 +59,25 @@ collections:
 
 
 ### Disqus ###
-disqus:
-  shortname: your-short-name-disqus                     # Your website Shortname on disqus
+# disqus:
+#   shortname: your-short-name-disqus                     # Your website Shortname on disqus
 
 
 ### Analytics ###
-analytics:
-  enabled: false                                        # Set true to enable analytics
-  google:
-    tracking_id: your-google-tracking-id
+# analytics:
+#   enabled: false                                        # Set true to enable analytics
+#   google:
+#     tracking_id: your-google-tracking-id
 
 
 ### Buy me a coffee ###
 # See https://www.buymeacoffee.com/
-buymeacoffee:
-  enabled: false
-  username: your_username
-  color: "#007bff"
-  message: "Thank you for visiting."                    # Message to be displayed aside from the button for a few seconds.
-  description: "Support me on Buy me a coffee!"
+# buymeacoffee:
+#   enabled: false
+#   username: your_username
+#   color: "#007bff"
+#   message: "Thank you for visiting."                    # Message to be displayed aside from the button for a few seconds.
+#   description: "Support me on Buy me a coffee!"
 
 
 ### Defaults for collections ###

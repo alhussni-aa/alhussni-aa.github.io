@@ -1,17 +1,24 @@
-- title: Student, Harvard CS
-  from: 2014
-  to: 2018
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-               nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-               reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-
-- title: Software Engineer, Google, UK
-  from: 2018
-  to: present
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-               nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-               reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+- title: BSc of Electrical Engineering and Mathematics
+  from: Aug 2022
+  to: Present | New York University Abu Dhabi | Abu Dhabi, UAE
+  description: 'GPA: 3.74, Highlighted coursework: Electronics, Applied Machine Learning,
+    Applied Optimization, Control Systems Engineering, Analog and Digital Communication
+    Theory, Advanced Digital Logic, Design and Innovation.'
+- title: Admissions Ambassador
+  from: Sep 2023
+  to: Present | NYU Abu Dhabi Admissions Office | Abu Dhabi, UAE
+  description: Currently serving as a primary contact for campus visitors and prospective
+    students, handling administrative tasks, leading campus tours, supporting key
+    events, and participating in student panels., Part of the Area Lead/Marcomm Project
+    Manager team, which is an extra responsibility involving experiential marketing,
+    data management and reports, and program/tour research and development.
+- title: Research Assistant
+  from: Jun 2023
+  to: Jul 2024 | Center for Quantum and Topological Systems | Abu Dhabi, UAE
+  description: Worked with a team of more than ten graduate researchers on three different
+    projects on topological quantum computing., Contributed to writing mathematical
+    proofs in Cubical Agda to help formalize the mathematical configuration spaces.,
+    Working on NMR and ESR spectroscopy for nitrogen-vacancy centers., Researching
+    the experimental setup (the electronic and optical side) and optimizing the setup
+    to generate and detect the frequencies of microwaves., Some work on MATLAB and
+    SpinQ simulations.

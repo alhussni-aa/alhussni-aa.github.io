@@ -1,0 +1,19 @@
+{
+    "email": [
+        {"label": "Work", "address": "aa10108@nyu.edu"},
+        {"label": "Personal", "address": "personal@example.com"}
+    ],
+    "phone": [
+        {"label": "US", "number": "+16467027472"},
+        {"label": "UAE", "number": "+971563194675"},
+        {"label": "Syria", "number": "+963981674398"}
+    ],
+    "websites": [
+        {"label": "Portfolio", "url": "https://portfolio.example.com"},
+        {"label": "GitHub", "url": "https://github.com/username"}
+    ],
+    "accounts": [
+        {"platform": "LinkedIn", "url": "https://linkedin.com/in/username"},
+        {"platform": "Twitter", "url": "https://twitter.com/username"}
+    ]
+}

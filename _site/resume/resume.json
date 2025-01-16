@@ -1,0 +1,141 @@
+{
+    "sections": [
+        {
+            "title": "Education",
+            "items": [
+                {
+                    "title": "BSc of Electrical Engineering and Mathematics",
+                    "organization": "New York University Abu Dhabi",
+                    "location": "Abu Dhabi, UAE",
+                    "start_date": "2022-08",
+                    "end_date": "Present",
+                    "description": [
+                        "GPA: 3.74",
+                        "Highlighted coursework: Electronics, Applied Machine Learning, Applied Optimization, Control Systems Engineering, Analog and Digital Communication Theory, Advanced Digital Logic, Design and Innovation."
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Work Experience",
+            "items": [
+                {
+                    "title": "Admissions Ambassador",
+                    "organization": "NYU Abu Dhabi Admissions Office",
+                    "location": "Abu Dhabi, UAE",
+                    "start_date": "2023-09",
+                    "end_date": "Present",
+                    "description": [
+                        "Currently serving as a primary contact for campus visitors and prospective students, handling administrative tasks, leading campus tours, supporting key events, and participating in student panels.",
+                        "Part of the Area Lead/Marcomm Project Manager team, which is an extra responsibility involving experiential marketing, data management and reports, and program/tour research and development."
+                    ]
+                },
+                {
+                    "title": "Research Assistant",
+                    "organization": "Center for Quantum and Topological Systems",
+                    "location": "Abu Dhabi, UAE",
+                    "start_date": "2023-06",
+                    "end_date": "2024-07",
+                    "description": [
+                        "Worked with a team of more than ten graduate researchers on three different projects on topological quantum computing.",
+                        "Contributed to writing mathematical proofs in Cubical Agda to help formalize the mathematical configuration spaces.",
+                        "Working on NMR and ESR spectroscopy for nitrogen-vacancy centers.",
+                        "Researching the experimental setup (the electronic and optical side) and optimizing the setup to generate and detect the frequencies of microwaves.",
+                        "Some work on MATLAB and SpinQ simulations."
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Leadership Experience",
+            "items": []
+        },
+        {
+            "title": "Projects",
+            "items": [
+                {
+                    "name": "hisham fc",
+                    "tools": [
+                        ""
+                    ],
+                    "image": "/info/media/hisham.jpg",
+                    "description": "Creative project. A website for our intramurals football club.",
+                    "external_url": "https://sites.google.com/nyu.edu/hisham/"
+                }
+            ]
+        },
+        {
+            "title": "Skills",
+            "items": [
+                {
+                    "name": "C++",
+                    "percentage": 60,
+                    "category": "Tech"
+                },
+                {
+                    "name": "Python",
+                    "percentage": 75,
+                    "category": "Tech"
+                },
+                {
+                    "name": "Adobe Photoshop",
+                    "percentage": 80,
+                    "category": "Other"
+                },
+                {
+                    "name": "Adobe Illustrator",
+                    "percentage": 75,
+                    "category": "Other"
+                },
+                {
+                    "name": "LaTeX",
+                    "percentage": 90,
+                    "category": "Tech"
+                },
+                {
+                    "name": "Altium Designer",
+                    "percentage": 65,
+                    "category": "Tech"
+                },
+                {
+                    "name": "Cadence",
+                    "percentage": 70,
+                    "category": "Tech"
+                },
+                {
+                    "name": "MATLAB",
+                    "percentage": 90,
+                    "category": "Tech"
+                }
+            ]
+        },
+        {
+            "title": "Awards",
+            "items": []
+        },
+        {
+            "title": "Certifications",
+            "items": []
+        },
+        {
+            "title": "Publications",
+            "items": []
+        },
+        {
+            "title": "Volunteering Opportunities",
+            "items": []
+        },
+        {
+            "title": "Languages",
+            "items": []
+        },
+        {
+            "title": "Interests",
+            "items": []
+        },
+        {
+            "title": "Extracurriculars",
+            "items": []
+        }
+    ]
+}
