@@ -1,10 +1,7 @@
 ### Site Settings ###
 title               : Abdullah Alhussni
 description         : >-
-                      [WORK IN PROGRESS]
-                      Fueled by coffee :coffee:,
-                      driven by equations,
-                      solving problems to power a sustainable future.
+                      Electricity, Equations, and Caffeine
 baseurl             : ""            # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
 remote_theme        : yousinix/portfolYOU
 open_new_tab        : false                    # Opens external URLs in new tab (works for posts, projects and navbar only)
