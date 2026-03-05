@@ -129,5 +129,6 @@ description = "..."
 - [x] Altium/Cadence custom SVG icons with cropped viewBoxes
 - [x] GitHub Actions workflow for Hugo + Pages deployment
 - [x] Cleaned stale `themes/aafu` submodule reference
+- [x] Deleted old forked repo, created fresh repo, pushed to master
+- [x] GitHub Pages live at https://alhussni-aa.github.io/
 - [ ] Screenshots for 5 private projects (user will provide later)
-- [ ] Create new GitHub repo (replacing the forked one) and push
