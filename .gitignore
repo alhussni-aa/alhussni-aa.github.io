@@ -1,13 +1,16 @@
-# Build outputs
+# Hugo build outputs
 public/
 resources/
-
-# Hugo build lock
 .hugo_build.lock
 
-# Node dependencies
+# Node
 node_modules/
 package-lock.json
+
+# Environment / secrets
+.env
+.env.*
+*.pem
 
 # IDE
 .vscode/
@@ -20,7 +23,7 @@ package-lock.json
 .DS_Store
 Thumbs.db
 
-# Theme-specific (shouldn't be committed)
+# Theme deps (never commit these)
 themes/*/node_modules/
 themes/**/package-lock.json
 
