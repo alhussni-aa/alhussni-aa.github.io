@@ -1,0 +1,11 @@
+# GitHub repositories to display on the projects page
+# Fetched client-side via GitHub API
+
+username = "alhussni-aa"
+repos = [
+  "room-designer-3000",
+  "tictactoe-on-budget",
+  "ECG-Heart-Monitor",
+  "Shake-Rattle-and-Roll",
+  "fpga-microprocessor",
+]

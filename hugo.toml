@@ -1,0 +1,63 @@
+baseURL = 'https://alhussni-aa.github.io/'
+languageCode = 'en-us'
+title = 'Abdullah Alhussni'
+theme = 'hugo-noir'
+
+# URL handling
+relativeURLs = true
+canonifyURLs = true
+
+# Multilingual configuration
+defaultContentLanguage = 'en'
+defaultContentLanguageInSubdir = true
+
+[languages]
+  [languages.en]
+    languageName = 'English'
+    title = 'Abdullah Alhussni'
+    weight = 1
+    contentDir = 'content/en'
+    [languages.en.menu]
+      [[languages.en.menu.main]]
+        name = 'About'
+        pageRef = '/about'
+        weight = 1
+      [[languages.en.menu.main]]
+        name = 'Experience'
+        pageRef = '/experience'
+        weight = 2
+      [[languages.en.menu.main]]
+        name = 'Leadership'
+        pageRef = '/leadership'
+        weight = 3
+      [[languages.en.menu.main]]
+        name = 'Projects'
+        pageRef = '/projects'
+        weight = 4
+      [[languages.en.menu.main]]
+        name = 'Blog'
+        pageRef = '/blogs'
+        weight = 5
+      [[languages.en.menu.main]]
+        name = 'Contact'
+        pageRef = '/contact'
+        weight = 6
+
+[params]
+name = 'Abdullah Alhussni'
+location = 'Abu Dhabi, UAE'
+description = 'Wannabe polymath. Full-time caffeinator.'
+profile_image = '/images/profile.jpg'
+
+# Social links
+github = 'https://github.com/alhussni-aa'
+twitter = ''
+linkedin = 'https://linkedin.com/in/alhussniaa'
+email = 'aa10108@nyu.edu'
+facebook = 'https://facebook.com/alhussni.aa'
+kaggle = 'https://kaggle.com/abdullahalhussni'
+stackoverflow = 'https://stackoverflow.com/u/19573902'
+youtube = 'https://youtube.com/@alhussniaa'
+
+[security.exec]
+allow = ['^(?:npx|npm|pnpm|tailwindcss)$']

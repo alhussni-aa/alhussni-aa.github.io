@@ -1,0 +1,22 @@
+# Tech stack carousel - update with your skills
+# Icons from https://devicon.dev/
+
+row1 = [
+  { icon = "devicon-cplusplus-plain", name = "C++" },
+  { icon = "devicon-python-plain", name = "Python" },
+  { icon = "devicon-latex-original", name = "LaTeX" },
+  { icon = "devicon-matlab-plain", name = "MATLAB" },
+  { icon = "devicon-git-plain", name = "Git" },
+  { icon = "devicon-github-original", name = "GitHub" }
+]
+
+row2 = [
+  { icon = "devicon-photoshop-plain", name = "Adobe Photoshop" },
+  { icon = "devicon-illustrator-plain", name = "Adobe Illustrator" },
+  { icon = "devicon-linux-plain", name = "Linux" },
+  { icon = "devicon-bash-plain", name = "Bash" },
+  { icon = "devicon-vscode-plain", name = "VS Code" },
+  { icon = "devicon-hugo-plain", name = "Hugo" },
+  { icon = "", image = "/images/icons/altium-designer.svg", name = "Altium Designer" },
+  { icon = "", image = "/images/icons/cadence.svg", name = "Cadence" }
+]

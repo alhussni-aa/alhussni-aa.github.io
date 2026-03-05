@@ -1,0 +1,58 @@
+# Projects data file
+# Theme expects [[projects]] with: title, description, link, image, tech (comma-separated string)
+# Projects with an image get a full card; projects without get a compact card
+
+[[projects]]
+title = "Hisham FC"
+description = "Creative project. A website for our intramurals football club."
+link = "https://sites.google.com/nyu.edu/hisham/"
+image = "/images/hisham.jpg"
+tech = ""
+
+[[projects]]
+title = "FR3 Sensing"
+description = "Capstone project code — Integrated Sensing and Communication (ISAC) for 6G Networks."
+link = ""
+image = ""
+tech = "Python, MATLAB"
+private = true
+
+[[projects]]
+title = "IC 10 Analysis"
+description = "Gelfand Center research — scripts to study variable sources in the galaxy IC 10."
+link = ""
+image = ""
+tech = "Python, Astropy"
+private = true
+
+[[projects]]
+title = "Visual Branch-and-Price"
+description = "A branch-and-price algorithm simulator for educational purposes for operations research classes."
+link = ""
+image = ""
+tech = "Python"
+private = true
+
+[[projects]]
+title = "Office Scheduler"
+description = "An app to schedule shifts for an office under specific constraints — availability, fairness, consecutive shifts, etc."
+link = ""
+image = ""
+tech = "Python"
+private = true
+
+[[projects]]
+title = "CQTS AWG Experiments"
+description = "CQTS research — MATLAB code to study the time-dependent Schrodinger equation governing qubit evolution and generate ideal waveforms for exciting multi-spin-particle systems."
+link = ""
+image = ""
+tech = "MATLAB"
+private = true
+
+# [[projects]]
+# title = "CppCheckers"
+# description = "The famous American checkers, programmed in C++."
+# link = ""
+# image = ""
+# tech = "C++"
+# private = true

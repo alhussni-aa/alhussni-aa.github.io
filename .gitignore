@@ -1,0 +1,26 @@
+# Build outputs
+public/
+resources/
+
+# Hugo build lock
+.hugo_build.lock
+
+# Node dependencies
+node_modules/
+package-lock.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Theme-specific (shouldn't be committed)
+themes/*/node_modules/
+themes/**/package-lock.json
+

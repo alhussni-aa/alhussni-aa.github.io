@@ -1,0 +1,152 @@
+[author]
+name = "Abdullah Alhussni"
+location = "Abu Dhabi, UAE"
+description = "Wannabe polymath. Full-time caffeinator."
+profile_image = "/images/profile.jpg"
+
+# Social links
+github = "https://github.com/alhussni-aa"
+twitter = ""
+linkedin = "https://linkedin.com/in/alhussniaa"
+email = "aa10108@nyu.edu"
+facebook = "https://facebook.com/alhussni.aa"
+kaggle = "https://kaggle.com/abdullahalhussni"
+stackoverflow = "https://stackoverflow.com/u/19573902"
+youtube = "https://youtube.com/@alhussniaa"
+
+# Honors & Awards (displayed on About page)
+[[honors]]
+institution = "New York University Abu Dhabi"
+title = "NYUAD Full Scholarship"
+date = "2022 - 2026"
+
+[[honors]]
+institution = "New York University Abu Dhabi"
+title = "Dean's List"
+date = "Fall 2022, Spring 2023, Spring-II 2024"
+
+[[honors]]
+institution = "New York University Abu Dhabi"
+title = "NYUAD Hackathon for Social Good in the Arab World — 1st Place"
+date = "2023"
+
+[[honors]]
+institution = "Syrian Scientific Olympiad"
+title = "National Physics Olympiad — Gold Medal"
+date = "2021"
+
+[[honors]]
+institution = "Syrian Scientific Olympiad"
+title = "National Physics Olympiad — Silver Medal"
+date = "2020"
+
+[[honors]]
+institution = "Syrian Scientific Olympiad"
+title = "National Mathematics Olympiad — Silver Medal"
+date = "2021"
+
+[[honors]]
+institution = "Syrian Scientific Olympiad"
+title = "National Mathematics Olympiad — Bronze Medal"
+date = "2020"
+
+[[honors]]
+institution = "Syrian Scientific Olympiad"
+title = "National Informatics Olympiad — Bronze Medal"
+date = "2021"
+
+[[honors]]
+institution = "Ministry of Education, Syria"
+title = "Baccalaureate — Top of Class (Scientific Stream)"
+date = "2022"
+
+# Certifications (displayed on About page)
+[[certifications]]
+title = "MATLAB Onramp"
+url = "https://matlabacademy.mathworks.com/progress/share/certificate.html?id=c0271aa4-cf93-4f59-8c04-dd495e9a0149"
+date = "2023"
+
+[[certifications]]
+title = "Simulink Onramp"
+url = "https://matlabacademy.mathworks.com/progress/share/certificate.html?id=7bbff5a1-4d46-4b1d-a5d6-14dc413e4a03"
+date = "2023"
+
+[[certifications]]
+title = "Machine Learning Onramp"
+url = "https://matlabacademy.mathworks.com/progress/share/certificate.html?id=e48a0f18-0067-4c35-b13a-08e4bb0efa2e"
+date = "2024"
+
+[[certifications]]
+title = "Signal Processing Onramp"
+url = "https://matlabacademy.mathworks.com/progress/share/certificate.html?id=da76e834-68c3-4dc3-b2a2-aeec5a8f2e5e"
+date = "2024"
+
+[[certifications]]
+title = "Deep Learning Onramp"
+url = "https://matlabacademy.mathworks.com/progress/share/certificate.html?id=3bb68fc7-8a9a-472f-ab8e-2c6e7a6c6a10"
+date = "2024"
+
+[[certifications]]
+title = "Computer Vision Onramp"
+url = "https://matlabacademy.mathworks.com/progress/share/certificate.html?id=66b2e9c4-3baa-4e1d-9ef6-cb1cd14bfcf9"
+date = "2024"
+
+[[certifications]]
+title = "Reinforcement Learning Onramp"
+url = "https://matlabacademy.mathworks.com/progress/share/certificate.html?id=95d6d70a-5bdf-4ab2-80e8-0fa3d59daba0"
+date = "2024"
+
+[[certifications]]
+title = "Bloomberg Market Concepts (BMC)"
+url = "https://portal.bloombergforeducation.com/certificates/Q3igvDBf8dcEBHuQE5cDXoRv"
+date = "2024"
+
+# Voluntary Work (displayed on About page)
+[[voluntary]]
+organization = "NYUAD Muslim Students Association"
+url = "https://nyuad.campuslabs.com/engage/organization/msa"
+role = "President"
+period = "May 2025 - Present"
+description = "Lead the MSA executive board; organize community events, interfaith dialogues, and religious programming for the NYUAD community."
+
+[[voluntary]]
+organization = "NYUAD Muslim Students Association"
+url = "https://nyuad.campuslabs.com/engage/organization/msa"
+role = "Co-Vice President"
+period = "May 2024 - May 2025"
+description = "Co-managed the MSA board, coordinated semester programming, and supported the president in strategic planning."
+
+[[voluntary]]
+organization = "NYUAD Arab Student Association"
+url = "https://nyuad.campuslabs.com/engage/organization/arabstudentsassociation"
+role = "Events Coordinator"
+period = "Sep 2023 - May 2024"
+description = "Planned and executed cultural events celebrating Arab heritage and identity on campus."
+
+[[voluntary]]
+organization = "Al-Diwan (Arabic Literary Magazine)"
+url = "https://nyuad.campuslabs.com/engage/organization/aldiwan"
+role = "Events Coordinator"
+period = "Sep 2023 - May 2024"
+description = "Organized literary evenings, open-mic sessions, and publication launch events for the Arabic literary magazine."
+
+[[voluntary]]
+organization = "Sophomore Year Experience (SYE)"
+url = "https://nyuad.nyu.edu/en/students/student-success.html"
+role = "SYE Mentor"
+period = "Sep 2023 - May 2024"
+description = "Mentored second-year students through academic and social challenges, meeting regularly and connecting them with campus resources."
+
+[[voluntary]]
+organization = "Al Muntaha Volunteer Group"
+url = ""
+role = "Tutor"
+period = "2019 - 2022"
+description = "Volunteered as a tutor teaching mathematics and physics to underprivileged secondary-school students in Damascus."
+
+[[voluntary]]
+organization = "Paper Airplanes"
+url = "https://www.paperairplanes.org/"
+role = "Student Coordinator"
+period = "2020 - 2022"
+description = "Coordinated online English tutoring sessions connecting Syrian students with volunteer tutors worldwide."
