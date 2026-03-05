@@ -18,5 +18,5 @@ row2 = [
   { icon = "devicon-vscode-plain", name = "VS Code" },
   { icon = "devicon-hugo-plain", name = "Hugo" },
   { icon = "", image = "/images/icons/altium-designer.svg", name = "Altium Designer" },
-  { icon = "", image = "/images/icons/cadence.svg", name = "Cadence" }
+  { icon = "", image = "/images/icons/cadence.svg", name = "Cadence Virtuoso" }
 ]

@@ -7,73 +7,78 @@ company_link = "https://nyuad.nyu.edu/"
 period = "Aug 2022 - May 2026"
 country = "Abu Dhabi, UAE"
 responsibilities = [
-  "GPA: 3.641",
+  "GPA: 3.641 (unofficial); official yet to be calculated.",
   "Capstone: Integrated Sensing and Communication (ISAC) for 6G Networks under Prof. Marwa Chafii.",
-  "Exchange: NYU Tandon School of Engineering, Brooklyn NY (Spring 2025); NYU Berlin (J-Term 2024).",
-  "Highlighted coursework: Electronics, Applied Machine Learning, Applied Optimization, Control Systems Engineering, Analog & Digital Communication Theory, Advanced Digital Logic, Real-Time Embedded Systems, Design & Innovation, Probability & Statistics.",
+  "Exchange at NYU New York (Spring 2025); J-term at NYU Florence (January 2024); Regional Academic Seminar at NYU Athens (Summer 2024).",
+  "Highlighted coursework: Real-Time Embedded Systems, Applied Machine Learning, Applied Optimization, Electronics, Control Systems Engineering, Analog & Digital Communication Theory, Advanced Digital Logic, Signals and Systems, Differential Geometry, Advanced Probability, Dynamical Systems, Abstract Algebra, PDEs, Design & Innovation, Probability & Statistics.",
 ]
 technologies = []
 
 [[experience]]
 role = "Research Assistant"
-company = "Gelfand Center for Sustainable Energy, NYUAD"
-company_link = "https://nyuad.nyu.edu/en/research/centers-labs-and-projects/gelfand-center-for-sustainable-energy.html"
-period = "Feb 2025 - Present"
-country = "Abu Dhabi, UAE"
+company = "Gelfand Research Group"
+company_link = ""
+period = "May 2025 - Present"
+country = "Remote"
 responsibilities = [
-  "Working on Electromechanical Wave Energy Conversion under the supervision of Prof. Matthew Wagers.",
-  "Designing and simulating oscillating water column (OWC) energy harvesters using COMSOL Multiphysics.",
-  "Building physical prototypes to validate computational models of wave energy conversion.",
+  "Contributed to the analysis of variable sources in dwarf galaxy IC 10 by cross-matching LCO observations, constructing light curves, and generating photometric diagrams to classify source types using Python and Astropy.",
 ]
-technologies = ["COMSOL Multiphysics", "MATLAB", "Altium Designer"]
+technologies = ["Python", "Astropy"]
 
 [[experience]]
-role = "Lead Admissions Ambassador / Visiting Ambassador"
+role = "Admissions Ambassador"
 company = "NYU Abu Dhabi Admissions Office"
-company_link = "https://nyuad.nyu.edu/en/admissions.html"
+company_link = "https://nyuad.nyu.edu/en/about/leadership-and-people/office-of-the-vice-chancellor/admissions.html"
 period = "Sep 2023 - Present"
 country = "Abu Dhabi, UAE"
 responsibilities = [
-  "Serve as a primary contact for campus visitors and prospective students; handle administrative tasks, lead campus tours, support key events, and participate in student panels.",
-  "Part of the Area Lead / Marcomm Project Manager team: experiential marketing, data management, reports, and program/tour R&D.",
-  "Lead Candidate Weekend operations — coordinating logistics, hosting candidates, and representing student life.",
-  "Visiting Ambassador: represent NYUAD at international high schools and education fairs across the MENA region.",
+  "Area Lead for Marketing Communications (AY 23-24); Lead Ambassador for Budgeting and Scheduling (AY 25-26).",
+  "Conducted campus tours, office hours, student panels, and pre-application advising sessions.",
+  "Coordinated Candidate Weekend logistics for 100+ prospective students.",
+  "Managed scheduling, budget tracking, applicant data reporting, and ambassador recruitment/training using Slate CRM and WhenToWork.",
+  "Visiting Ambassador at NYU Undergraduate Admissions, New York, USA (Jan 2025 - May 2025): conducted tours and participated in student panels during the spring recruitment cycle.",
 ]
 technologies = []
 
 [[experience]]
-role = "Facilitator"
-company = "Weyak (NYUAD Student Success)"
-company_link = "https://nyuad.nyu.edu/en/students/student-success.html"
-period = "Sep 2024 - Present"
+role = "Weyak Facilitator"
+company = "NYU Abu Dhabi Class Year Experience"
+company_link = "https://nyuad.nyu.edu/en/campus-life/undergraduate-life/navigating-the-first-year.html"
+period = "Aug 2024 - Dec 2024"
 country = "Abu Dhabi, UAE"
 responsibilities = [
-  "Facilitate the First-Year Dialog (FYD) program, guiding groups of incoming students through their transition to university life.",
-  "Design and lead workshops on academic skills, campus resources, and personal development.",
+  "Supported 10+ first-year students through comprehensive college transition programming, delivering 6 curriculum sessions covering self-discovery, wellness, intercultural competency, conflict transformation, and campus resource familiarization.",
+  "Led orientation and Marhaba Week activities, including welcome sessions, social media campaigns, city outings, and chaperone duties.",
+  "Organized community-building events, floor meetings, and off-campus excursions to deepen students' engagement with UAE culture and campus community.",
+  "Conducted individual check-ins and provided ongoing mentorship, emotional support, and conflict mediation within the residential community.",
+  "Collaborated with First-Year RAs and peer Weyak Facilitators to create an inclusive, supportive living and learning community.",
+  "Participated in comprehensive staff training, administrative coordination, and program planning to ensure program quality and student success.",
 ]
 technologies = []
 
 [[experience]]
 role = "Research Assistant"
 company = "Center for Quantum and Topological Systems (CQTS)"
-company_link = "https://nyuad.nyu.edu/en/research/centers-labs-and-projects/center-for-quantum-and-topological-systems.html"
+company_link = "https://equbal.scholar.nyuad.nyu.edu/"
 period = "Jun 2023 - Jul 2024"
 country = "Abu Dhabi, UAE"
 responsibilities = [
-  "Summer 2023: Contributed to writing mathematical proofs in Cubical Agda to formalize configuration spaces for topological quantum computing.",
-  "J-Term 2024: Worked on NMR and ESR spectroscopy for nitrogen-vacancy (NV) center hardware, researching the electronic and optical setup to generate and detect microwave frequencies.",
-  "Spring 2024: Continued NV center experimental work; co-authored a publication on the project's findings.",
-  "Collaborated with a team of 10+ graduate researchers across three topological quantum computing projects.",
+  "Summer 2023: Worked with a team of 10+ graduate researchers on three topological quantum computing projects; contributed to writing mathematical proofs in Cubical Agda to formalize configuration spaces and braids.",
+  "Fall 2023, Spring 2024, and Summer 2024: Designed and optimized RF/optical hardware for nitrogen-vacancy (NV) center NMR/ESR spectroscopy; developed MATLAB models for spin system dynamics; prototyped light-activated DNP setups.",
+  "Co-authored peer-reviewed publication: \"Dynamic nuclear polarization: State of the art and future possibilities with light activation.\"",
 ]
 technologies = ["Cubical Agda", "MATLAB", "SpinQ"]
 
 [[experience]]
-role = "Physics Olympiad Coach"
-company = "Syrian Physics Olympiad Team"
-period = "2021 - 2022"
-country = "Damascus, Syria"
+role = "Senior Physics Coach"
+company = "Distinction and Creativity Agency - Syrian Physics Olympiad"
+company_link = ""
+period = "Sep 2020 - Sep 2023"
+country = "Remote"
 responsibilities = [
-  "Coached secondary-school students preparing for national and international Physics Olympiad competitions.",
-  "Developed problem sets and conducted workshops on classical mechanics, thermodynamics, and electromagnetism.",
+  "Coached 20+ high school students preparing for national and international physics olympiad competitions; provided curriculum development, weekly training sessions, and exam preparation.",
+  "Designed and administered three competitive exams to evaluate student progress and identify areas for improvement.",
+  "Led intensive week-long summer camp coaching before EuPhO and IPhO 2022; mentored students who achieved 1 bronze medal and 4 honorable mentions at IPhO 2022.",
+  "Maintained 2 hours/week online office hours to address student questions and provide personalized support.",
 ]
 technologies = []

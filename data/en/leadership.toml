@@ -2,48 +2,76 @@
 
 [[leadership]]
 role = "President"
-organization = "Muslim Students Association (MSA)"
+organization = "The Muslim Students Association / Coexistence Board - The Lantern Subcommittee"
 organization_link = "https://nyuad.campuslabs.com/engage/organization/msa"
-period = "May 2025 - Present"
-description = "Lead the MSA executive board; organize community events, interfaith dialogues, and religious programming for the NYUAD community."
+period = "Aug 2025 - Present"
+responsibilities = [
+  "Lead organization with 100+ frequent campus attendees; manage social media strategy, advertising budget, and cross-functional team coordination.",
+  "Initiated and executed signature programming, including Matcha-making Workshop, Fried Chicken Fridays, and Thursday Iftar gatherings (avg. 70 attendees per event).",
+  "Spearheaded organizational restructuring and transition of MSA into the Coexistence Board framework (The Lantern Subcommittee).",
+  "Coordinated Welcome Event and community building initiatives.",
+]
 
 [[leadership]]
-role = "Co-Vice President"
-organization = "Muslim Students Association (MSA)"
+role = "Co-Vice-President"
+organization = "The Muslim Students Association"
 organization_link = "https://nyuad.campuslabs.com/engage/organization/msa"
-period = "May 2024 - May 2025"
-description = "Co-managed the MSA board, coordinated semester programming, and supported the president in strategic planning."
+period = "Aug 2024 - Dec 2024"
+responsibilities = [
+  "Engaged in strategic planning meetings to establish logistics and governance structure for MSA board operations.",
+  "Co-organized campus events, including Welcome Event, \"Reflecting on Spirituality: Finding Pride in Your Faith\" lecture series, and \"Balancing University Life with Islam\" speaker panel featuring external guest speakers.",
+  "Contributed to organizational decision-making and program development that strengthened community connections among Muslim students.",
+]
 
 [[leadership]]
 role = "Events Coordinator"
-organization = "Arab Student Association (ASA)"
+organization = "The Arab Students Association"
 organization_link = "https://nyuad.campuslabs.com/engage/organization/arabstudentsassociation"
-period = "Sep 2023 - May 2024"
-description = "Planned and executed cultural events celebrating Arab heritage and identity on campus."
+period = "Jan 2023 - Dec 2023"
+responsibilities = [
+  "Contributed to organizing various events including the \"Ahlan Ramadan\" event showcasing Arabic culture and Ramadan traditions, a scavenger hunt for colloquial Arabic, a cultural night event, a Suhoor event, and a collaborative debate event with an Arabic poetry group discussing Modern Poetry.",
+  "Average attendees ranged from 60 to 180 per event.",
+]
 
 [[leadership]]
 role = "Events Coordinator"
-organization = "Al-Diwan (Arabic Literary Magazine)"
+organization = "Al-Diwan"
 organization_link = "https://nyuad.campuslabs.com/engage/organization/aldiwan"
-period = "Sep 2023 - May 2024"
-description = "Organized literary evenings, open-mic sessions, and publication launch events for the Arabic literary magazine."
+period = "Sep 2023 - Dec 2023"
+responsibilities = [
+  "Contributed to organizing various events for the Al-Diwan student-interest group at NYUAD, an Arabic poetry group.",
+  "Organized and participated in debates organized by the group.",
+]
 
 [[leadership]]
-role = "SYE Mentor"
-organization = "Sophomore Year Experience (SYE)"
-organization_link = "https://nyuad.nyu.edu/en/students/student-success.html"
-period = "Sep 2023 - May 2024"
-description = "Mentored second-year students through academic and social challenges, meeting regularly and connecting them with campus resources."
+role = "College Applications Mentor"
+organization = "Syrian Youth Empowerment Initiative"
+organization_link = ""
+period = "May 2023 - May 2024"
+responsibilities = [
+  "Mentored two Syrian students through the college application process, one of whom made it to Swarthmore College.",
+  "Roughly 4-6 hours a week commitment. Helped with reviewing essays, college lists, and general tips.",
+  "Helped interview the SYE class of 2024/25 and 2025/26.",
+]
 
 [[leadership]]
-role = "Tutor"
-organization = "Al Muntaha Volunteer Group"
-period = "2019 - 2022"
-description = "Volunteered as a tutor teaching mathematics and physics to underprivileged secondary-school students in Damascus."
+role = "English Language Tutor"
+organization = "Al Muntaha Tutoring"
+organization_link = ""
+period = "May 2023 - Aug 2023"
+responsibilities = [
+  "Tutored an Egyptian 12-year-old boy in English for one weekly hour over 20 weeks.",
+  "Helped with essential grammar topics such as tenses and vocabulary expansion through various teaching methods.",
+]
 
 [[leadership]]
 role = "Student Coordinator"
 organization = "Paper Airplanes"
 organization_link = "https://www.paperairplanes.org/"
-period = "2020 - 2022"
-description = "Coordinated online English tutoring sessions connecting Syrian students with volunteer tutors worldwide."
+period = "Aug 2021 - Dec 2021"
+responsibilities = [
+  "Volunteered 8 hours weekly providing support to students, addressing questions and concerns surrounding program logistics.",
+  "Graded diagnostic exams, conducted bi-weekly check-ins, and tracked progress using Google Sheets.",
+  "Produced English/Arabic translations of relevant resources.",
+  "Participated in virtual events related to college applications and exam preparation.",
+]

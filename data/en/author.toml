@@ -9,10 +9,14 @@ github = "https://github.com/alhussni-aa"
 twitter = ""
 linkedin = "https://linkedin.com/in/alhussniaa"
 email = "aa10108@nyu.edu"
+email_personal = "alhussni.aa@gmail.com"
+email_outlook = "alhussniaa@outlook.com"
 facebook = "https://facebook.com/alhussni.aa"
 kaggle = "https://kaggle.com/abdullahalhussni"
-stackoverflow = "https://stackoverflow.com/u/19573902"
+stackexchange = "https://stackexchange.com/users/24370178"
 youtube = "https://youtube.com/@alhussniaa"
+phone_uae = "+971 56 319 4675"
+phone_syria = "+963 981 674 398"
 
 # Honors & Awards (displayed on About page)
 [[honors]]
@@ -28,6 +32,51 @@ date = "Fall 2022, Spring 2023, Spring-II 2024"
 [[honors]]
 institution = "New York University Abu Dhabi"
 title = "NYUAD Hackathon for Social Good in the Arab World — 1st Place"
+date = "2023"
+
+[[honors]]
+institution = "International Physics Olympiad"
+title = "Bronze Medal"
+date = "2021"
+
+[[honors]]
+institution = "International Applied Physics Olympiad"
+title = "Silver Medal"
+date = "2021"
+
+[[honors]]
+institution = "European Physics Olympiad"
+title = "Honorable Mention"
+date = "2020"
+
+[[honors]]
+institution = "International Distributed Physics Olympiad"
+title = "Bronze Medal"
+date = "2020"
+
+[[honors]]
+institution = "Physics Cup"
+title = "Successful Participation Certificate"
+date = "2021"
+
+[[honors]]
+institution = "Khalifa University Math Competition"
+title = "Silver Medal"
+date = "2023"
+
+[[honors]]
+institution = "Khalifa University Math Competition"
+title = "Bronze Medal"
+date = "2022"
+
+[[honors]]
+institution = "CSAW Hack My Robot"
+title = "2nd Place"
+date = "2022"
+
+[[honors]]
+institution = "IEEExtreme"
+title = "Ranking 1346/7091 globally, 20/68 regionally, 8/21 in NYUAD"
 date = "2023"
 
 [[honors]]
@@ -101,52 +150,92 @@ title = "Bloomberg Market Concepts (BMC)"
 url = "https://portal.bloombergforeducation.com/certificates/Q3igvDBf8dcEBHuQE5cDXoRv"
 date = "2024"
 
+[[certifications]]
+title = "CSWA (Certified SOLIDWORKS Associate)"
+url = ""
+date = ""
+
+[[certifications]]
+title = "Customer Service Excellence — Spearhead Training"
+url = ""
+date = ""
+
+[[certifications]]
+title = "Photoshop (Advanced)"
+url = ""
+date = ""
+
+[[certifications]]
+title = "CorelDRAW"
+url = ""
+date = ""
+
+[[certifications]]
+title = "Electronics (Advanced, Screens, and Troubleshooting)"
+url = ""
+date = ""
+
+[[certifications]]
+title = "Python (Beginner)"
+url = ""
+date = ""
+
+[[certifications]]
+title = "Accountancy (Beginner)"
+url = ""
+date = ""
+
+[[certifications]]
+title = "Abu Dhabi Volunteering License"
+url = ""
+date = ""
+
 # Voluntary Work (displayed on About page)
 [[voluntary]]
-organization = "NYUAD Muslim Students Association"
-url = "https://nyuad.campuslabs.com/engage/organization/msa"
-role = "President"
-period = "May 2025 - Present"
-description = "Lead the MSA executive board; organize community events, interfaith dialogues, and religious programming for the NYUAD community."
-
-[[voluntary]]
-organization = "NYUAD Muslim Students Association"
-url = "https://nyuad.campuslabs.com/engage/organization/msa"
-role = "Co-Vice President"
-period = "May 2024 - May 2025"
-description = "Co-managed the MSA board, coordinated semester programming, and supported the president in strategic planning."
-
-[[voluntary]]
-organization = "NYUAD Arab Student Association"
-url = "https://nyuad.campuslabs.com/engage/organization/arabstudentsassociation"
-role = "Events Coordinator"
-period = "Sep 2023 - May 2024"
-description = "Planned and executed cultural events celebrating Arab heritage and identity on campus."
-
-[[voluntary]]
-organization = "Al-Diwan (Arabic Literary Magazine)"
-url = "https://nyuad.campuslabs.com/engage/organization/aldiwan"
-role = "Events Coordinator"
-period = "Sep 2023 - May 2024"
-description = "Organized literary evenings, open-mic sessions, and publication launch events for the Arabic literary magazine."
-
-[[voluntary]]
-organization = "Sophomore Year Experience (SYE)"
-url = "https://nyuad.nyu.edu/en/students/student-success.html"
-role = "SYE Mentor"
-period = "Sep 2023 - May 2024"
-description = "Mentored second-year students through academic and social challenges, meeting regularly and connecting them with campus resources."
-
-[[voluntary]]
-organization = "Al Muntaha Volunteer Group"
+organization = "IC @ NYU"
 url = ""
-role = "Tutor"
-period = "2019 - 2022"
-description = "Volunteered as a tutor teaching mathematics and physics to underprivileged secondary-school students in Damascus."
+role = "Volunteer"
+period = "Jan 2025 - May 2025"
+description = "Helped organize Juma'ah prayers and Ramadan iftars in New York."
 
 [[voluntary]]
-organization = "Paper Airplanes"
-url = "https://www.paperairplanes.org/"
-role = "Student Coordinator"
-period = "2020 - 2022"
-description = "Coordinated online English tutoring sessions connecting Syrian students with volunteer tutors worldwide."
+organization = "Na'amal"
+url = ""
+role = "Virtual Workshop Facilitator"
+period = "Aug - Sep 2024"
+description = "Helped facilitate sessions on freelancing and Upwork."
+
+[[voluntary]]
+organization = "Operation Smile"
+url = ""
+role = "Volunteer"
+period = "Apr 2024"
+description = "Participated in the Operation Smile opportunity during the Al Wahda Mall Book Sale; helped raise funds for free cleft lip and cleft palate surgeries."
+
+[[voluntary]]
+organization = "Iftar Sa'em"
+url = ""
+role = "Volunteer"
+period = "Mar - Apr 2024"
+description = "Helped give out meals for people fasting in Ramadan."
+
+[[voluntary]]
+organization = "First-Year Kashtah"
+url = ""
+role = "Volunteer"
+period = "Mar 2023"
+description = "Volunteered at Almheirbi Farm in Liwa; activities included goat feeding, building painting, and arranging animal feed, with overnight camping in the dunes."
+
+[[voluntary]]
+organization = "Community Outreach Mangroves Planting"
+url = ""
+role = "Volunteer"
+period = "Nov 2022"
+description = "Helped plant mangrove trees at Jebel Ali Sanctuary; the team broke the record for planting 5,000 mangroves in under one hour."
+
+[[voluntary]]
+organization = "Operation Smile"
+url = ""
+role = "Volunteer"
+period = "Oct 2022"
+description = "Participated in the Operation Smile opportunity during the Al Wahda Mall Book Sale; helped raise nearly 40,000 AED for free cleft lip and cleft palate surgeries."

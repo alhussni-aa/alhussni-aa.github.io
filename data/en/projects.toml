@@ -1,6 +1,7 @@
 # Projects data file
 # Theme expects [[projects]] with: title, description, link, image, tech (comma-separated string)
 # Projects with an image get a full card; projects without get a compact card
+# Order: featured (with image) → public (with GitHub link) → private
 
 [[projects]]
 title = "Hisham FC"
@@ -10,16 +11,46 @@ image = "/images/hisham.jpg"
 tech = ""
 
 [[projects]]
+title = "ECG Heart Monitor"
+description = "Designed an ECG circuit to detect and amplify cardiac electrical signals. Simulated in Cadence Virtuoso, PCB designed in Altium. Also designed a wristwatch prototype, a miniaturized low-power version."
+link = "https://github.com/alhussni-aa/ECG-Heart-Monitor"
+image = ""
+tech = "Cadence Virtuoso, Altium Designer"
+
+[[projects]]
+title = "FPGA Microprocessor"
+description = "Designed a 14-bit microprocessor in VHDL with 16 operations (arithmetic, logical, branching). Implemented on an FPGA with a 7-segment display controller."
+link = "https://github.com/alhussni-aa/fpga-microprocessor"
+image = ""
+tech = "VHDL, FPGA"
+
+[[projects]]
 title = "FR3 Sensing"
-description = "Capstone project code — Integrated Sensing and Communication (ISAC) for 6G Networks."
+description = "Capstone project — Machine learning-enabled multiband wireless sensing for activity recognition (ISAC for 6G Networks)."
 link = ""
 image = ""
 tech = "Python, MATLAB"
 private = true
 
 [[projects]]
+title = "Robotic Arm 3D Design"
+description = "Optimized the design of the first joint of a robotic arm for manufacturability. Designed 3D-printable components in SOLIDWORKS."
+link = ""
+image = ""
+tech = "SOLIDWORKS"
+private = true
+
+[[projects]]
+title = "Parkinson's Symptoms Detector"
+description = "Developed an embedded sensor fusion system using STM32L4 (gyroscope/accelerometer) to detect Parkinson's disease dyskinesia and tremor. Implemented real-time signal processing in C with PlatformIO."
+link = ""
+image = ""
+tech = "C, STM32, PlatformIO"
+private = true
+
+[[projects]]
 title = "IC 10 Analysis"
-description = "Gelfand Center research — scripts to study variable sources in the galaxy IC 10."
+description = "Gelfand Research Group — scripts to analyze variable sources in dwarf galaxy IC 10 by cross-matching LCO observations and constructing light curves."
 link = ""
 image = ""
 tech = "Python, Astropy"
@@ -27,18 +58,18 @@ private = true
 
 [[projects]]
 title = "Visual Branch-and-Price"
-description = "A branch-and-price algorithm simulator for educational purposes for operations research classes."
+description = "A branch-and-price algorithm simulator for educational purposes for operations research classes. Shows a tree and lets you split at any variable."
 link = ""
 image = ""
-tech = "Python"
+tech = "Python, Google OR-Tools, tkinter"
 private = true
 
 [[projects]]
 title = "Office Scheduler"
-description = "An app to schedule shifts for an office under specific constraints — availability, fairness, consecutive shifts, etc."
+description = "An app to schedule shifts for an office under specific constraints — availability, fairness, consecutive shifts, etc. Uses CP-SAT from Google OR-Tools."
 link = ""
 image = ""
-tech = "Python"
+tech = "Python, Google OR-Tools"
 private = true
 
 [[projects]]
@@ -47,6 +78,38 @@ description = "CQTS research — MATLAB code to study the time-dependent Schrodi
 link = ""
 image = ""
 tech = "MATLAB"
+private = true
+
+[[projects]]
+title = "PID Motor Controller"
+description = "Implemented a PID controller to control the position of a DC motor shaft, using an optical encoder and an Arduino board."
+link = ""
+image = ""
+tech = "Arduino"
+private = true
+
+[[projects]]
+title = "Dryer Monitoring 3000"
+description = "IoT project for solving laundry problems on campus at NYUAD. End-to-end system using Seeed Studio XIAO ESP32C3 and DHT11 to detect dryer cycle completion and notify users via email/SMS."
+link = ""
+image = ""
+tech = "ESP32, IoT, Home Assistant"
+private = true
+
+[[projects]]
+title = "Room Designer 3000"
+description = "A VR room designer built in Unity with C# for Oculus Quest 2. Allows users to design and arrange rooms in virtual reality."
+link = ""
+image = ""
+tech = "Unity, C#, VR"
+private = true
+
+[[projects]]
+title = "Tic-Tac-Toe on a Budget"
+description = "The famous game Tic-Tac-Toe, made with C++. Designed with multiple interfaces, accessible within a terminal."
+link = ""
+image = ""
+tech = "C++"
 private = true
 
 # [[projects]]
