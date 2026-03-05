@@ -4,18 +4,22 @@
 
     {{ $projectsData := index site.Data .Language.Lang "projects" }}
 
-    <!-- Featured Projects (with images) -->
+    <!-- Split projects into: featured (has image), public (has link, no image), private (no link) -->
     {{ with $projectsData.projects }}
     {{ $featured := slice }}
+    {{ $public := slice }}
     {{ $private := slice }}
     {{ range . }}
         {{ if and .image (ne .image "") }}
             {{ $featured = $featured | append . }}
+        {{ else if and .link (ne .link "") }}
+            {{ $public = $public | append . }}
         {{ else }}
             {{ $private = $private | append . }}
         {{ end }}
     {{ end }}
 
+    <!-- Featured Projects (with images) -->
     {{ if $featured }}
     <div class="grid grid-cols-1 gap-6 md:gap-8 max-w-3xl mx-auto mb-12">
         {{ range $featured }}
@@ -48,7 +52,40 @@
     </div>
     {{ end }}
 
-    <!-- Private / Text-only Projects -->
+    <!-- Public Projects (with GitHub links, no image) -->
+    {{ if $public }}
+    <h2 class="text-2xl md:text-3xl font-bold mb-6 text-text-primary-light dark:text-text-primary-dark flex items-center gap-3">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-text-secondary-light dark:text-text-secondary-dark">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+        </svg>
+        Public Projects
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl mx-auto mb-12">
+        {{ range $public }}
+        <a href="{{ .link }}" target="_blank" rel="noopener noreferrer" class="public-project-card group rounded-lg border border-border-primary-light dark:border-border-primary-dark bg-bg-primary-light dark:bg-bg-secondary-dark p-5 transition-all duration-300 hover:border-accent-light/50 dark:hover:border-accent-dark/50 hover:shadow-lg block">
+            <div class="flex items-start justify-between mb-2">
+                <h3 class="text-base md:text-lg font-semibold text-accent-light dark:text-accent-dark group-hover:underline truncate pr-2">
+                    {{ .title }}
+                </h3>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-1 text-text-secondary-light dark:text-text-secondary-dark opacity-50 group-hover:opacity-100 transition-opacity">
+                    <path d="M7 17l9.2-9.2M17 17V7H7"/>
+                </svg>
+            </div>
+            <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark mb-3 line-clamp-2">{{ .description }}</p>
+            {{ if .tech }}
+            <div class="flex flex-wrap gap-1.5">
+                {{ $techs := split .tech "," }}
+                {{ range $tech := $techs }}
+                <span class="px-1.5 py-0.5 text-[10px] md:text-xs font-medium rounded-full border border-accent-light/30 dark:border-accent-dark/30 text-accent-light dark:text-accent-dark">{{ strings.TrimSpace $tech }}</span>
+                {{ end }}
+            </div>
+            {{ end }}
+        </a>
+        {{ end }}
+    </div>
+    {{ end }}
+
+    <!-- Private Projects -->
     {{ if $private }}
     <h2 class="text-2xl md:text-3xl font-bold mb-6 text-text-primary-light dark:text-text-primary-dark flex items-center gap-3">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-text-secondary-light dark:text-text-secondary-dark">

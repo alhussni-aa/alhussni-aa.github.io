@@ -119,28 +119,58 @@
         <h2 class="text-4xl font-bold mb-5">{{ T "experienceTitle" }}</h2>
         <div class="space-y-4 max-w-3xl mx-auto">
             {{ range $index, $exp := . }}
-            <div class="relative pl-8 before:content-[''] before:absolute before:left-0 before:top-0 before:w-[2px] before:h-full before:bg-gray-700 before:rounded-full">
-                {{ if eq .company "Open Source Contributor" }}
-                <div class="absolute -left-1.5 top-0 w-3 h-3 bg-[#121212] border border-blue-400 rounded-full"></div>
-                {{ else }}
-                <div class="absolute -left-1.5 top-0 w-2 h-2 bg-gray-700 rounded-full"></div>
-                {{ end }}
-                <div class="text-gray-400 text-xl mb-1">
-                    {{ if .company_link }}
-                        <a href="{{ .company_link }}" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-2 font-medium hover:text-accent-light dark:hover:text-accent-dark transition-colors duration-200">
-                            {{ .company }}
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-70 group-hover:opacity-100 transition-opacity duration-200">
-                                <path d="M7 17l9.2-9.2M17 17V7H7"/>
+            <div class="home-exp-card relative pl-8 before:content-[''] before:absolute before:left-0 before:top-0 before:w-[2px] before:h-full before:bg-border-secondary-light dark:before:bg-border-secondary-dark before:rounded-full">
+                <div class="absolute -left-1.5 top-0 w-2 h-2 bg-border-secondary-light dark:bg-border-secondary-dark rounded-full"></div>
+                <div class="p-5 rounded-lg bg-bg-primary-light dark:bg-bg-secondary-dark transition-all duration-300 border border-border-primary-light dark:border-border-primary-dark">
+                    <div class="home-exp-header flex items-start justify-between cursor-pointer" onclick="toggleHomeExpDetails(this)">
+                        <div class="flex-grow">
+                            {{ if .company }}
+                            <div class="text-text-secondary-light dark:text-text-secondary-dark text-lg mb-1">
+                                {{ if .company_link }}
+                                <a href="{{ .company_link }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 font-medium text-text-secondary-light dark:text-text-secondary-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors duration-200" onclick="event.stopPropagation()">
+                                    {{ .company }}
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-70 hover:opacity-100 transition-opacity duration-200">
+                                        <path d="M7 17l9.2-9.2M17 17V7H7"/>
+                                    </svg>
+                                </a>
+                                {{ else }}
+                                    <span class="font-medium">{{ .company }}</span>
+                                {{ end }}
+                            </div>
+                            {{ end }}
+                            <h3 class="text-2xl font-semibold text-text-primary-light dark:text-text-primary-dark mb-1">{{ .role }}</h3>
+                            <div class="text-text-secondary-light dark:text-text-secondary-dark">{{ .period }}</div>
+                            {{ if .country }}
+                            <div class="text-text-secondary-light dark:text-text-secondary-dark text-sm">{{ .country }}</div>
+                            {{ end }}
+                        </div>
+                        {{ if or .responsibilities .technologies }}
+                        <button class="home-toggle-details p-1 text-text-secondary-light dark:text-text-secondary-dark hover:text-text-primary-light dark:hover:text-text-primary-dark transition-all duration-300 shrink-0 mt-1" aria-label="Toggle details">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
                             </svg>
-                        </a>
-                    {{ else }}
-                        {{ .company }}
-                    {{ end }}
+                        </button>
+                        {{ end }}
+                    </div>
+                    <div class="home-exp-details collapsed">
+                        {{ if .responsibilities }}
+                        <div class="mt-4">
+                            <ul class="list-disc list-outside ml-5 space-y-2">
+                                {{ range .responsibilities }}
+                                <li class="text-text-secondary-light dark:text-text-secondary-dark leading-relaxed">{{ . }}</li>
+                                {{ end }}
+                            </ul>
+                        </div>
+                        {{ end }}
+                        {{ if .technologies }}
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            {{ range .technologies }}
+                            <span class="px-3 py-1 text-sm bg-bg-primary-light dark:bg-bg-tertiary-dark text-text-secondary-light dark:text-text-secondary-dark rounded-full border border-border-primary-light dark:border-border-primary-dark">{{ . }}</span>
+                            {{ end }}
+                        </div>
+                        {{ end }}
+                    </div>
                 </div>
-                <p class="text-2xl font-semibold">{{ .role }}</p>
-                <p class="text-gray-400 font-semibold">{{ .period }}</p>
-                <p class="text-gray-400 text-sm">{{ if .country }} {{ .country }}{{ end }}</p>
-                <p class="mt-2">{{ .description }}</p>
             </div>
             {{ end }}
         </div>
@@ -446,6 +476,34 @@ footer {
     background: linear-gradient(to bottom, transparent, rgba(17, 24, 39, 0.5));
 }
 
+/* Homepage experience expand/collapse */
+.home-exp-details {
+    max-height: 2000px;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out, opacity 0.3s ease, margin 0.3s ease;
+    opacity: 1;
+}
+.home-exp-details.collapsed {
+    max-height: 0;
+    opacity: 0;
+    margin-top: 0 !important;
+}
+.home-toggle-details {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+.home-toggle-details.rotated {
+    transform: rotate(180deg);
+}
+.home-exp-header {
+    user-select: none;
+}
+.home-exp-header a {
+    user-select: auto;
+}
+
 /* Toaster styles */
 .toaster {
     position: fixed;
@@ -472,6 +530,18 @@ html.dark .toaster {
 </style>
 
 <script>
+function toggleHomeExpDetails(header) {
+    var card = header.closest('.home-exp-card');
+    var details = card.querySelector('.home-exp-details');
+    var btn = card.querySelector('.home-toggle-details');
+    if (details) {
+        details.classList.toggle('collapsed');
+    }
+    if (btn) {
+        btn.classList.toggle('rotated');
+    }
+}
+
 function copyToClipboard(text) {
     navigator.clipboard.writeText(text).then(function() {
         showToaster('Discord username copied to clipboard!');

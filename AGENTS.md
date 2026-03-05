@@ -37,8 +37,8 @@ content/en/
   contact.md                 # Contact page
   blogs/                     # Blog posts (markdown)
 layouts/
-  index.html                 # Homepage override (carousel SVG fix, GitHub preview, dark mode CSS)
-  _default/projects.html     # Projects override (featured cards + private text cards + GitHub JS fetch)
+  index.html                 # Homepage override (carousel SVG fix, GitHub preview, dark mode CSS, experience expand/collapse)
+  _default/projects.html     # Projects override (featured cards + public cards + private text cards + GitHub JS fetch)
   _default/leadership.html   # Custom leadership timeline template with expand/collapse
   _default/experience.html   # Custom experience timeline (no stat boxes) with expand/collapse
   _default/contact.html      # Custom contact page with 11 icon cards (3 emails, 2 phones, 6 socials) from author.toml
@@ -143,4 +143,8 @@ description = "..."
 - [x] Experience & leadership templates render bullet points (list-disc)
 - [x] Projects ordered: featured → public → private
 - [x] Stack Exchange network profile link (replaces Stack Overflow)
+- [x] Projects template three-way split: featured (image) / public (link, no image) / private (no link)
+- [x] Leadership links fixed: removed wrong MSA/ASA/Al-Diwan links, added SYE + Al Muntaha links, fixed Paper Airplanes URL
+- [x] Stack Exchange URL corrected to network profile with username
+- [x] Homepage experience section: expand/collapse dropdowns with responsibilities bullets (collapsed by default)
 - [ ] Screenshots for 5 private projects (user will provide later)
