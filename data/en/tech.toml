@@ -11,26 +11,41 @@ row1 = [
   { icon = "devicon-c-plain", name = "C" },
   { icon = "devicon-matlab-plain", name = "MATLAB" },
   { icon = "devicon-pytorch-original", name = "PyTorch" },
+  { icon = "devicon-keras-plain", name = "Keras" },
+  { icon = "devicon-scikitlearn-plain", name = "scikit-learn" },
+  { icon = "devicon-numpy-plain", name = "NumPy" },
+  { icon = "devicon-pandas-plain", name = "Pandas" },
+  { icon = "devicon-matplotlib-plain", name = "Matplotlib" },
+  { icon = "devicon-anaconda-original", name = "Anaconda" },
   { icon = "devicon-arduino-plain", name = "Arduino" },
+  { icon = "devicon-raspberrypi-plain", name = "Raspberry Pi" },
+  { icon = "devicon-embeddedc-plain", name = "Embedded C" },
+  { icon = "devicon-ros-original", name = "ROS" },
+  { icon = "devicon-gazebo-plain", name = "Gazebo" },
   { icon = "devicon-latex-original", name = "LaTeX" },
   { icon = "devicon-html5-plain", name = "HTML" },
   { icon = "devicon-git-plain", name = "Git" },
-  { icon = "devicon-github-original", name = "GitHub" },
-  { icon = "devicon-docker-plain", name = "Docker" },
-  { icon = "devicon-jupyter-plain", name = "Jupyter" },
   { icon = "", image = "/images/icons/altium-designer.svg", name = "Altium Designer" },
 ]
 
 row2 = [
-  { icon = "devicon-unity-original", name = "Unity" },
+  { icon = "devicon-unity-plain", name = "Unity" },
   { icon = "devicon-blender-original", name = "Blender" },
   { icon = "devicon-linux-plain", name = "Linux" },
   { icon = "devicon-ubuntu-plain", name = "Ubuntu" },
+  { icon = "devicon-kalilinux-original", name = "Kali Linux" },
   { icon = "devicon-bash-plain", name = "Bash" },
+  { icon = "devicon-neovim-plain", name = "Neovim" },
   { icon = "devicon-vscode-plain", name = "VS Code" },
+  { icon = "devicon-github-original", name = "GitHub" },
+  { icon = "devicon-docker-plain", name = "Docker" },
+  { icon = "devicon-jupyter-plain", name = "Jupyter" },
+  { icon = "devicon-kaggle-original", name = "Kaggle" },
   { icon = "devicon-hugo-plain", name = "Hugo" },
   { icon = "devicon-photoshop-plain", name = "Photoshop" },
   { icon = "devicon-illustrator-plain", name = "Illustrator" },
+  { icon = "devicon-inkscape-plain", name = "Inkscape" },
+  { icon = "devicon-canva-original", name = "Canva" },
   { icon = "devicon-gimp-plain", name = "GIMP" },
   { icon = "devicon-markdown-original", name = "Markdown" },
   { icon = "", image = "/images/icons/cadence.svg", name = "Cadence Virtuoso" },
@@ -44,7 +59,7 @@ items = ["C++", "Python", "C#", "VHDL", "Embedded C", "HTML", "Markdown", "Cubic
 
 [[categories]]
 name = "Scientific Computing & ML"
-items = ["PyTorch", "MATLAB", "Simulink", "GAMS", "Google OR-Tools", "PyPSA"]
+items = ["PyTorch", "Keras", "scikit-learn", "NumPy", "Pandas", "Matplotlib", "MATLAB", "Simulink", "Anaconda", "Kaggle", "GAMS", "Google OR-Tools", "PyPSA"]
 
 [[categories]]
 name = "Electronics & EDA"
@@ -52,7 +67,7 @@ items = ["Altium Designer", "Cadence Virtuoso", "LTspice", "KiCAD", "OpenDSS", "
 
 [[categories]]
 name = "MCUs & Embedded"
-items = ["Arduino", "ESP32", "ATOM LITE", "STM32", "FPGA Programming"]
+items = ["Arduino", "ESP32", "ATOM LITE", "STM32", "Raspberry Pi", "FPGA Programming"]
 
 [[categories]]
 name = "Robotics, Simulation & VR"
@@ -64,11 +79,11 @@ items = ["SOLIDWORKS", "Blender", "OnShape"]
 
 [[categories]]
 name = "Tools & Systems"
-items = ["Git", "GitHub", "Docker", "Visual Studio Code", "LaTeX", "Overleaf", "Linux", "Ubuntu", "Kali Linux"]
+items = ["Git", "GitHub", "Docker", "Visual Studio Code", "Neovim", "LaTeX", "Overleaf", "Linux", "Ubuntu", "Kali Linux"]
 
 [[categories]]
 name = "Creative & Design"
-items = ["Adobe Creative Suite", "Adobe Photoshop", "Adobe Illustrator", "CorelDRAW", "GIMP"]
+items = ["Adobe Creative Suite", "Adobe Photoshop", "Adobe Illustrator", "Inkscape", "Canva", "CorelDRAW", "GIMP"]
 
 [[categories]]
 name = "Productivity"
