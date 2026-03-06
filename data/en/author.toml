@@ -191,6 +191,39 @@ url = ""
 date = ""
 
 # Voluntary Work (displayed on About page)
+
+# Study Away (displayed on About page)
+[[study_away]]
+campus = "NYU New York"
+period = "Spring 2025"
+
+[[study_away]]
+campus = "NYU Athens"
+period = "Summer 2024"
+
+[[study_away]]
+campus = "NYU Florence"
+period = "J-Term 2024"
+
+# Highlighted Coursework (displayed on About page)
+coursework = [
+  "Real-Time Embedded Systems",
+  "Applied Machine Learning",
+  "Applied Optimization",
+  "Electronics",
+  "Control Systems Engineering",
+  "Analog & Digital Communication Theory",
+  "Advanced Digital Logic",
+  "Signals and Systems",
+  "Differential Geometry",
+  "Advanced Probability",
+  "Dynamical Systems",
+  "Abstract Algebra",
+  "Partial Differential Equations",
+  "Design & Innovation",
+  "Probability & Statistics",
+]
+
 [[voluntary]]
 organization = "IC @ NYU"
 url = ""

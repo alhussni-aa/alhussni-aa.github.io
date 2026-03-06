@@ -1,138 +1,177 @@
 {{ define "main" }}
 <div class="max-w-4xl mx-auto px-4 py-12">
-    <h1 class="text-5xl font-bold mb-6 text-text-primary-light dark:text-text-primary-dark">{{ .Title }}</h1>
+    <h1 class="text-4xl md:text-5xl font-bold mb-8 text-text-primary-light dark:text-text-primary-dark">{{ .Title }}</h1>
 
-    <div class="flex flex-col gap-8">
-        <div class="flex-grow">
-            <div class="bg-bg-primary-light dark:bg-bg-secondary-dark p-8 rounded-lg mb-8 border border-border-primary-light dark:border-border-primary-dark">
-                <div class="about-prose max-w-none">
-                    {{ .Content }}
-                </div>
-            </div>
-            
-            {{ $authorData := index site.Data .Language.Lang "author" }}
+    {{ $authorData := index site.Data .Language.Lang "author" }}
 
-            <!-- Honors & Awards -->
-            {{ with $authorData.honors }}
-            <div class="bg-bg-primary-light dark:bg-bg-secondary-dark p-6 md:p-8 rounded-lg mb-8 border border-border-primary-light dark:border-border-primary-dark">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 md:mb-6 text-text-primary-light dark:text-text-primary-dark">Honors & Awards</h2>
-                <div class="space-y-4">
-                    {{ range . }}
-                    <div class="flex flex-col gap-1 p-4 rounded-lg bg-bg-primary-light dark:bg-bg-secondary-dark border border-border-primary-light dark:border-border-primary-dark transition-all duration-300">
-                        <div class="text-text-secondary-light dark:text-text-secondary-dark text-sm">{{ .institution }}</div>
-                        <h3 class="text-lg md:text-xl font-semibold text-text-primary-light dark:text-text-primary-dark">{{ .title }}</h3>
-                        <div class="text-text-secondary-light dark:text-text-secondary-dark text-sm">{{ .date }}</div>
-                    </div>
-                    {{ end }}
-                </div>
-            </div>
-            {{ end }}
-
-            <!-- Certifications -->
-            {{ with $authorData.certifications }}
-            <div class="bg-bg-primary-light dark:bg-bg-secondary-dark p-6 md:p-8 rounded-lg mb-8 border border-border-primary-light dark:border-border-primary-dark">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 md:mb-6 text-text-primary-light dark:text-text-primary-dark">Certifications</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {{ range . }}
-                    {{ if and .url (ne .url "") }}
-                    <a href="{{ .url }}" target="_blank" rel="noopener noreferrer"
-                       class="group flex flex-col h-full p-4 md:p-5 rounded-lg bg-bg-primary-light dark:bg-bg-secondary-dark border border-border-primary-light dark:border-border-primary-dark hover:border-accent-light/50 dark:hover:border-accent-dark/50 hover:shadow-md transition-all duration-300">
-                        <div class="flex items-center justify-between mb-2">
-                            <h3 class="text-base md:text-lg font-semibold text-text-primary-light dark:text-text-primary-dark">
-                                {{ .title }}
-                            </h3>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 ml-2 opacity-50 group-hover:opacity-100 transition-opacity duration-200 text-text-secondary-light dark:text-text-secondary-dark">
-                                <path d="M7 17l9.2-9.2M17 17V7H7"/>
-                            </svg>
-                        </div>
-                        {{ if and .date (ne .date "") }}
-                        <p class="text-text-secondary-light dark:text-text-secondary-dark text-sm">{{ .date }}</p>
-                        {{ end }}
-                    </a>
-                    {{ else }}
-                    <div class="flex flex-col h-full p-4 md:p-5 rounded-lg bg-bg-primary-light dark:bg-bg-secondary-dark border border-border-primary-light dark:border-border-primary-dark transition-all duration-300">
-                        <div class="flex items-center mb-2">
-                            <h3 class="text-base md:text-lg font-semibold text-text-primary-light dark:text-text-primary-dark">
-                                {{ .title }}
-                            </h3>
-                        </div>
-                        {{ if and .date (ne .date "") }}
-                        <p class="text-text-secondary-light dark:text-text-secondary-dark text-sm">{{ .date }}</p>
-                        {{ end }}
-                    </div>
-                    {{ end }}
-                    {{ end }}
-                </div>
-            </div>
-            {{ end }}
-
-            <!-- Voluntary Work -->
-            {{ with $authorData.voluntary }}
-            <div class="bg-bg-primary-light dark:bg-bg-secondary-dark p-6 md:p-8 rounded-lg mb-8 border border-border-primary-light dark:border-border-primary-dark">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4 md:mb-6 text-text-primary-light dark:text-text-primary-dark">Voluntary Work</h2>
-                <div class="space-y-4">
-                    {{ range . }}
-                    <div class="flex flex-col gap-1 p-4 rounded-lg bg-bg-primary-light dark:bg-bg-secondary-dark border border-border-primary-light dark:border-border-primary-dark transition-all duration-300">
-                        <div class="text-text-secondary-light dark:text-text-secondary-dark text-base">
-                            {{ if and .url (ne .url "") }}
-                            <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="animated-link inline-flex items-center gap-2 hover:text-accent-light dark:hover:text-accent-dark transition-colors duration-200">
-                                {{ .organization }}
-                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-70 hover:opacity-100 transition-opacity">
-                                    <path d="M7 17l9.2-9.2M17 17V7H7"/>
-                                </svg>
-                            </a>
-                            {{ else }}
-                            <span class="font-medium">{{ .organization }}</span>
-                            {{ end }}
-                        </div>
-                        <h3 class="text-lg md:text-xl font-semibold text-text-primary-light dark:text-text-primary-dark">{{ .role }}</h3>
-                        <div class="text-text-secondary-light dark:text-text-secondary-dark text-sm">{{ .period }}</div>
-                        <p class="text-text-secondary-light dark:text-text-secondary-dark text-base mt-1">{{ .description }}</p>
-                    </div>
-                    {{ end }}
-                </div>
-            </div>
-            {{ end }}
-        </div>
+    <!-- Bio / Intro -->
+    <div class="about-prose mb-8">
+        {{ .Content }}
     </div>
+
+    <!-- Study Away -->
+    {{ with $authorData.study_away }}
+    <section class="mb-8">
+        <div class="bg-bg-primary-light dark:bg-bg-secondary-dark rounded-lg border border-border-primary-light dark:border-border-primary-dark overflow-hidden">
+            <div class="px-6 pt-5 pb-3 border-b border-border-primary-light dark:border-border-primary-dark">
+                <h2 class="text-xl md:text-2xl font-bold text-text-primary-light dark:text-text-primary-dark flex items-center gap-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent-light dark:text-accent-dark"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                    Study Away
+                </h2>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-border-primary-light dark:divide-border-primary-dark">
+                {{ range . }}
+                <div class="px-6 py-4 flex flex-col">
+                    <span class="text-base font-semibold text-text-primary-light dark:text-text-primary-dark">{{ .campus }}</span>
+                    <span class="text-sm text-text-secondary-light dark:text-text-secondary-dark mt-0.5">{{ .period }}</span>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </section>
+    {{ end }}
+
+    <!-- Highlighted Coursework -->
+    {{ with $authorData.coursework }}
+    <section class="mb-8">
+        <div class="bg-bg-primary-light dark:bg-bg-secondary-dark rounded-lg border border-border-primary-light dark:border-border-primary-dark overflow-hidden">
+            <div class="px-6 pt-5 pb-3 border-b border-border-primary-light dark:border-border-primary-dark">
+                <h2 class="text-xl md:text-2xl font-bold text-text-primary-light dark:text-text-primary-dark flex items-center gap-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent-light dark:text-accent-dark"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
+                    Highlighted Coursework
+                </h2>
+            </div>
+            <div class="p-5 flex flex-wrap gap-2">
+                {{ range . }}
+                <span class="px-3 py-1.5 text-sm font-medium rounded-full border border-border-primary-light dark:border-border-primary-dark text-text-secondary-light dark:text-text-secondary-dark bg-bg-primary-light dark:bg-bg-tertiary-dark transition-colors duration-200">{{ . }}</span>
+                {{ end }}
+            </div>
+        </div>
+    </section>
+    {{ end }}
+
+    <!-- Honors & Awards -->
+    {{ with $authorData.honors }}
+    <section class="mb-8">
+        <div class="bg-bg-primary-light dark:bg-bg-secondary-dark rounded-lg border border-border-primary-light dark:border-border-primary-dark overflow-hidden">
+            <div class="px-6 pt-5 pb-3 border-b border-border-primary-light dark:border-border-primary-dark">
+                <h2 class="text-xl md:text-2xl font-bold text-text-primary-light dark:text-text-primary-dark flex items-center gap-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent-light dark:text-accent-dark"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+                    Honors & Awards
+                </h2>
+            </div>
+            <div class="divide-y divide-border-primary-light dark:divide-border-primary-dark">
+                {{ range . }}
+                <div class="px-6 py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
+                    <div>
+                        <span class="text-base font-semibold text-text-primary-light dark:text-text-primary-dark">{{ .title }}</span>
+                        <span class="text-sm text-text-secondary-light dark:text-text-secondary-dark block sm:inline sm:ml-2">{{ .institution }}</span>
+                    </div>
+                    <span class="text-sm text-text-secondary-light dark:text-text-secondary-dark whitespace-nowrap">{{ .date }}</span>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </section>
+    {{ end }}
+
+    <!-- Certifications -->
+    {{ with $authorData.certifications }}
+    <section class="mb-8">
+        <div class="bg-bg-primary-light dark:bg-bg-secondary-dark rounded-lg border border-border-primary-light dark:border-border-primary-dark overflow-hidden">
+            <div class="px-6 pt-5 pb-3 border-b border-border-primary-light dark:border-border-primary-dark">
+                <h2 class="text-xl md:text-2xl font-bold text-text-primary-light dark:text-text-primary-dark flex items-center gap-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent-light dark:text-accent-dark"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="m9 15 2 2 4-4"/></svg>
+                    Certifications
+                </h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 divide-border-primary-light dark:divide-border-primary-dark">
+                {{ range $i, $cert := . }}
+                {{ if and .url (ne .url "") }}
+                <a href="{{ .url }}" target="_blank" rel="noopener noreferrer"
+                   class="group flex items-center justify-between px-6 py-3.5 hover:bg-bg-secondary-light dark:hover:bg-bg-tertiary-dark transition-colors duration-200 {{ if (modBool $i 2) }}md:border-l md:border-border-primary-light md:dark:border-border-primary-dark{{ end }}">
+                    <div class="flex flex-col">
+                        <span class="text-sm font-medium text-text-primary-light dark:text-text-primary-dark group-hover:text-accent-light dark:group-hover:text-accent-dark transition-colors">{{ .title }}</span>
+                        {{ if and .date (ne .date "") }}
+                        <span class="text-xs text-text-secondary-light dark:text-text-secondary-dark">{{ .date }}</span>
+                        {{ end }}
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 ml-3 opacity-40 group-hover:opacity-100 transition-opacity text-text-secondary-light dark:text-text-secondary-dark">
+                        <path d="M7 17l9.2-9.2M17 17V7H7"/>
+                    </svg>
+                </a>
+                {{ else }}
+                <div class="flex items-center px-6 py-3.5 {{ if (modBool $i 2) }}md:border-l md:border-border-primary-light md:dark:border-border-primary-dark{{ end }}">
+                    <div class="flex flex-col">
+                        <span class="text-sm font-medium text-text-primary-light dark:text-text-primary-dark">{{ .title }}</span>
+                        {{ if and .date (ne .date "") }}
+                        <span class="text-xs text-text-secondary-light dark:text-text-secondary-dark">{{ .date }}</span>
+                        {{ end }}
+                    </div>
+                </div>
+                {{ end }}
+                {{ end }}
+            </div>
+        </div>
+    </section>
+    {{ end }}
+
+    <!-- Voluntary Work -->
+    {{ with $authorData.voluntary }}
+    <section class="mb-8">
+        <div class="bg-bg-primary-light dark:bg-bg-secondary-dark rounded-lg border border-border-primary-light dark:border-border-primary-dark overflow-hidden">
+            <div class="px-6 pt-5 pb-3 border-b border-border-primary-light dark:border-border-primary-dark">
+                <h2 class="text-xl md:text-2xl font-bold text-text-primary-light dark:text-text-primary-dark flex items-center gap-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent-light dark:text-accent-dark"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                    Voluntary Work
+                </h2>
+            </div>
+            <div class="divide-y divide-border-primary-light dark:divide-border-primary-dark">
+                {{ range . }}
+                <div class="px-6 py-4">
+                    <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 mb-1">
+                        <div>
+                            <span class="text-base font-semibold text-text-primary-light dark:text-text-primary-dark">{{ .role }}</span>
+                            <span class="text-sm text-text-secondary-light dark:text-text-secondary-dark"> &mdash;
+                                {{ if and .url (ne .url "") }}
+                                <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="hover:text-accent-light dark:hover:text-accent-dark transition-colors duration-200 underline underline-offset-2">{{ .organization }}</a>
+                                {{ else }}
+                                {{ .organization }}
+                                {{ end }}
+                            </span>
+                        </div>
+                        <span class="text-sm text-text-secondary-light dark:text-text-secondary-dark whitespace-nowrap">{{ .period }}</span>
+                    </div>
+                    <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark leading-relaxed">{{ .description }}</p>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </section>
+    {{ end }}
 </div>
 
 <style>
     .about-prose {
-        color: var(--tw-prose-body, #4b5563);
         font-size: 1.125rem;
-        line-height: 1.8;
+        line-height: 1.85;
+        color: #4b5563;
     }
     html.dark .about-prose {
         color: #9ca3af;
     }
     .about-prose p {
-        margin-bottom: 1rem;
+        margin-bottom: 1.25rem;
     }
-    .about-prose h2 {
-        font-size: 1.5rem;
-        font-weight: 700;
-        margin-top: 2rem;
-        margin-bottom: 0.75rem;
-        color: var(--tw-text-opacity, inherit);
-    }
-    html.dark .about-prose h2 {
-        color: #e5e7eb;
+    .about-prose p:last-child {
+        margin-bottom: 0;
     }
     .about-prose strong {
-        color: inherit;
         font-weight: 600;
+        color: #1f2937;
     }
     html.dark .about-prose strong {
         color: #e5e7eb;
-    }
-    .about-prose ul {
-        list-style-type: disc;
-        padding-left: 1.5rem;
-        margin-bottom: 1rem;
-    }
-    .about-prose li {
-        margin-bottom: 0.25rem;
     }
     .about-prose a {
         color: #0284c7;
@@ -141,28 +180,6 @@
     }
     html.dark .about-prose a {
         color: #0ea5e9;
-    }
-
-    .animated-link {
-        position: relative;
-        display: inline-flex;
-        align-items: center;
-    }
-    .animated-link::after {
-        content: '';
-        position: absolute;
-        width: 0;
-        height: 1px;
-        bottom: -1px;
-        left: 0;
-        background-color: #0284c7;
-        transition: width 0.3s ease-in-out;
-    }
-    .animated-link:hover::after {
-        width: 100%;
-    }
-    html.dark .animated-link::after {
-        background-color: #0ea5e9;
     }
 </style>
 {{ end }}
