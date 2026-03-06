@@ -21,16 +21,16 @@ Personal portfolio site for Abdullah Alhussni, built with Hugo + the `hugo-noir`
 ```
 hugo.toml                    # Master config: site params, nav menu, social links
 data/en/
-  author.toml                # Author bio, social links, honors[], certifications[], voluntary[]
+  author.toml                # Author bio, social links, coursework[], honors[], certifications[], voluntary[], study_away[]
   experience.toml            # 6 entries: NYUAD, Gelfand, NYU Admissions, Weyak, CQTS, Physics Olympiad
   leadership.toml            # 7 entries: MSA, ASA, Al-Diwan, SYE, Al Muntaha, Paper Airplanes
-  projects.toml              # 1 featured (Hisham FC w/ image) + 2 public + 12 private (text-only cards) + 1 commented out
+  projects.toml              # 1 featured (Hisham FC w/ image) + 9 text-only cards + 1 commented out (no overlap with github.toml)
   github.toml                # username + 5 repo names (fetched client-side)
-  tech.toml                  # Skills carousel rows, includes custom SVG icons
+  tech.toml                  # Skills — 10 categories, 60 items (categorized pill tags on homepage)
   blogs.toml                 # Blog metadata (empty — no posts yet)
 content/en/
   _index.md                  # Homepage
-  about.md                   # Bio, capstone, research, coursework
+  about.md                   # Bio, capstone, research (layout: "about")
   experience.md              # Stub for experience page
   leadership.md              # Stub for leadership page
   projects.md                # Stub for projects page
@@ -38,11 +38,11 @@ content/en/
   blogs/                     # Blog posts (markdown)
 layouts/
   index.html                 # Homepage override (carousel SVG fix, GitHub preview, dark mode CSS, experience expand/collapse)
-  _default/about.html        # About page override (proper prose styling, handles empty cert/voluntary URLs)
-  _default/projects.html     # Projects override (featured cards + public cards + private text cards + GitHub JS fetch)
+  _default/about.html        # About page override (bio card w/ accent border, Study Away grid, Coursework pills, collapsible Honors/Certs/Voluntary with counts)
+  _default/projects.html     # Projects override (featured cards + text cards + GitHub JS fetch)
   _default/leadership.html   # Custom leadership timeline template with expand/collapse
   _default/experience.html   # Custom experience timeline (no stat boxes) with expand/collapse
-  _default/contact.html      # Custom contact page with 11 icon cards (3 emails, 2 phones, 6 socials) from author.toml
+  _default/contact.html      # Custom contact page with 12 icon cards (3 emails, 1 phone, 8 socials incl. ORCID + Telegram) from author.toml
 static/images/icons/
   altium-designer.svg        # Custom icon, viewBox cropped to "5 66 180 59"
   cadence.svg                # Custom icon, viewBox cropped to "32 68 153 61"
@@ -81,7 +81,6 @@ description = "..."
 link = ""           # empty for private
 image = ""          # empty = compact text card; non-empty = full image card
 tech = "Python, MATLAB"
-private = true      # optional flag
 ```
 
 ### github.toml
@@ -112,7 +111,7 @@ description = "..."
 
 ## Known Gotchas
 
-1. **TOML structure**: Scalar keys (like `github_username`) and `[[array]]` tables in the same file causes Hugo to not expose scalars at root level. Keep them in separate files (hence `github.toml` is separate from `projects.toml`).
+1. **TOML structure**: Scalar keys (like `github_username`) and `[[array]]` tables in the same file causes Hugo to not expose scalars at root level. Keep them in separate files (hence `github.toml` is separate from `projects.toml`). In `author.toml`, root-level scalars like `coursework = [...]` MUST appear before the first `[table]` header (`[author]`); otherwise they get nested inside whatever table/array-of-tables precedes them.
 2. **Template context**: Inside `{{ with ... }}` or `{{ range ... }}` blocks, `.Language.Lang` fails because `.` is rebound. Use `$.Language.Lang` to access page context.
 3. **SVG carousel**: Custom SVG icons use `width: auto; height: 2.25rem; max-width: 6rem;` in CSS to handle non-square viewBoxes (Altium/Cadence are ~3:1 aspect ratio).
 4. **Theme @apply bug**: The theme's original `projects.html` uses `@apply` in a `<style>` block which may not work without PostCSS. Our override avoids this by using inline Tailwind classes.
@@ -130,7 +129,7 @@ description = "..."
 - [x] Projects page: featured image cards + private text-only cards + GitHub API fetch
 - [x] Leadership page with custom timeline template + expand/collapse toggle
 - [x] Experience page with custom timeline template (no stat boxes) + expand/collapse toggle
-- [x] Contact page with 11 icon cards (3 emails, 2 phones, 6 socials) from author.toml
+- [x] Contact page with 10 icon cards (3 emails, 1 phone, 6 socials) from author.toml
 - [x] Nav menu with 5 sections (About, Experience, Leadership, Projects, Contact)
 - [x] Altium/Cadence Virtuoso custom SVG icons with cropped viewBoxes
 - [x] Dark mode CSS fix for custom SVG icons (`filter: invert(1)`)
@@ -151,4 +150,19 @@ description = "..."
 - [x] Deleted 10 sample blog entries from blogs.toml, removed Blog from nav menu and homepage
 - [x] About page: custom layout override with proper prose styling, section headings, handles empty cert/voluntary URLs
 - [x] CQTS experience link corrected to asifequbal.com
+- [x] About page layout front matter fix (`layout: "about"` added to about.md)
+- [x] Coursework TOML fix: moved `coursework = [...]` before `[author]` table so Hugo sees it at root level
+- [x] About page now renders all 5 data sections: Study Away, Coursework, Honors, Certifications, Voluntary Work
+- [x] Resume cross-check: removed Syrian phone number from contact data
+- [x] Resume cross-check: fixed National Physics Olympiad 2021 from "Gold Medal" to "1st Place, International Team Selection"
+- [x] Resume cross-check: removed 4 inaccurate Syrian Olympiad honors (Physics Silver 2020, Math Silver 2021, Math Bronze 2020, Informatics Bronze 2021)
+- [x] Resume cross-check: removed 5 more honors not in awards list (Scholarship, Dean's List, Hackathon, National Physics 2021, Baccalaureate)
+- [x] Resume cross-check: fixed IEEExtreme description (dropped NYUAD ranking, changed "regionally" to "in the region")
+- [x] Resume cross-check: removed 6 certifications (ML Onramp, Signal Processing Onramp, Deep Learning Onramp, Computer Vision Onramp, Reinforcement Learning Onramp, Bloomberg Market Concepts)
+- [x] Final author.toml: 9 honors, 10 certifications, 7 voluntary, 3 study_away, 15 coursework
+- [x] About page bio rewritten with expanded capstone details, leadership description, removed GPA
+- [x] Projects page restructured: 2 sections (featured/text cards + GitHub repos) instead of 3-way split (featured/public/private)
+- [x] Removed 4 projects from projects.toml that overlapped with github.toml (ECG Heart Monitor, FPGA Microprocessor, Room Designer 3000, Tic-Tac-Toe on a Budget)
+- [x] Removed `private = true` flag from projects.toml (no longer needed)
+- [x] Projects template simplified: featured cards (image) → text cards (no public/private labels) → GitHub repos (API fetch)
 - [ ] Screenshots for 5 private projects (user will provide later)

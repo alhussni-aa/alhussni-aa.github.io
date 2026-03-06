@@ -1,22 +1,41 @@
-# Tech stack carousel - update with your skills
-# Icons from https://devicon.dev/
+# Skills / "What I Work With" — categorized for homepage display
 
-row1 = [
-  { icon = "devicon-cplusplus-plain", name = "C++" },
-  { icon = "devicon-python-plain", name = "Python" },
-  { icon = "devicon-latex-original", name = "LaTeX" },
-  { icon = "devicon-matlab-plain", name = "MATLAB" },
-  { icon = "devicon-git-plain", name = "Git" },
-  { icon = "devicon-github-original", name = "GitHub" }
-]
+[[categories]]
+name = "Programming"
+items = ["C++", "Python", "C#", "VHDL", "Embedded C", "HTML", "Markdown", "Cubical Agda"]
 
-row2 = [
-  { icon = "devicon-photoshop-plain", name = "Adobe Photoshop" },
-  { icon = "devicon-illustrator-plain", name = "Adobe Illustrator" },
-  { icon = "devicon-linux-plain", name = "Linux" },
-  { icon = "devicon-bash-plain", name = "Bash" },
-  { icon = "devicon-vscode-plain", name = "VS Code" },
-  { icon = "devicon-hugo-plain", name = "Hugo" },
-  { icon = "", image = "/images/icons/altium-designer.svg", name = "Altium Designer" },
-  { icon = "", image = "/images/icons/cadence.svg", name = "Cadence Virtuoso" }
-]
+[[categories]]
+name = "Scientific Computing & ML"
+items = ["PyTorch", "MATLAB", "Simulink", "GAMS", "Google OR-Tools", "PyPSA"]
+
+[[categories]]
+name = "Electronics & EDA"
+items = ["Altium Designer", "Cadence Virtuoso", "LTspice", "KiCAD", "OpenDSS", "Sonnet Lite", "GNU Radio", "PCB Design & Soldering", "Digital & Analog Electronics Repair"]
+
+[[categories]]
+name = "MCUs & Embedded"
+items = ["Arduino", "ESP32", "ATOM LITE", "STM32", "FPGA Programming"]
+
+[[categories]]
+name = "Robotics, Simulation & VR"
+items = ["ROS & ROS2", "Rviz", "Gazebo", "Unity", "VR Design & Oculus Quest Programming"]
+
+[[categories]]
+name = "3D Design / CAD"
+items = ["SOLIDWORKS", "Blender", "OnShape"]
+
+[[categories]]
+name = "Tools & Systems"
+items = ["Git", "GitHub", "Docker", "Visual Studio Code", "LaTeX", "Overleaf", "Linux", "Ubuntu", "Kali Linux"]
+
+[[categories]]
+name = "Creative & Design"
+items = ["Adobe Creative Suite", "Adobe Photoshop", "Adobe Illustrator", "CorelDRAW", "GIMP"]
+
+[[categories]]
+name = "Productivity"
+items = ["Microsoft Office", "Microsoft Word", "Microsoft Excel", "Microsoft PowerPoint", "Google Workspace", "Slate (Admissions CRM)", "WhenToWork (Employee Scheduling)"]
+
+[[categories]]
+name = "Other"
+items = ["Accountancy", "Touch Typing (+70 WPM)"]

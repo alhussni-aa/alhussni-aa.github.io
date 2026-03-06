@@ -1,29 +1,36 @@
 {{ define "main" }}
+{{ $authorData := index site.Data $.Language.Lang "author" }}
+
 <div class="max-w-4xl mx-auto px-4 py-12">
-    <h1 class="text-4xl md:text-5xl font-bold mb-8 text-text-primary-light dark:text-text-primary-dark">{{ .Title }}</h1>
+    <!-- Page header -->
+    <h1 class="text-4xl md:text-5xl font-bold mb-2 text-text-primary-light dark:text-text-primary-dark">About</h1>
+    <p class="text-lg text-text-secondary-light dark:text-text-secondary-dark mb-10">Wannabe polymath. Full-time caffeinator.</p>
 
-    {{ $authorData := index site.Data .Language.Lang "author" }}
-
-    <!-- Bio / Intro -->
-    <div class="about-prose mb-12">
-        {{ .Content }}
-    </div>
+    <!-- Bio card -->
+    <section class="mb-10">
+        <div class="relative bg-bg-primary-light dark:bg-bg-secondary-dark rounded-lg border border-border-primary-light dark:border-border-primary-dark overflow-hidden">
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-accent-light dark:bg-accent-dark rounded-l-lg"></div>
+            <div class="about-prose px-8 py-7">
+                {{ .Content }}
+            </div>
+        </div>
+    </section>
 
     <!-- Study Away -->
     {{ with $authorData.study_away }}
-    <section class="mb-8">
+    <section class="mb-6">
         <div class="bg-bg-primary-light dark:bg-bg-secondary-dark rounded-lg border border-border-primary-light dark:border-border-primary-dark overflow-hidden">
             <div class="px-6 pt-5 pb-3 border-b border-border-primary-light dark:border-border-primary-dark">
-                <h2 class="text-xl md:text-2xl font-bold text-text-primary-light dark:text-text-primary-dark flex items-center gap-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent-light dark:text-accent-dark"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                <h2 class="text-lg font-bold text-text-primary-light dark:text-text-primary-dark flex items-center gap-2.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent-light dark:text-accent-dark"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
                     Study Away
                 </h2>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-border-primary-light dark:divide-border-primary-dark">
                 {{ range . }}
-                <div class="px-6 py-4 flex flex-col">
-                    <span class="text-base font-semibold text-text-primary-light dark:text-text-primary-dark">{{ .campus }}</span>
-                    <span class="text-sm text-text-secondary-light dark:text-text-secondary-dark mt-0.5">{{ .period }}</span>
+                <div class="px-6 py-3.5 flex flex-col">
+                    <span class="text-sm font-semibold text-text-primary-light dark:text-text-primary-dark">{{ .campus }}</span>
+                    <span class="text-xs text-text-secondary-light dark:text-text-secondary-dark mt-0.5">{{ .period }}</span>
                 </div>
                 {{ end }}
             </div>
@@ -32,18 +39,25 @@
     {{ end }}
 
     <!-- Highlighted Coursework -->
-    {{ with $authorData.coursework }}
-    <section class="mb-8">
+    {{ with $authorData.course_categories }}
+    <section class="mb-6">
         <div class="bg-bg-primary-light dark:bg-bg-secondary-dark rounded-lg border border-border-primary-light dark:border-border-primary-dark overflow-hidden">
             <div class="px-6 pt-5 pb-3 border-b border-border-primary-light dark:border-border-primary-dark">
-                <h2 class="text-xl md:text-2xl font-bold text-text-primary-light dark:text-text-primary-dark flex items-center gap-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent-light dark:text-accent-dark"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
-                    Highlighted Coursework
+                <h2 class="text-lg font-bold text-text-primary-light dark:text-text-primary-dark flex items-center gap-2.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent-light dark:text-accent-dark"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
+                    Coursework
                 </h2>
             </div>
-            <div class="p-5 flex flex-wrap gap-2">
+            <div class="p-4 space-y-3">
                 {{ range . }}
-                <span class="px-3 py-1.5 text-sm font-medium rounded-full border border-border-primary-light dark:border-border-primary-dark text-text-secondary-light dark:text-text-secondary-dark bg-bg-primary-light dark:bg-bg-tertiary-dark transition-colors duration-200">{{ . }}</span>
+                <div>
+                    <h3 class="text-xs font-semibold text-text-secondary-light dark:text-text-secondary-dark uppercase tracking-wider mb-1.5">{{ .name }}</h3>
+                    <div class="flex flex-wrap gap-1.5">
+                        {{ range .courses }}
+                        <span class="px-2.5 py-1 text-xs font-medium rounded-full border border-border-primary-light dark:border-border-primary-dark text-text-secondary-light dark:text-text-secondary-dark bg-bg-primary-light dark:bg-bg-tertiary-dark">{{ . }}</span>
+                        {{ end }}
+                    </div>
+                </div>
                 {{ end }}
             </div>
         </div>
@@ -52,126 +66,167 @@
 
     <!-- Honors & Awards -->
     {{ with $authorData.honors }}
-    <section class="mb-8">
+    {{ $totalHonors := len . }}
+    {{ $previewCount := 6 }}
+    <section class="mb-6">
         <div class="bg-bg-primary-light dark:bg-bg-secondary-dark rounded-lg border border-border-primary-light dark:border-border-primary-dark overflow-hidden">
             <div class="px-6 pt-5 pb-3 border-b border-border-primary-light dark:border-border-primary-dark">
-                <h2 class="text-xl md:text-2xl font-bold text-text-primary-light dark:text-text-primary-dark flex items-center gap-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent-light dark:text-accent-dark"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+                <h2 class="text-lg font-bold text-text-primary-light dark:text-text-primary-dark flex items-center gap-2.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent-light dark:text-accent-dark"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
                     Honors & Awards
+                    <span class="text-xs font-normal text-text-secondary-light dark:text-text-secondary-dark ml-1">{{ $totalHonors }}</span>
                 </h2>
             </div>
             <div class="divide-y divide-border-primary-light dark:divide-border-primary-dark">
-                {{ range . }}
-                <div class="px-6 py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
-                    <div>
-                        <span class="text-base font-semibold text-text-primary-light dark:text-text-primary-dark">{{ .title }}</span>
-                        <span class="text-sm text-text-secondary-light dark:text-text-secondary-dark block sm:inline sm:ml-2">{{ .institution }}</span>
+                {{ range $i, $honor := . }}
+                <div class="honors-row px-6 py-3 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-0.5 {{ if ge $i $previewCount }}honors-hidden{{ end }}">
+                    <div class="min-w-0">
+                        <span class="text-sm font-medium text-text-primary-light dark:text-text-primary-dark">{{ .title }}</span>
+                        <span class="text-xs text-text-secondary-light dark:text-text-secondary-dark ml-1.5">{{ .institution }}</span>
                     </div>
-                    <span class="text-sm text-text-secondary-light dark:text-text-secondary-dark whitespace-nowrap">{{ .date }}</span>
+                    <span class="text-xs text-text-secondary-light dark:text-text-secondary-dark whitespace-nowrap shrink-0">{{ .date }}</span>
                 </div>
                 {{ end }}
             </div>
+            {{ if gt $totalHonors $previewCount }}
+            <div class="px-6 py-3 border-t border-border-primary-light dark:border-border-primary-dark">
+                <button onclick="toggleSection(this, 'honors')" class="text-sm text-accent-light dark:text-accent-dark hover:underline underline-offset-2 flex items-center gap-1.5 section-toggle" data-section="honors" data-collapsed-text="Show all {{ $totalHonors }} awards">
+                    <span class="toggle-label">Show all {{ $totalHonors }} awards</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="toggle-chevron transition-transform duration-300"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+            </div>
+            {{ end }}
         </div>
     </section>
     {{ end }}
 
     <!-- Certifications -->
     {{ with $authorData.certifications }}
-    <section class="mb-8">
+    {{ $totalCerts := len . }}
+    {{ $certPreview := 6 }}
+    <section class="mb-6">
         <div class="bg-bg-primary-light dark:bg-bg-secondary-dark rounded-lg border border-border-primary-light dark:border-border-primary-dark overflow-hidden">
             <div class="px-6 pt-5 pb-3 border-b border-border-primary-light dark:border-border-primary-dark">
-                <h2 class="text-xl md:text-2xl font-bold text-text-primary-light dark:text-text-primary-dark flex items-center gap-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent-light dark:text-accent-dark"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="m9 15 2 2 4-4"/></svg>
+                <h2 class="text-lg font-bold text-text-primary-light dark:text-text-primary-dark flex items-center gap-2.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent-light dark:text-accent-dark"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="m9 15 2 2 4-4"/></svg>
                     Certifications
+                    <span class="text-xs font-normal text-text-secondary-light dark:text-text-secondary-dark ml-1">{{ $totalCerts }}</span>
                 </h2>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 divide-border-primary-light dark:divide-border-primary-dark">
+            <div class="grid grid-cols-1 md:grid-cols-2">
                 {{ range $i, $cert := . }}
+                {{ $isHidden := ge $i $certPreview }}
                 {{ if and .url (ne .url "") }}
                 <a href="{{ .url }}" target="_blank" rel="noopener noreferrer"
-                   class="group flex items-center justify-between px-6 py-3.5 hover:bg-bg-secondary-light dark:hover:bg-bg-tertiary-dark transition-colors duration-200 {{ if (modBool $i 2) }}md:border-l md:border-border-primary-light md:dark:border-border-primary-dark{{ end }}">
-                    <div class="flex flex-col">
-                        <span class="text-sm font-medium text-text-primary-light dark:text-text-primary-dark group-hover:text-accent-light dark:group-hover:text-accent-dark transition-colors">{{ .title }}</span>
-                        {{ if and .date (ne .date "") }}
-                        <span class="text-xs text-text-secondary-light dark:text-text-secondary-dark">{{ .date }}</span>
-                        {{ end }}
+                   class="cert-item group flex items-center justify-between px-6 py-3 border-b border-border-primary-light dark:border-border-primary-dark hover:bg-bg-secondary-light dark:hover:bg-bg-tertiary-dark transition-colors duration-200 {{ if (modBool $i 2) }}md:border-l{{ end }} {{ if $isHidden }}certs-hidden{{ end }}">
+                    <div class="flex flex-col min-w-0">
+                        <span class="text-sm font-medium text-text-primary-light dark:text-text-primary-dark group-hover:text-accent-light dark:group-hover:text-accent-dark transition-colors truncate">{{ .title }}</span>
+                        {{ with .date }}<span class="text-xs text-text-secondary-light dark:text-text-secondary-dark">{{ . }}</span>{{ end }}
                     </div>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 ml-3 opacity-40 group-hover:opacity-100 transition-opacity text-text-secondary-light dark:text-text-secondary-dark">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0 ml-2 opacity-30 group-hover:opacity-100 transition-opacity text-text-secondary-light dark:text-text-secondary-dark">
                         <path d="M7 17l9.2-9.2M17 17V7H7"/>
                     </svg>
                 </a>
                 {{ else }}
-                <div class="flex items-center px-6 py-3.5 {{ if (modBool $i 2) }}md:border-l md:border-border-primary-light md:dark:border-border-primary-dark{{ end }}">
-                    <div class="flex flex-col">
-                        <span class="text-sm font-medium text-text-primary-light dark:text-text-primary-dark">{{ .title }}</span>
-                        {{ if and .date (ne .date "") }}
-                        <span class="text-xs text-text-secondary-light dark:text-text-secondary-dark">{{ .date }}</span>
-                        {{ end }}
+                <div class="cert-item flex items-center px-6 py-3 border-b border-border-primary-light dark:border-border-primary-dark {{ if (modBool $i 2) }}md:border-l{{ end }} {{ if $isHidden }}certs-hidden{{ end }}">
+                    <div class="flex flex-col min-w-0">
+                        <span class="text-sm font-medium text-text-primary-light dark:text-text-primary-dark truncate">{{ .title }}</span>
+                        {{ with .date }}<span class="text-xs text-text-secondary-light dark:text-text-secondary-dark">{{ . }}</span>{{ end }}
                     </div>
                 </div>
                 {{ end }}
                 {{ end }}
             </div>
+            {{ if gt $totalCerts $certPreview }}
+            <div class="px-6 py-3 border-t border-border-primary-light dark:border-border-primary-dark">
+                <button onclick="toggleSection(this, 'certs')" class="text-sm text-accent-light dark:text-accent-dark hover:underline underline-offset-2 flex items-center gap-1.5 section-toggle" data-section="certs" data-collapsed-text="Show all {{ $totalCerts }} certifications">
+                    <span class="toggle-label">Show all {{ $totalCerts }} certifications</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="toggle-chevron transition-transform duration-300"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+            </div>
+            {{ end }}
         </div>
     </section>
     {{ end }}
 
     <!-- Voluntary Work -->
     {{ with $authorData.voluntary }}
-    <section class="mb-8">
+    {{ $totalVol := len . }}
+    {{ $volPreview := 3 }}
+    <section class="mb-6">
         <div class="bg-bg-primary-light dark:bg-bg-secondary-dark rounded-lg border border-border-primary-light dark:border-border-primary-dark overflow-hidden">
             <div class="px-6 pt-5 pb-3 border-b border-border-primary-light dark:border-border-primary-dark">
-                <h2 class="text-xl md:text-2xl font-bold text-text-primary-light dark:text-text-primary-dark flex items-center gap-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent-light dark:text-accent-dark"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                <h2 class="text-lg font-bold text-text-primary-light dark:text-text-primary-dark flex items-center gap-2.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent-light dark:text-accent-dark"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
                     Voluntary Work
+                    <span class="text-xs font-normal text-text-secondary-light dark:text-text-secondary-dark ml-1">{{ $totalVol }}</span>
                 </h2>
             </div>
             <div class="divide-y divide-border-primary-light dark:divide-border-primary-dark">
-                {{ range . }}
-                <div class="px-6 py-4">
-                    <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 mb-1">
-                        <div>
-                            <span class="text-base font-semibold text-text-primary-light dark:text-text-primary-dark">{{ .role }}</span>
-                            <span class="text-sm text-text-secondary-light dark:text-text-secondary-dark"> &mdash;
+                {{ range $i, $vol := . }}
+                <div class="vol-row px-6 py-3.5 {{ if ge $i $volPreview }}vol-hidden{{ end }}">
+                    <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-0.5 mb-0.5">
+                        <div class="min-w-0">
+                            {{ if and .role (ne .role "") }}
+                            <span class="text-sm font-semibold text-text-primary-light dark:text-text-primary-dark">{{ .role }}</span>
+                            <span class="text-xs text-text-secondary-light dark:text-text-secondary-dark"> &mdash;
                                 {{ if and .url (ne .url "") }}
                                 <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="hover:text-accent-light dark:hover:text-accent-dark transition-colors duration-200 underline underline-offset-2">{{ .organization }}</a>
                                 {{ else }}
                                 {{ .organization }}
                                 {{ end }}
                             </span>
+                            {{ else }}
+                            <span class="text-sm font-semibold text-text-primary-light dark:text-text-primary-dark">
+                                {{ if and .url (ne .url "") }}
+                                <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="hover:text-accent-light dark:hover:text-accent-dark transition-colors duration-200 underline underline-offset-2">{{ .organization }}</a>
+                                {{ else }}
+                                {{ .organization }}
+                                {{ end }}
+                            </span>
+                            {{ end }}
                         </div>
-                        <span class="text-sm text-text-secondary-light dark:text-text-secondary-dark whitespace-nowrap">{{ .period }}</span>
+                        <span class="text-xs text-text-secondary-light dark:text-text-secondary-dark whitespace-nowrap shrink-0">{{ .period }}</span>
                     </div>
-                    <p class="text-sm text-text-secondary-light dark:text-text-secondary-dark leading-relaxed">{{ .description }}</p>
+                    <p class="text-xs text-text-secondary-light dark:text-text-secondary-dark leading-relaxed">{{ .description }}</p>
                 </div>
                 {{ end }}
             </div>
+            {{ if gt $totalVol $volPreview }}
+            <div class="px-6 py-3 border-t border-border-primary-light dark:border-border-primary-dark">
+                <button onclick="toggleSection(this, 'vol')" class="text-sm text-accent-light dark:text-accent-dark hover:underline underline-offset-2 flex items-center gap-1.5 section-toggle" data-section="vol" data-collapsed-text="Show all {{ $totalVol }} entries">
+                    <span class="toggle-label">Show all {{ $totalVol }} entries</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="toggle-chevron transition-transform duration-300"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+            </div>
+            {{ end }}
         </div>
     </section>
     {{ end }}
 </div>
 
 <style>
+    /* Bio prose */
     .about-prose {
-        font-size: 1.125rem;
-        line-height: 1.85;
-        color: #4b5563;
+        font-size: 1.05rem;
+        line-height: 1.8;
+        color: #374151;
     }
     html.dark .about-prose {
-        color: #9ca3af;
+        color: #d1d5db;
     }
     .about-prose p {
-        margin-bottom: 2rem;
+        margin-bottom: 1.25rem;
     }
     .about-prose p:last-child {
         margin-bottom: 0;
     }
     .about-prose strong {
         font-weight: 600;
-        color: #1f2937;
+        color: #111827;
     }
     html.dark .about-prose strong {
-        color: #e5e7eb;
+        color: #f3f4f6;
     }
     .about-prose a {
         color: #0284c7;
@@ -179,7 +234,51 @@
         text-underline-offset: 2px;
     }
     html.dark .about-prose a {
-        color: #0ea5e9;
+        color: #38bdf8;
+    }
+
+    /* Collapsible sections */
+    .honors-hidden,
+    .certs-hidden,
+    .vol-hidden {
+        display: none;
+    }
+    .honors-hidden.show,
+    .certs-hidden.show,
+    .vol-hidden.show {
+        display: flex;
+    }
+    .vol-hidden.show {
+        display: block;
+    }
+    .cert-item.certs-hidden.show {
+        display: flex;
+    }
+
+    /* Chevron rotation */
+    .toggle-chevron.rotated {
+        transform: rotate(180deg);
     }
 </style>
+
+<script>
+function toggleSection(btn, section) {
+    var items = document.querySelectorAll('.' + section + '-hidden');
+    var label = btn.querySelector('.toggle-label');
+    var chevron = btn.querySelector('.toggle-chevron');
+    var isExpanded = items.length > 0 && items[0].classList.contains('show');
+
+    items.forEach(function(item) {
+        item.classList.toggle('show');
+    });
+
+    if (chevron) chevron.classList.toggle('rotated');
+
+    if (isExpanded) {
+        label.textContent = btn.getAttribute('data-collapsed-text');
+    } else {
+        label.textContent = 'Show less';
+    }
+}
+</script>
 {{ end }}

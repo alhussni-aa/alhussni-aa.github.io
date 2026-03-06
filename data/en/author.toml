@@ -1,3 +1,93 @@
+# Coursework (displayed on About page, categorized)
+# Root-level array-of-tables — must be BEFORE [author] table
+
+[[course_categories]]
+name = "Engineering Common Courses"
+courses = [
+  "Senior Design Capstone Project II",
+  "Senior Design Capstone Project I",
+  "Physics II",
+  "Engineering Ethics",
+  "Numerical Methods",
+  "Engineering Statics",
+  "Digital Logic",
+  "Circuit Fundamentals",
+  "Conservation Laws",
+  "Design and Innovation",
+  "Computer Programming for Engineers",
+  "Foundations of Science 1 & 2",
+  "Physics",
+  "Chemistry",
+  "Biology",
+  "Physics Lab",
+  "Chemistry Lab",
+]
+
+[[course_categories]]
+name = "Electrical Engineering"
+courses = [
+  "Real-Time Embedded Systems (Graduate Level)",
+  "Electric Energy Conversion Systems",
+  "Applied Optimization",
+  "Applied Machine Learning",
+  "Electronics",
+  "Analog and Digital Communication Theory",
+  "Advanced Circuits",
+  "Advanced Digital Logic",
+  "Controls Systems Engineering",
+  "Signals and Systems",
+  "Electricity and Magnetism",
+  "Fundamentals of Complex Variables",
+]
+
+[[course_categories]]
+name = "Mathematics"
+courses = [
+  "Special Topics in Mathematics — Math for AI: Probability",
+  "Differential Geometry",
+  "Advanced Probability",
+  "Dynamical Systems",
+  "Abstract Algebra 1",
+  "Partial Differential Equations for Engineers",
+  "Intro to Math Modeling",
+  "Analysis",
+  "Foundations of Mathematics",
+  "Probability and Statistics",
+  "Fundamentals of Discrete Math",
+  "Multivariable Calculus",
+  "Linear Algebra",
+  "Ordinary Differential Equations",
+]
+
+[[course_categories]]
+name = "General Electives"
+courses = [
+  "Advanced AI and Machine Learning",
+  "Computer-Aided Design",
+]
+
+[[course_categories]]
+name = "Core Curriculum"
+courses = [
+  "Life in the Universe",
+  "Reporting (on) Migration",
+  "Bioarchaeological Perspectives on Death: A Case Study in Medieval Italy",
+  "Incarceration",
+  "Exploring Our Linguistic Identities",
+  "AI, Automation, and the Future of Work",
+  "Orientalisms",
+]
+
+[[course_categories]]
+name = "Physical Health and Education"
+courses = [
+  "Beginner Swimming",
+  "Men's Soccer (Intercollegiate Sport) x3",
+  "Jiu Jitsu (Intercollegiate Sport)",
+  "All Levels Hip Hop",
+  "Jiu Jitsu",
+]
+
 [author]
 name = "Abdullah Alhussni"
 location = "Abu Dhabi, UAE"
@@ -16,24 +106,10 @@ kaggle = "https://kaggle.com/abdullahalhussni"
 stackexchange = "https://stackexchange.com/users/18069012/abdullah-alhussni"
 youtube = "https://youtube.com/@alhussniaa"
 phone_uae = "+971 56 319 4675"
-phone_syria = "+963 981 674 398"
+orcid = "https://orcid.org/0009-0006-8563-9023"
+telegram = "alhussni_aa"
 
 # Honors & Awards (displayed on About page)
-[[honors]]
-institution = "New York University Abu Dhabi"
-title = "NYUAD Full Scholarship"
-date = "2022 - 2026"
-
-[[honors]]
-institution = "New York University Abu Dhabi"
-title = "Dean's List"
-date = "Fall 2022, Spring 2023, Spring-II 2024"
-
-[[honors]]
-institution = "New York University Abu Dhabi"
-title = "NYUAD Hackathon for Social Good in the Arab World — 1st Place"
-date = "2023"
-
 [[honors]]
 institution = "International Physics Olympiad"
 title = "Bronze Medal"
@@ -76,38 +152,8 @@ date = "2022"
 
 [[honors]]
 institution = "IEEExtreme"
-title = "Ranking 1346/7091 globally, 20/68 regionally, 8/21 in NYUAD"
+title = "Ranking 1346/7091 globally, 20/68 in the region"
 date = "2023"
-
-[[honors]]
-institution = "Syrian Scientific Olympiad"
-title = "National Physics Olympiad — Gold Medal"
-date = "2021"
-
-[[honors]]
-institution = "Syrian Scientific Olympiad"
-title = "National Physics Olympiad — Silver Medal"
-date = "2020"
-
-[[honors]]
-institution = "Syrian Scientific Olympiad"
-title = "National Mathematics Olympiad — Silver Medal"
-date = "2021"
-
-[[honors]]
-institution = "Syrian Scientific Olympiad"
-title = "National Mathematics Olympiad — Bronze Medal"
-date = "2020"
-
-[[honors]]
-institution = "Syrian Scientific Olympiad"
-title = "National Informatics Olympiad — Bronze Medal"
-date = "2021"
-
-[[honors]]
-institution = "Ministry of Education, Syria"
-title = "Baccalaureate — Top of Class (Scientific Stream)"
-date = "2022"
 
 # Certifications (displayed on About page)
 [[certifications]]
@@ -119,36 +165,6 @@ date = "2023"
 title = "Simulink Onramp"
 url = "https://matlabacademy.mathworks.com/progress/share/certificate.html?id=7bbff5a1-4d46-4b1d-a5d6-14dc413e4a03"
 date = "2023"
-
-[[certifications]]
-title = "Machine Learning Onramp"
-url = "https://matlabacademy.mathworks.com/progress/share/certificate.html?id=e48a0f18-0067-4c35-b13a-08e4bb0efa2e"
-date = "2024"
-
-[[certifications]]
-title = "Signal Processing Onramp"
-url = "https://matlabacademy.mathworks.com/progress/share/certificate.html?id=da76e834-68c3-4dc3-b2a2-aeec5a8f2e5e"
-date = "2024"
-
-[[certifications]]
-title = "Deep Learning Onramp"
-url = "https://matlabacademy.mathworks.com/progress/share/certificate.html?id=3bb68fc7-8a9a-472f-ab8e-2c6e7a6c6a10"
-date = "2024"
-
-[[certifications]]
-title = "Computer Vision Onramp"
-url = "https://matlabacademy.mathworks.com/progress/share/certificate.html?id=66b2e9c4-3baa-4e1d-9ef6-cb1cd14bfcf9"
-date = "2024"
-
-[[certifications]]
-title = "Reinforcement Learning Onramp"
-url = "https://matlabacademy.mathworks.com/progress/share/certificate.html?id=95d6d70a-5bdf-4ab2-80e8-0fa3d59daba0"
-date = "2024"
-
-[[certifications]]
-title = "Bloomberg Market Concepts (BMC)"
-url = "https://portal.bloombergforeducation.com/certificates/Q3igvDBf8dcEBHuQE5cDXoRv"
-date = "2024"
 
 [[certifications]]
 title = "CSWA (Certified SOLIDWORKS Associate)"
@@ -205,29 +221,10 @@ period = "Summer 2024"
 campus = "NYU Florence"
 period = "J-Term 2024"
 
-# Highlighted Coursework (displayed on About page)
-coursework = [
-  "Real-Time Embedded Systems",
-  "Applied Machine Learning",
-  "Applied Optimization",
-  "Electronics",
-  "Control Systems Engineering",
-  "Analog & Digital Communication Theory",
-  "Advanced Digital Logic",
-  "Signals and Systems",
-  "Differential Geometry",
-  "Advanced Probability",
-  "Dynamical Systems",
-  "Abstract Algebra",
-  "Partial Differential Equations",
-  "Design & Innovation",
-  "Probability & Statistics",
-]
-
 [[voluntary]]
 organization = "IC @ NYU"
 url = ""
-role = "Volunteer"
+role = ""
 period = "Jan 2025 - May 2025"
 description = "Helped organize Juma'ah prayers and Ramadan iftars in New York."
 
@@ -241,34 +238,34 @@ description = "Helped facilitate sessions on freelancing and Upwork."
 [[voluntary]]
 organization = "Operation Smile"
 url = ""
-role = "Volunteer"
+role = ""
 period = "Apr 2024"
 description = "Participated in the Operation Smile opportunity during the Al Wahda Mall Book Sale; helped raise funds for free cleft lip and cleft palate surgeries."
 
 [[voluntary]]
 organization = "Iftar Sa'em"
 url = ""
-role = "Volunteer"
+role = ""
 period = "Mar - Apr 2024"
 description = "Helped give out meals for people fasting in Ramadan."
 
 [[voluntary]]
 organization = "First-Year Kashtah"
 url = ""
-role = "Volunteer"
+role = ""
 period = "Mar 2023"
 description = "Volunteered at Almheirbi Farm in Liwa; activities included goat feeding, building painting, and arranging animal feed, with overnight camping in the dunes."
 
 [[voluntary]]
 organization = "Community Outreach Mangroves Planting"
 url = ""
-role = "Volunteer"
+role = ""
 period = "Nov 2022"
 description = "Helped plant mangrove trees at Jebel Ali Sanctuary; the team broke the record for planting 5,000 mangroves in under one hour."
 
 [[voluntary]]
 organization = "Operation Smile"
 url = ""
-role = "Volunteer"
+role = ""
 period = "Oct 2022"
 description = "Participated in the Operation Smile opportunity during the Al Wahda Mall Book Sale; helped raise nearly 40,000 AED for free cleft lip and cleft palate surgeries."

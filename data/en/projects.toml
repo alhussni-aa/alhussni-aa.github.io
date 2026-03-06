@@ -1,7 +1,7 @@
 # Projects data file
-# Theme expects [[projects]] with: title, description, link, image, tech (comma-separated string)
-# Projects with an image get a full card; projects without get a compact card
-# Order: featured (with image) → public (with GitHub link) → private
+# Projects with an image get a featured card; projects without get a compact text card
+# Projects that have public GitHub repos are in github.toml (fetched client-side via API)
+# Order: featured (with image) → other projects (text cards)
 
 [[projects]]
 title = "Hisham FC"
@@ -11,26 +11,11 @@ image = "/images/hisham.jpg"
 tech = ""
 
 [[projects]]
-title = "ECG Heart Monitor"
-description = "Designed an ECG circuit to detect and amplify cardiac electrical signals. Simulated in Cadence Virtuoso, PCB designed in Altium. Also designed a wristwatch prototype, a miniaturized low-power version."
-link = "https://github.com/alhussni-aa/ECG-Heart-Monitor"
-image = ""
-tech = "Cadence Virtuoso, Altium Designer"
-
-[[projects]]
-title = "FPGA Microprocessor"
-description = "Designed a 14-bit microprocessor in VHDL with 16 operations (arithmetic, logical, branching). Implemented on an FPGA with a 7-segment display controller."
-link = "https://github.com/alhussni-aa/fpga-microprocessor"
-image = ""
-tech = "VHDL, FPGA"
-
-[[projects]]
 title = "FR3 Sensing"
 description = "Capstone project — Machine learning-enabled multiband wireless sensing for activity recognition (ISAC for 6G Networks)."
 link = ""
 image = ""
 tech = "Python, MATLAB"
-private = true
 
 [[projects]]
 title = "Robotic Arm 3D Design"
@@ -38,7 +23,6 @@ description = "Optimized the design of the first joint of a robotic arm for manu
 link = ""
 image = ""
 tech = "SOLIDWORKS"
-private = true
 
 [[projects]]
 title = "Parkinson's Symptoms Detector"
@@ -46,7 +30,6 @@ description = "Developed an embedded sensor fusion system using STM32L4 (gyrosco
 link = ""
 image = ""
 tech = "C, STM32, PlatformIO"
-private = true
 
 [[projects]]
 title = "IC 10 Analysis"
@@ -54,7 +37,6 @@ description = "Gelfand Research Group — scripts to analyze variable sources in
 link = ""
 image = ""
 tech = "Python, Astropy"
-private = true
 
 [[projects]]
 title = "Visual Branch-and-Price"
@@ -62,7 +44,6 @@ description = "A branch-and-price algorithm simulator for educational purposes f
 link = ""
 image = ""
 tech = "Python, Google OR-Tools, tkinter"
-private = true
 
 [[projects]]
 title = "Office Scheduler"
@@ -70,7 +51,6 @@ description = "An app to schedule shifts for an office under specific constraint
 link = ""
 image = ""
 tech = "Python, Google OR-Tools"
-private = true
 
 [[projects]]
 title = "CQTS AWG Experiments"
@@ -78,7 +58,6 @@ description = "CQTS research — MATLAB code to study the time-dependent Schrodi
 link = ""
 image = ""
 tech = "MATLAB"
-private = true
 
 [[projects]]
 title = "PID Motor Controller"
@@ -86,7 +65,6 @@ description = "Implemented a PID controller to control the position of a DC moto
 link = ""
 image = ""
 tech = "Arduino"
-private = true
 
 [[projects]]
 title = "Dryer Monitoring 3000"
@@ -94,23 +72,6 @@ description = "IoT project for solving laundry problems on campus at NYUAD. End-
 link = ""
 image = ""
 tech = "ESP32, IoT, Home Assistant"
-private = true
-
-[[projects]]
-title = "Room Designer 3000"
-description = "A VR room designer built in Unity with C# for Oculus Quest 2. Allows users to design and arrange rooms in virtual reality."
-link = ""
-image = ""
-tech = "Unity, C#, VR"
-private = true
-
-[[projects]]
-title = "Tic-Tac-Toe on a Budget"
-description = "The famous game Tic-Tac-Toe, made with C++. Designed with multiple interfaces, accessible within a terminal."
-link = ""
-image = ""
-tech = "C++"
-private = true
 
 # [[projects]]
 # title = "CppCheckers"
@@ -118,4 +79,3 @@ private = true
 # link = ""
 # image = ""
 # tech = "C++"
-# private = true
