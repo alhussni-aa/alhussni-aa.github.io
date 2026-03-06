@@ -5,7 +5,7 @@
 
 [[projects]]
 title = "FR3 Sensing"
-description = "Capstone project — Machine learning-enabled multiband wireless sensing for activity recognition using FR3 spectrum CSI, under Prof. Marwa Chafii."
+description = "Capstone project — Machine learning-enabled multiband wireless sensing for activity recognition using FR3 spectrum CSI, under Prof. Marwa Chafii and Dr. Roberto Bomfin."
 link = ""
 image = ""
 tech = "Python, MATLAB"
