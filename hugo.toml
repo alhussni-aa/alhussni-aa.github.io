@@ -35,13 +35,9 @@ defaultContentLanguageInSubdir = true
         pageRef = '/projects'
         weight = 4
       [[languages.en.menu.main]]
-        name = 'Blog'
-        pageRef = '/blogs'
-        weight = 5
-      [[languages.en.menu.main]]
         name = 'Contact'
         pageRef = '/contact'
-        weight = 6
+        weight = 5
 
 [params]
 name = 'Abdullah Alhussni'

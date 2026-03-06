@@ -27,7 +27,7 @@ data/en/
   projects.toml              # 1 featured (Hisham FC w/ image) + 2 public + 12 private (text-only cards) + 1 commented out
   github.toml                # username + 5 repo names (fetched client-side)
   tech.toml                  # Skills carousel rows, includes custom SVG icons
-  blogs.toml                 # Blog metadata
+  blogs.toml                 # Blog metadata (empty — no posts yet)
 content/en/
   _index.md                  # Homepage
   about.md                   # Bio, capstone, research, coursework
@@ -38,6 +38,7 @@ content/en/
   blogs/                     # Blog posts (markdown)
 layouts/
   index.html                 # Homepage override (carousel SVG fix, GitHub preview, dark mode CSS, experience expand/collapse)
+  _default/about.html        # About page override (proper prose styling, handles empty cert/voluntary URLs)
   _default/projects.html     # Projects override (featured cards + public cards + private text cards + GitHub JS fetch)
   _default/leadership.html   # Custom leadership timeline template with expand/collapse
   _default/experience.html   # Custom experience timeline (no stat boxes) with expand/collapse
@@ -130,7 +131,7 @@ description = "..."
 - [x] Leadership page with custom timeline template + expand/collapse toggle
 - [x] Experience page with custom timeline template (no stat boxes) + expand/collapse toggle
 - [x] Contact page with 11 icon cards (3 emails, 2 phones, 6 socials) from author.toml
-- [x] Nav menu with all 6 sections (About, Experience, Leadership, Projects, Blog, Contact)
+- [x] Nav menu with 5 sections (About, Experience, Leadership, Projects, Contact)
 - [x] Altium/Cadence Virtuoso custom SVG icons with cropped viewBoxes
 - [x] Dark mode CSS fix for custom SVG icons (`filter: invert(1)`)
 - [x] GitHub Actions workflow for Hugo + Pages deployment
@@ -147,4 +148,7 @@ description = "..."
 - [x] Leadership links fixed: removed wrong MSA/ASA/Al-Diwan links, added SYE + Al Muntaha links, fixed Paper Airplanes URL
 - [x] Stack Exchange URL corrected to network profile with username
 - [x] Homepage experience section: expand/collapse dropdowns with responsibilities bullets (collapsed by default)
+- [x] Deleted 10 sample blog entries from blogs.toml, removed Blog from nav menu and homepage
+- [x] About page: custom layout override with proper prose styling, section headings, handles empty cert/voluntary URLs
+- [x] CQTS experience link corrected to asifequbal.com
 - [ ] Screenshots for 5 private projects (user will provide later)
