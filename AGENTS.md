@@ -26,7 +26,7 @@ data/en/
   leadership.toml            # 7 entries: MSA, ASA, Al-Diwan, SYE, Al Muntaha, Paper Airplanes
   projects.toml              # 1 featured (Hisham FC w/ image) + 9 text-only cards + 1 commented out (no overlap with github.toml)
   github.toml                # username + 5 repo names (fetched client-side)
-  tech.toml                  # Skills — 10 categories, 60 items (categorized pill tags on homepage)
+  tech.toml                  # Skills — row1/row2 (26 carousel items for homepage) + 10 categories, 60 items (categorized pills on About page)
   blogs.toml                 # Blog metadata (empty — no posts yet)
 content/en/
   _index.md                  # Homepage
@@ -37,8 +37,8 @@ content/en/
   contact.md                 # Contact page
   blogs/                     # Blog posts (markdown)
 layouts/
-  index.html                 # Homepage override (carousel SVG fix, GitHub preview, dark mode CSS, experience expand/collapse)
-  _default/about.html        # About page override (bio card w/ accent border, Study Away grid, Coursework pills, collapsible Honors/Certs/Voluntary with counts)
+  index.html                 # Homepage override (scrolling logo carousel, GitHub preview, dark mode CSS, experience expand/collapse)
+  _default/about.html        # About page override (bio card w/ accent border, Technical Skills categorized pills, Study Away grid, Coursework pills, collapsible Honors/Certs/Voluntary with counts)
   _default/projects.html     # Projects override (featured cards + text cards + GitHub JS fetch)
   _default/leadership.html   # Custom leadership timeline template with expand/collapse
   _default/experience.html   # Custom experience timeline (no stat boxes) with expand/collapse
@@ -165,4 +165,7 @@ description = "..."
 - [x] Removed 4 projects from projects.toml that overlapped with github.toml (ECG Heart Monitor, FPGA Microprocessor, Room Designer 3000, Tic-Tac-Toe on a Budget)
 - [x] Removed `private = true` flag from projects.toml (no longer needed)
 - [x] Projects template simplified: featured cards (image) → text cards (no public/private labels) → GitHub repos (API fetch)
+- [x] Homepage scrolling logo carousel restored with 26 items (14 row1 + 12 row2) using devicon icons + custom SVGs for Altium/Cadence
+- [x] tech.toml restructured: row1/row2 arrays for carousel + [[categories]] for About page (60 items, 10 categories)
+- [x] About page: added Technical Skills section with categorized pill tags between bio card and Study Away
 - [ ] Screenshots for 5 private projects (user will provide later)

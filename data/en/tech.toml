@@ -1,4 +1,42 @@
-# Skills / "What I Work With" — categorized for homepage display
+# Skills / "What I Work With"
+# Row 1 & Row 2: scrolling carousel on homepage (items with devicon icons or custom SVG)
+# Categories: full categorized list on About page
+
+# --- Carousel rows (homepage) ---
+
+row1 = [
+  { icon = "devicon-cplusplus-plain", name = "C++" },
+  { icon = "devicon-python-plain", name = "Python" },
+  { icon = "devicon-csharp-plain", name = "C#" },
+  { icon = "devicon-c-plain", name = "C" },
+  { icon = "devicon-matlab-plain", name = "MATLAB" },
+  { icon = "devicon-pytorch-original", name = "PyTorch" },
+  { icon = "devicon-arduino-plain", name = "Arduino" },
+  { icon = "devicon-latex-original", name = "LaTeX" },
+  { icon = "devicon-html5-plain", name = "HTML" },
+  { icon = "devicon-git-plain", name = "Git" },
+  { icon = "devicon-github-original", name = "GitHub" },
+  { icon = "devicon-docker-plain", name = "Docker" },
+  { icon = "devicon-jupyter-plain", name = "Jupyter" },
+  { icon = "", image = "/images/icons/altium-designer.svg", name = "Altium Designer" },
+]
+
+row2 = [
+  { icon = "devicon-unity-original", name = "Unity" },
+  { icon = "devicon-blender-original", name = "Blender" },
+  { icon = "devicon-linux-plain", name = "Linux" },
+  { icon = "devicon-ubuntu-plain", name = "Ubuntu" },
+  { icon = "devicon-bash-plain", name = "Bash" },
+  { icon = "devicon-vscode-plain", name = "VS Code" },
+  { icon = "devicon-hugo-plain", name = "Hugo" },
+  { icon = "devicon-photoshop-plain", name = "Photoshop" },
+  { icon = "devicon-illustrator-plain", name = "Illustrator" },
+  { icon = "devicon-gimp-plain", name = "GIMP" },
+  { icon = "devicon-markdown-original", name = "Markdown" },
+  { icon = "", image = "/images/icons/cadence.svg", name = "Cadence Virtuoso" },
+]
+
+# --- Full categorized list (About page) ---
 
 [[categories]]
 name = "Programming"

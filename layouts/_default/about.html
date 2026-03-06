@@ -16,6 +16,33 @@
         </div>
     </section>
 
+    <!-- Technical Skills -->
+    {{ $techData := index site.Data $.Language.Lang "tech" }}
+    {{ with $techData.categories }}
+    <section class="mb-6">
+        <div class="bg-bg-primary-light dark:bg-bg-secondary-dark rounded-lg border border-border-primary-light dark:border-border-primary-dark overflow-hidden">
+            <div class="px-6 pt-5 pb-3 border-b border-border-primary-light dark:border-border-primary-dark">
+                <h2 class="text-lg font-bold text-text-primary-light dark:text-text-primary-dark flex items-center gap-2.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent-light dark:text-accent-dark"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                    Technical Skills
+                </h2>
+            </div>
+            <div class="p-4 space-y-3">
+                {{ range . }}
+                <div>
+                    <h3 class="text-xs font-semibold text-text-secondary-light dark:text-text-secondary-dark uppercase tracking-wider mb-1.5">{{ .name }}</h3>
+                    <div class="flex flex-wrap gap-1.5">
+                        {{ range .items }}
+                        <span class="px-2.5 py-1 text-xs font-medium rounded-full border border-border-primary-light dark:border-border-primary-dark text-text-secondary-light dark:text-text-secondary-dark bg-bg-primary-light dark:bg-bg-tertiary-dark">{{ . }}</span>
+                        {{ end }}
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </section>
+    {{ end }}
+
     <!-- Study Away -->
     {{ with $authorData.study_away }}
     <section class="mb-6">

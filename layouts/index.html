@@ -1,4 +1,7 @@
 {{ define "main" }}
+<head>
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+</head>
 <div class="w-full md:w-4/5 lg:w-3/5 mx-auto px-14 py-12">
     <!-- Hero Section -->
     {{ $authorData := index site.Data .Language.Lang "author" }}
@@ -48,18 +51,59 @@
     <!-- Tech Stack -->
     {{ with (index site.Data .Language.Lang "tech") }}
         <section class="mb-20">
-            <h2 class="text-4xl font-bold mb-6">{{ T "whatIWorkWith" }}</h2>
-            <div class="space-y-4">
-                {{ range .categories }}
-                <div>
-                    <h3 class="text-xs font-semibold text-text-secondary-light dark:text-text-secondary-dark uppercase tracking-wider mb-2">{{ .name }}</h3>
-                    <div class="flex flex-wrap gap-2">
-                        {{ range .items }}
-                        <span class="skill-pill">{{ . }}</span>
-                        {{ end }}
+            <h2 class="text-4xl font-bold mb-2 relative">{{ T "whatIWorkWith" }}</h2>
+            <div class="tech-carousel">
+                <div class="carousel-container">
+                    <div class="carousel-track carousel-track-left-to-right">
+                        {{- range .row1 -}}
+                            <div class="carousel-item">
+                                {{- if .image -}}
+                                    <img src="{{ .image }}" alt="{{ .name }}" class="carousel-icon-img">
+                                {{- else -}}
+                                    <i class="{{ .icon }}"></i>
+                                {{- end -}}
+                                <span class="text-xl">{{ .name }}</span>
+                            </div>
+                        {{- end -}}
+                        {{/* Duplicates for infinite scroll */}}
+                        {{- range .row1 -}}
+                            <div class="carousel-item">
+                                {{- if .image -}}
+                                    <img src="{{ .image }}" alt="{{ .name }}" class="carousel-icon-img">
+                                {{- else -}}
+                                    <i class="{{ .icon }}"></i>
+                                {{- end -}}
+                                <span class="text-xl">{{ .name }}</span>
+                            </div>
+                        {{- end -}}
                     </div>
                 </div>
-                {{ end }}
+
+                <div class="carousel-container -mt-1">
+                    <div class="carousel-track-reverse">
+                        {{- range .row2 -}}
+                            <div class="carousel-item">
+                                {{- if .image -}}
+                                    <img src="{{ .image }}" alt="{{ .name }}" class="carousel-icon-img">
+                                {{- else -}}
+                                    <i class="{{ .icon }}"></i>
+                                {{- end -}}
+                                <span class="text-xl">{{ .name }}</span>
+                            </div>
+                        {{- end -}}
+                        {{/* Duplicates for infinite scroll */}}
+                        {{- range .row2 -}}
+                            <div class="carousel-item">
+                                {{- if .image -}}
+                                    <img src="{{ .image }}" alt="{{ .name }}" class="carousel-icon-img">
+                                {{- else -}}
+                                    <i class="{{ .icon }}"></i>
+                                {{- end -}}
+                                <span class="text-xl">{{ .name }}</span>
+                            </div>
+                        {{- end -}}
+                    </div>
+                </div>
             </div>
         </section>
     {{ else }}
@@ -233,31 +277,101 @@
 </div>
 
 <style>
-.skill-pill {
-    display: inline-block;
-    padding: 0.3rem 0.75rem;
-    font-size: 0.8rem;
-    font-weight: 500;
-    border-radius: 9999px;
-    border: 1px solid #d1d5db;
-    color: inherit;
-    background: transparent;
+.tech-carousel {
+    width: 100%;
+    overflow: hidden;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.carousel-track, .carousel-track-reverse {
+    display: flex;
+    width: fit-content;
+}
+
+.carousel-track {
+    animation: scroll 45s linear infinite;
+}
+
+.carousel-track-left-to-right {
+    display: flex;
+    width: fit-content;
+    animation: scroll-left-to-right 60s linear infinite;
+}
+
+.carousel-track-reverse {
+    animation: scroll-reverse 45s linear infinite;
+}
+
+.carousel-item {
+    display: flex;
+    align-items: center;
+    width: auto;
+    padding: 0.75rem 0.5rem;
+    margin: 0 0.1rem;
+    border-radius: 0.5rem;
     white-space: nowrap;
-    transition: border-color 0.2s, background-color 0.2s;
+    gap: 0.5rem;
 }
 
-html.dark .skill-pill {
-    border-color: #4b5563;
+.carousel-item i {
+    font-size: 2.25rem;
 }
 
-.skill-pill:hover {
-    border-color: #6b7280;
-    background-color: rgba(107, 114, 128, 0.1);
+.carousel-icon-img {
+    width: auto;
+    height: 2.25rem;
+    max-width: 6rem;
+    object-fit: contain;
+    filter: grayscale(1) brightness(2);
 }
 
-html.dark .skill-pill:hover {
-    border-color: #9ca3af;
-    background-color: rgba(156, 163, 175, 0.1);
+html.dark .carousel-icon-img {
+    filter: invert(1);
+}
+
+.carousel-item span {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.carousel-container:hover .carousel-track,
+.carousel-container:hover .carousel-track-reverse,
+.carousel-container:hover .carousel-track-left-to-right {
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-100% / 2));
+    }
+}
+
+@keyframes scroll-left-to-right {
+    0% {
+        transform: translateX(calc(-100% / 2));
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes scroll-reverse {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-100% / 2));
+    }
 }
 
 .max-w-3xl {
