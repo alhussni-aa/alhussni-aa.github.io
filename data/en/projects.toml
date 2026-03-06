@@ -1,18 +1,11 @@
 # Projects data file
 # Projects with an image get a featured card; projects without get a compact text card
 # Projects that have public GitHub repos are in github.toml (fetched client-side via API)
-# Order: featured (with image) → other projects (text cards)
-
-[[projects]]
-title = "Hisham FC"
-description = "Creative project. A website for our intramurals football club."
-link = "https://sites.google.com/nyu.edu/hisham/"
-image = "/images/hisham.jpg"
-tech = ""
+# Order: capstone first, engineering projects, then creative/art at the end
 
 [[projects]]
 title = "FR3 Sensing"
-description = "Capstone project — Machine learning-enabled multiband wireless sensing for activity recognition (ISAC for 6G Networks)."
+description = "Capstone project — Machine learning-enabled multiband wireless sensing for activity recognition using FR3 spectrum CSI, under Prof. Marwa Chafii."
 link = ""
 image = ""
 tech = "Python, MATLAB"
@@ -72,6 +65,13 @@ description = "IoT project for solving laundry problems on campus at NYUAD. End-
 link = ""
 image = ""
 tech = "ESP32, IoT, Home Assistant"
+
+[[projects]]
+title = "Hisham FC"
+description = "Creative project. A website for our intramurals football club."
+link = "https://sites.google.com/nyu.edu/hisham/"
+image = "/images/hisham.jpg"
+tech = ""
 
 # [[projects]]
 # title = "CppCheckers"

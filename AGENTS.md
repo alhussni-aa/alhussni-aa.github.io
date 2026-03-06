@@ -26,7 +26,7 @@ data/en/
   leadership.toml            # 7 entries: MSA, ASA, Al-Diwan, SYE, Al Muntaha, Paper Airplanes
   projects.toml              # 1 featured (Hisham FC w/ image) + 9 text-only cards + 1 commented out (no overlap with github.toml)
   github.toml                # username + 5 repo names (fetched client-side)
-  tech.toml                  # Skills — row1/row2 (26 carousel items for homepage) + 10 categories, 60 items (categorized pills on About page)
+  tech.toml                  # Skills — row1/row2 (41 carousel items for homepage) + 10 categories, ~73 items (categorized pills on About page)
   blogs.toml                 # Blog metadata (empty — no posts yet)
 content/en/
   _index.md                  # Homepage
@@ -37,7 +37,7 @@ content/en/
   contact.md                 # Contact page
   blogs/                     # Blog posts (markdown)
 layouts/
-  index.html                 # Homepage override (scrolling logo carousel, GitHub preview, dark mode CSS, experience expand/collapse)
+  index.html                 # Homepage override (scrolling logo carousel, single Education card from experience[0], single project text card, dark mode CSS)
   _default/about.html        # About page override (bio card w/ accent border, Technical Skills categorized pills, Study Away grid, Coursework pills, collapsible Honors/Certs/Voluntary with counts)
   _default/projects.html     # Projects override (featured cards + text cards + GitHub JS fetch)
   _default/leadership.html   # Custom leadership timeline template with expand/collapse
@@ -168,4 +168,9 @@ description = "..."
 - [x] Homepage scrolling logo carousel restored with 26 items (14 row1 + 12 row2) using devicon icons + custom SVGs for Altium/Cadence
 - [x] tech.toml restructured: row1/row2 arrays for carousel + [[categories]] for About page (60 items, 10 categories)
 - [x] About page: added Technical Skills section with categorized pill tags between bio card and Study Away
+- [x] Homepage declutter: replaced 6-entry Experience timeline with single Education card (NYUAD only, not titled "Experience")
+- [x] Homepage declutter: simplified Projects section to 1 text card (FR3 Sensing) + "View All" link; removed GitHub mini-cards and JS fetch from homepage
+- [x] Homepage declutter: cleaned up dead CSS (project-card, aspect-w-16, line-clamp-2, blog-card, home-exp-* styles) and dead JS (toggleHomeExpDetails)
+- [x] experience.toml: NYUAD entry updated — GPA "3.64", capstone description updated, coursework bullet removed
+- [x] projects.toml: reordered — FR3 Sensing (capstone) first, Hisham FC last
 - [ ] Screenshots for 5 private projects (user will provide later)

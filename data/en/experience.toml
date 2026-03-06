@@ -7,10 +7,9 @@ company_link = "https://nyuad.nyu.edu/"
 period = "Aug 2022 - May 2026"
 country = "Abu Dhabi, UAE"
 responsibilities = [
-  "GPA: 3.641 (unofficial); official yet to be calculated.",
-  "Capstone: Integrated Sensing and Communication (ISAC) for 6G Networks under Prof. Marwa Chafii.",
+  "GPA: 3.64",
+  "Capstone: Machine learning-enabled multiband wireless sensing for activity recognition using FR3 spectrum CSI, under Prof. Marwa Chafii.",
   "Exchange at NYU New York (Spring 2025); J-term at NYU Florence (January 2024); Regional Academic Seminar at NYU Athens (Summer 2024).",
-  "Highlighted coursework: Real-Time Embedded Systems, Applied Machine Learning, Applied Optimization, Electronics, Control Systems Engineering, Analog & Digital Communication Theory, Advanced Digital Logic, Signals and Systems, Differential Geometry, Advanced Probability, Dynamical Systems, Abstract Algebra, PDEs, Design & Innovation, Probability & Statistics.",
 ]
 technologies = []
 
