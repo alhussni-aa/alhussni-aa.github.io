@@ -86,6 +86,7 @@ courses = [
 [author]
 name = "Abdullah Alhussni"
 location = "Abu Dhabi, UAE"
+address = "NYU Abu Dhabi, P.O. Box 129188, Saadiyat Island, Abu Dhabi, UAE"
 description = "Wannabe polymath. Full-time caffeinator."
 profile_image = "/images/profile.jpg"
 
@@ -216,10 +217,31 @@ period = "Summer 2024"
 campus = "NYU Florence"
 period = "J-Term 2024"
 
+# Languages
+[[languages]]
+name = "Arabic (Syrian Levantine / Modern Standard Arabic)"
+level = "Native"
+
+[[languages]]
+name = "English"
+level = "Fluent"
+
+[[languages]]
+name = "French"
+level = "Intermediate"
+
+# Publications
+[[publications]]
+title = "Dynamic nuclear polarization: State of the art and future possibilities with light activation"
+authors = ""
+venue = ""
+year = ""
+url = ""
+
 [[voluntary]]
 organization = "IC @ NYU"
 url = ""
-role = ""
+role = "Volunteer"
 period = "Jan 2025 - May 2025"
 description = "Helped organize Juma'ah prayers and Ramadan iftars in New York."
 

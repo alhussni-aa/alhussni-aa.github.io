@@ -1,9 +1,20 @@
 # Experience data - from resume
 
 [[experience]]
+role = "Crew Member"
+company = "Khallouf Future Power"
+company_link = ""
+period = "Jun 2025"
+country = "Damascus, Syria"
+responsibilities = [
+  "Helped with the installation of hundreds of solar panels, inverters, batteries, and cables across 10 different factories and houses in Syria.",
+]
+technologies = []
+
+[[experience]]
 role = "Research Assistant"
 company = "Gelfand Research Group"
-company_link = ""
+company_link = "https://nyuad.nyu.edu/en/academics/divisions/science/faculty/joseph-gelfand.html"
 period = "May 2025 - Present"
 country = "Remote"
 responsibilities = [
@@ -16,7 +27,7 @@ role = "Admissions Ambassador"
 company = "NYU Abu Dhabi Admissions Office"
 company_link = "https://nyuad.nyu.edu/en/about/leadership-and-people/office-of-the-vice-chancellor/admissions.html"
 period = "Sep 2023 - Present"
-country = "Abu Dhabi, UAE"
+country = "Abu Dhabi, UAE / New York, USA"
 responsibilities = [
   "Area Lead for Marketing Communications (AY 23-24); Lead Ambassador for Budgeting and Scheduling (AY 25-26).",
   "Conducted campus tours, office hours, student panels, and pre-application advising sessions.",
@@ -50,7 +61,7 @@ period = "Jun 2023 - Jul 2024"
 country = "Abu Dhabi, UAE"
 responsibilities = [
   "Summer 2023: Worked with a team of 10+ graduate researchers on three topological quantum computing projects; contributed to writing mathematical proofs in Cubical Agda to formalize configuration spaces and braids.",
-  "Fall 2023, Spring 2024, and Summer 2024: Designed and optimized RF/optical hardware for nitrogen-vacancy (NV) center NMR/ESR spectroscopy; developed MATLAB models for spin system dynamics; prototyped light-activated DNP setups.",
+  "Fall 2023, Spring 2024, and Summer 2024 (interdisciplinary Quantum eXploration Lab): Designed and optimized RF/optical hardware for nitrogen-vacancy (NV) center NMR/ESR spectroscopy; developed MATLAB models for spin system dynamics; prototyped light-activated DNP setups.",
   "Co-authored peer-reviewed publication: \"Dynamic nuclear polarization: State of the art and future possibilities with light activation.\"",
 ]
 technologies = ["Cubical Agda", "MATLAB", "SpinQ"]
@@ -62,7 +73,7 @@ company_link = "https://www.dcagency.org/"
 period = "Sep 2020 - Sep 2023"
 country = "Remote"
 responsibilities = [
-  "Coached 20+ high school students preparing for national and international physics olympiad competitions; provided curriculum development, weekly training sessions, and exam preparation.",
+  "Coached 20+ high school students preparing for national and international physics olympiad competitions; provided curriculum development, weekly training sessions, and exam preparation (Dec 2021 - Jan 2022).",
   "Designed and administered three competitive exams to evaluate student progress and identify areas for improvement.",
   "Led intensive week-long summer camp coaching before EuPhO and IPhO 2022; mentored students who achieved 1 bronze medal and 4 honorable mentions at IPhO 2022.",
   "Maintained 2 hours/week online office hours to address student questions and provide personalized support.",

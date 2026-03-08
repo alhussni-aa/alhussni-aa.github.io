@@ -18,21 +18,27 @@ institution = "Syrian Physics Olympiad"
 institution_link = "https://www.dcagency.org/"
 degree = "National Team Member"
 period = "Jan 2019 - Jul 2021"
-country = "Syria"
+country = "Damascus, Syria"
 gpa = ""
 details = [
-  "Member of the Syrian national physics team for three consecutive years (2019, 2020, 2021).",
-  "Progressed from 17th nationally in 2019 to 5th in 2020, 3rd in the selection exam, and 1st in the final international team selection in 2021.",
-  "Represented Syria at the European Physics Olympiad (EuPhO 2020), International Distributed Physics Olympiad (IdPhO 2020), International Applied Physics Olympiad (IApPhO 2021), International Physics Olympiad (IPhO 2021), and Physics Cup 2021.",
-  "Earned an IPhO Bronze Medal, IApPhO Silver Medal, IdPhO Bronze Medal, EuPhO Honorable Mention, and Physics Cup Successful Participation Certificate.",
-  "Trained under intensive national camp programs covering mechanics, thermodynamics, electromagnetism, optics, modern physics, and experimental physics.",
+  "Syrian Physics Olympiad national team member: 2019, 2020, and 2021.",
+  "17th place in the 2019 national team selection.",
+  "5th place in the 2020 national team selection.",
+  "3rd place in the 2021 national team selection.",
+  "International team member: 2020 and 2021.",
+  "5th place in the 2020 international team selection.",
+  "1st place in the 2021 international team selection.",
+  "Attended weekly training sessions during 2019 for about three weekly hours, trained independently for approximately 20 weekly hours from 2019 to 2021, and participated in the 2019 Syrian Science Olympiad summer training camp.",
+  "Represented Syria internationally in many competitions (all online due to COVID-19): European Physics Olympiad (EuPhO) 2020 and 2021, International Distributed Physics Olympiad (IdPhO) 2020, International Applied Physics Olympiad (IApPhO) 2021, International Physics Olympiad (IPhO) 2021.",
+  "Participated in online competitions such as Physics Cup, Phystech, and Fyziklani.",
+  "Participated in online team competitions with fellow national team members, such as Online Physics Brawl and Online Physics Olympiad.",
 ]
 textbooks = [
-  "Serway — Physics for Scientists and Engineers",
+  "Serway & Jewett — Physics for Scientists and Engineers",
   "Kleppner & Kolenkow — An Introduction to Mechanics",
   "Griffiths — Introduction to Electrodynamics",
   "Hecht — Optics",
-  "Salloum — General Physics (Arabic)",
+  "Salloum — Thermodynamics",
   "Irodov — Problems in General Physics",
 ]
 
@@ -44,8 +50,9 @@ period = "Mar 2020 - Mar 2022"
 country = "Remote"
 gpa = ""
 details = [
-  "Completed a two-year preparatory program covering academic skills, leadership development, and career readiness.",
-  "Received ongoing mentorship and advising from program alumni and facilitators.",
+  "Completed a two-year preparatory program (now named Prep Program) for college applications.",
+  "First year dedicated to learning about college applications, improving English, preparing for standardized tests, with projects, assignments, and weekly meetings.",
+  "Received one-on-one mentorship in the second year to guide through the college application process.",
 ]
 
 [[education]]
@@ -56,7 +63,8 @@ period = "Oct 2020 - May 2021"
 country = "Remote"
 gpa = ""
 details = [
-  "Participated in a structured English tutoring and cultural exchange program connecting conflict-affected youth with volunteer tutors worldwide.",
+  "Selected to participate in a one-year immersive program and was matched with a tutor to learn English (reading, writing, and speaking).",
+  "Exposed to different cultures and experiences to enhance cultural understanding and improve cultural sensitivity.",
 ]
 
 # Standardized Tests

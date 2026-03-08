@@ -15,6 +15,7 @@ github = ""
 link = ""
 image = ""
 tech = "Python, MATLAB"
+date = "Aug 2025 - Present"
 
 [[projects]]
 title = "Robotic Arm 3D Design"
@@ -23,6 +24,7 @@ github = ""
 link = ""
 image = ""
 tech = "SOLIDWORKS"
+date = "Oct 2025"
 
 [[projects]]
 title = "IC 10 Analysis"
@@ -31,6 +33,16 @@ github = ""
 link = ""
 image = ""
 tech = "Python, Astropy"
+date = "May 2025 - Present"
+
+[[projects]]
+title = "ACS Hackathon — Smart Grid Optimizer"
+description = "A prototype for a weather-aware smart grid optimizer using reinforcement learning. Framework and website only."
+github = ""
+link = ""
+image = ""
+tech = "Python, Reinforcement Learning"
+date = ""
 
 [[projects]]
 title = "Visual Branch-and-Price"
@@ -39,6 +51,7 @@ github = ""
 link = ""
 image = ""
 tech = "Python, Google OR-Tools, tkinter"
+date = ""
 
 [[projects]]
 title = "Office Scheduler"
@@ -47,6 +60,7 @@ github = ""
 link = ""
 image = ""
 tech = "Python, Google OR-Tools"
+date = ""
 
 [[projects]]
 title = "CQTS AWG Experiments"
@@ -55,6 +69,7 @@ github = ""
 link = ""
 image = ""
 tech = "MATLAB"
+date = "Jun 2023 - Jul 2024"
 
 [[projects]]
 title = "PID Motor Controller"
@@ -63,6 +78,7 @@ github = ""
 link = ""
 image = ""
 tech = "Arduino"
+date = "Dec 2023"
 
 [[projects]]
 title = "Dryer Monitoring 3000"
@@ -71,6 +87,7 @@ github = ""
 link = ""
 image = ""
 tech = "ESP32, IoT, Home Assistant"
+date = "Jan 2023"
 
 # --- Public projects (GitHub repos) ---
 
@@ -81,6 +98,7 @@ github = "Shake-Rattle-and-Roll"
 link = ""
 image = ""
 tech = "C, STM32, PlatformIO"
+date = "May 2025"
 
 [[projects]]
 title = "ECG Heart Monitor"
@@ -89,6 +107,7 @@ github = "ECG-Heart-Monitor"
 link = ""
 image = ""
 tech = "PCB Design, Altium Designer"
+date = "Dec 2024"
 
 [[projects]]
 title = "FPGA Microprocessor"
@@ -97,6 +116,7 @@ github = "fpga-microprocessor"
 link = ""
 image = ""
 tech = "VHDL, FPGA"
+date = "May 2024"
 
 [[projects]]
 title = "Room Designer 3000"
@@ -105,6 +125,7 @@ github = "room-designer-3000"
 link = ""
 image = ""
 tech = "C#, Unity"
+date = "Dec 2022"
 
 [[projects]]
 title = "Tic-Tac-Toe on a Budget"
@@ -113,6 +134,7 @@ github = "tictactoe-on-budget"
 link = ""
 image = ""
 tech = "C++"
+date = ""
 
 # --- Creative / artistic ---
 

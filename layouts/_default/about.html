@@ -43,6 +43,56 @@
     </section>
     {{ end }}
 
+    <!-- Languages -->
+    {{ with $authorData.languages }}
+    <section class="mb-6">
+        <div class="bg-bg-primary-light dark:bg-bg-secondary-dark rounded-lg border border-border-primary-light dark:border-border-primary-dark overflow-hidden">
+            <div class="px-6 pt-5 pb-3 border-b border-border-primary-light dark:border-border-primary-dark">
+                <h2 class="text-lg font-bold text-text-primary-light dark:text-text-primary-dark flex items-center gap-2.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent-light dark:text-accent-dark"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                    Languages
+                </h2>
+            </div>
+            <div class="p-4 flex flex-wrap gap-2">
+                {{ range . }}
+                <span class="px-3 py-1.5 text-sm font-medium rounded-full border border-border-primary-light dark:border-border-primary-dark text-text-primary-light dark:text-text-primary-dark bg-bg-primary-light dark:bg-bg-tertiary-dark">
+                    {{ .name }} <span class="text-text-secondary-light dark:text-text-secondary-dark font-normal">&mdash; {{ .level }}</span>
+                </span>
+                {{ end }}
+            </div>
+        </div>
+    </section>
+    {{ end }}
+
+    <!-- Publications -->
+    {{ with $authorData.publications }}
+    <section class="mb-6">
+        <div class="bg-bg-primary-light dark:bg-bg-secondary-dark rounded-lg border border-border-primary-light dark:border-border-primary-dark overflow-hidden">
+            <div class="px-6 pt-5 pb-3 border-b border-border-primary-light dark:border-border-primary-dark">
+                <h2 class="text-lg font-bold text-text-primary-light dark:text-text-primary-dark flex items-center gap-2.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent-light dark:text-accent-dark"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
+                    Publications
+                </h2>
+            </div>
+            <div class="divide-y divide-border-primary-light dark:divide-border-primary-dark">
+                {{ range . }}
+                <div class="px-6 py-3.5">
+                    <div class="text-sm font-medium text-text-primary-light dark:text-text-primary-dark">
+                        {{ if and .url (ne .url "") }}
+                        <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="hover:text-accent-light dark:hover:text-accent-dark transition-colors underline underline-offset-2">{{ .title }}</a>
+                        {{ else }}
+                        {{ .title }}
+                        {{ end }}
+                    </div>
+                    {{ with .authors }}<p class="text-xs text-text-secondary-light dark:text-text-secondary-dark mt-0.5">{{ . }}</p>{{ end }}
+                    {{ with .venue }}<p class="text-xs text-text-secondary-light dark:text-text-secondary-dark">{{ . }}{{ with $.year }} ({{ . }}){{ end }}</p>{{ end }}
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </section>
+    {{ end }}
+
     <!-- Honors & Awards -->
     {{ with $authorData.honors }}
     {{ $totalHonors := len . }}

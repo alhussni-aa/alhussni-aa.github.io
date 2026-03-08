@@ -6,6 +6,20 @@
     {{ with $author }}
     <div class="bg-bg-primary-light dark:bg-bg-secondary-dark p-8 rounded-lg border border-border-primary-light dark:border-border-primary-dark">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <!-- Address -->
+            {{ with .address }}
+            <div class="contact-link flex items-center gap-4 p-4 rounded-lg bg-bg-primary-light dark:bg-bg-secondary-dark transition-all duration-300">
+                <svg class="w-7 h-7 text-text-secondary-light dark:text-text-secondary-dark shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.75">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+                <div class="min-w-0">
+                    <div class="text-text-secondary-light dark:text-text-secondary-dark transition-colors duration-300 truncate">Address</div>
+                    <div class="text-sm text-text-tertiary-light dark:text-text-tertiary-dark">{{ . }}</div>
+                </div>
+            </div>
+            {{ end }}
+
             <!-- University Email -->
             {{ with .email }}
             <a href="mailto:{{ . }}" class="contact-link flex items-center gap-4 p-4 rounded-lg bg-bg-primary-light dark:bg-bg-secondary-dark transition-all duration-300">
