@@ -208,6 +208,9 @@ description = "..."
 - [x] README.md rewritten with setup instructions, clone command, dev server, build, deployment info; fixed theme link to prxshetty/hugo-noir
 - [x] Hugo binary copied to ~/.local/bin/hugo; tarball leftovers cleaned from home directory
 - [ ] Screenshots for private projects (user will provide later)
+- [x] Fix stale `stackoverflow` URL in hugo.toml — changed to `stackexchange` key with correct Stack Exchange network profile URL
+- [x] Clean `themes/hugo-noir` submodule dirty state — restored `config.toml` and `package-lock.json` that were showing as deleted
+- [ ] Re-add Blog to nav menu when first post is published (infrastructure ready: `_index.md` + `_template.md` exist)
 
 ## Screenshots TODO (for private project pages)
 
