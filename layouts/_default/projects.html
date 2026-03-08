@@ -14,10 +14,13 @@
         {{ $hasLink := and .link (ne .link "") }}
         {{ $hasImage := and .image (ne .image "") }}
         {{ $cardLink := "" }}
+        {{ $isExternal := false }}
         {{ if $hasGithub }}
             {{ $cardLink = printf "https://github.com/%s/%s" $githubUsername .github }}
+            {{ $isExternal = true }}
         {{ else if $hasLink }}
             {{ $cardLink = .link }}
+            {{ if hasPrefix .link "http" }}{{ $isExternal = true }}{{ end }}
         {{ end }}
 
         <div class="project-card group rounded-lg border border-border-primary-light dark:border-border-primary-dark bg-bg-primary-light dark:bg-bg-secondary-dark overflow-hidden transition-all duration-300 hover:border-accent-light/50 dark:hover:border-accent-dark/50 hover:shadow-lg flex flex-col">
@@ -25,7 +28,7 @@
             {{ if $hasImage }}
             <div class="w-full aspect-video overflow-hidden">
                 {{ if $cardLink }}
-                <a href="{{ $cardLink }}" target="_blank" rel="noopener noreferrer">
+                <a href="{{ $cardLink }}"{{ if $isExternal }} target="_blank" rel="noopener noreferrer"{{ end }}>
                     <img src="{{ .image }}" alt="{{ .title }}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                 </a>
                 {{ else }}
@@ -39,7 +42,7 @@
                 <div class="flex items-start justify-between mb-2">
                     <h3 class="text-base md:text-lg font-semibold text-accent-light dark:text-accent-dark truncate pr-2">
                         {{ if $cardLink }}
-                        <a href="{{ $cardLink }}" target="_blank" rel="noopener noreferrer" class="hover:underline">{{ .title }}</a>
+                        <a href="{{ $cardLink }}"{{ if $isExternal }} target="_blank" rel="noopener noreferrer"{{ end }} class="hover:underline">{{ .title }}</a>
                         {{ else }}
                         {{ .title }}
                         {{ end }}
@@ -52,7 +55,7 @@
                             </svg>
                         </a>
                         {{ else if $hasLink }}
-                        <a href="{{ $cardLink }}" target="_blank" rel="noopener noreferrer">
+                        <a href="{{ $cardLink }}"{{ if $isExternal }} target="_blank" rel="noopener noreferrer"{{ end }}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-text-secondary-light dark:text-text-secondary-dark opacity-50 group-hover:opacity-100 transition-opacity">
                                 <path d="M7 17l9.2-9.2M17 17V7H7"/>
                             </svg>
