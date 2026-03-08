@@ -7,13 +7,13 @@ Personal portfolio site for Abdullah Alhussni, built with Hugo + the `hugo-noir`
 ## Hard Rules
 
 - **NEVER modify files under `themes/hugo-noir/`** — use Hugo layout overrides in `layouts/`
-- GitHub repos are fetched **client-side via JS** (not build-time, not static TOML data)
+- All projects live in `projects.toml` — public repos have a `github` field that links to GitHub; private projects will link to dedicated pages (with screenshots) once created
 - Altium Designer and Cadence Virtuoso use **custom SVG images** (Devicon has no icons for them)
 - Primary email: `aa10108@nyu.edu` (same as `abdullah.alhussni@nyu.edu`); personal: `alhussni.aa@gmail.com`
 - GPA is **3.641** (not 3.74)
 - Leadership is a **separate page** from Experience — has its own template + data file
+- Education is a **separate page** from Experience — NYUAD lives in education.toml, not experience.toml
 - Motto/description: **"Wannabe polymath. Full-time caffeinator."**
-- Only 5 public repos in GitHub section (skip homework forks)
 - CppCheckers is **commented out** in projects.toml per user request
 
 ## Architecture
@@ -21,26 +21,29 @@ Personal portfolio site for Abdullah Alhussni, built with Hugo + the `hugo-noir`
 ```
 hugo.toml                    # Master config: site params, nav menu, social links
 data/en/
-  author.toml                # Author bio, social links, coursework[], honors[], certifications[], voluntary[], study_away[]
-  experience.toml            # 6 entries: NYUAD, Gelfand, NYU Admissions, Weyak, CQTS, Physics Olympiad
+  author.toml                # Author bio, social links, honors[], certifications[], voluntary[] (coursework + study_away moved to education page via course_categories[])
+  education.toml             # 4 education entries (NYUAD, Physics Olympiad, SYE, Paper Airplanes) + 4 standardized tests
+  experience.toml            # 5 entries: Gelfand, NYU Admissions, Weyak, CQTS, Physics Olympiad Coach
   leadership.toml            # 7 entries: MSA, ASA, Al-Diwan, SYE, Al Muntaha, Paper Airplanes
-  projects.toml              # 1 featured (Hisham FC w/ image) + 9 text-only cards + 1 commented out (no overlap with github.toml)
-  github.toml                # username + 5 repo names (fetched client-side)
+  projects.toml              # 15 project cards (9 private + 5 public GitHub + 1 featured) + 1 commented out; public repos have `github` field
+  github.toml                # GitHub username only (used to build repo URLs)
   tech.toml                  # Skills — row1/row2 (41 carousel items for homepage) + 10 categories, ~73 items (categorized pills on About page)
   blogs.toml                 # Blog metadata (empty — no posts yet)
 content/en/
   _index.md                  # Homepage
   about.md                   # Bio, capstone, research (layout: "about")
+  education.md               # Stub for education page (layout: "education")
   experience.md              # Stub for experience page
   leadership.md              # Stub for leadership page
   projects.md                # Stub for projects page
   contact.md                 # Contact page
   blogs/                     # Blog posts (markdown)
 layouts/
-  index.html                 # Homepage override (scrolling logo carousel, single Education card from experience[0], single project text card, dark mode CSS)
-  _default/about.html        # About page override (bio card w/ accent border, Technical Skills categorized pills, Study Away grid, Coursework pills, collapsible Honors/Certs/Voluntary with counts)
-  _default/projects.html     # Projects override (featured cards + text cards + GitHub JS fetch)
+  index.html                 # Homepage override (scrolling logo carousel, single Education card from education[0], single project text card, dark mode CSS)
+  _default/about.html        # About page override (bio card w/ accent border, Technical Skills categorized pills, collapsible Honors/Certs/Voluntary with counts)
+  _default/projects.html     # Projects override (unified grid: text cards + featured image cards; public repos link to GitHub, private link to pages)
   _default/leadership.html   # Custom leadership timeline template with expand/collapse
+  _default/education.html    # Custom education timeline with expand/collapse, coursework pills (NYUAD), textbooks (Physics Olympiad), standardized tests grid
   _default/experience.html   # Custom experience timeline (no stat boxes) with expand/collapse
   _default/contact.html      # Custom contact page with 12 icon cards (3 emails, 1 phone, 8 socials incl. ORCID + Telegram) from author.toml
 static/images/icons/
@@ -50,6 +53,25 @@ static/images/icons/
 ```
 
 ## Data File Schemas
+
+### education.toml
+```toml
+[[education]]
+institution = "..."
+institution_link = "..."
+degree = "..."
+period = "..."
+country = "..."
+gpa = ""                # optional, only NYUAD has this
+details = ["...", "..."]
+textbooks = ["...", "..."]  # optional, only Physics Olympiad has this
+
+[[tests]]
+name = "..."
+score = "..."
+breakdown = ""          # optional sub-scores
+date = ""
+```
 
 ### experience.toml
 ```toml
@@ -78,7 +100,8 @@ responsibilities = ["...", "..."]
 [[projects]]
 title = "..."
 description = "..."
-link = ""           # empty for private
+github = ""         # repo name for public repos (e.g. "fpga-microprocessor"); empty for private
+link = ""           # external URL (e.g. Hisham FC Google Sites link); empty for most
 image = ""          # empty = compact text card; non-empty = full image card
 tech = "Python, MATLAB"
 ```
@@ -86,7 +109,6 @@ tech = "Python, MATLAB"
 ### github.toml
 ```toml
 username = "alhussni-aa"
-repos = ["repo-name-1", "repo-name-2"]
 ```
 
 ### author.toml (arrays)
@@ -127,10 +149,11 @@ description = "..."
 
 - [x] Full resume data populated (experience, leadership, about, honors, certs, volunteering)
 - [x] Projects page: featured image cards + private text-only cards + GitHub API fetch
+- [x] Projects page unified: all projects in projects.toml, public repos have `github` field, no separate GitHub API section
 - [x] Leadership page with custom timeline template + expand/collapse toggle
 - [x] Experience page with custom timeline template (no stat boxes) + expand/collapse toggle
 - [x] Contact page with 10 icon cards (3 emails, 1 phone, 6 socials) from author.toml
-- [x] Nav menu with 5 sections (About, Experience, Leadership, Projects, Contact)
+- [x] Nav menu with 6 sections (About, Education, Experience, Leadership, Projects, Contact)
 - [x] Altium/Cadence Virtuoso custom SVG icons with cropped viewBoxes
 - [x] Dark mode CSS fix for custom SVG icons (`filter: invert(1)`)
 - [x] GitHub Actions workflow for Hugo + Pages deployment
@@ -173,4 +196,30 @@ description = "..."
 - [x] Homepage declutter: cleaned up dead CSS (project-card, aspect-w-16, line-clamp-2, blog-card, home-exp-* styles) and dead JS (toggleHomeExpDetails)
 - [x] experience.toml: NYUAD entry updated — GPA "3.64", capstone description updated, coursework bullet removed
 - [x] projects.toml: reordered — FR3 Sensing (capstone) first, Hisham FC last
-- [ ] Screenshots for 5 private projects (user will provide later)
+- [x] Projects page fully unified: merged 5 GitHub repos into projects.toml with `github` field; removed client-side API fetch; single grid with cards linking to GitHub (public) or pages (private); Hisham FC (artistic) at bottom
+- [x] Education page: separate from Experience with custom timeline template, expand/collapse, NYUAD coursework pills from author.toml, Physics Olympiad textbooks, standardized tests grid
+- [x] education.toml created: 4 education entries (NYUAD, Physics Olympiad, SYE, Paper Airplanes) + 4 standardized tests (IELTS, SAT, DET, TOEFL)
+- [x] NYUAD moved from experience.toml to education.toml; experience.toml now has 5 entries (Gelfand, NYU Admissions, Weyak, CQTS, Physics Olympiad Coach)
+- [x] Homepage Education card updated to read from education.toml instead of experience[0]
+- [x] About page: removed Study Away and Coursework sections (now only on Education page under NYUAD)
+- [x] Removed 5 redundant courses from author.toml (Physics, Chemistry, Biology, Physics Lab, Chemistry Lab — all part of "Foundations of Science 1 & 2")
+- [x] All expand/collapse sections now collapsed by default on Education, Experience, and Leadership pages
+- [x] Deleted unused Node.js scaffolding: package.json, tailwind.config.js, node_modules/ (theme uses Tailwind CDN)
+- [x] README.md rewritten with setup instructions, clone command, dev server, build, deployment info; fixed theme link to prxshetty/hugo-noir
+- [x] Hugo binary copied to ~/.local/bin/hugo; tarball leftovers cleaned from home directory
+- [ ] Screenshots for private projects (user will provide later)
+
+## Screenshots TODO (for private project pages)
+
+When ready, drop images in `static/images/projects/` and set `image = "/images/projects/..."` + `link = "/projects/..."` in projects.toml.
+
+| Project | What to include | Status |
+|---------|----------------|--------|
+| FR3 Sensing (capstone) | Photo of the SDR/USRP setup; confusion matrix plot | Pending |
+| IC 10 Analysis | Light curve plot | Pending |
+| Robotic Arm 3D Design | SOLIDWORKS renders, assembly views, exploded views | Pending |
+| PID Motor Controller | Position/response graph | Pending |
+| CQTS AWG Experiments | Waveform/spin dynamics plots | Pending |
+| Dryer Monitoring 3000 | Photos/diagrams from the report | Pending |
+| Visual Branch-and-Price | May go public (github field) instead | Pending decision |
+| Office Scheduler | May go public (github field) instead | Pending decision |

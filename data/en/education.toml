@@ -1,0 +1,85 @@
+# Education data
+
+[[education]]
+institution = "New York University Abu Dhabi"
+institution_link = "https://nyuad.nyu.edu/"
+degree = "BSc Electrical Engineering & Mathematics"
+period = "Aug 2022 - May 2026"
+country = "Abu Dhabi, UAE"
+gpa = "3.641"
+details = [
+  "Capstone: Machine learning-enabled multiband wireless sensing for activity recognition using FR3 spectrum CSI, under Prof. Marwa Chafii and Dr. Roberto Bomfin.",
+  "Exchange at NYU New York (Spring 2025); J-term at NYU Florence (January 2024); Regional Academic Seminar at NYU Athens (Summer 2024).",
+]
+# Coursework is rendered from author.toml course_categories (referenced in the education template)
+
+[[education]]
+institution = "Syrian Physics Olympiad"
+institution_link = ""
+degree = "National Team Member"
+period = "Jan 2019 - Jul 2021"
+country = "Syria"
+gpa = ""
+details = [
+  "Member of the Syrian national physics team for three consecutive years (2019, 2020, 2021).",
+  "Progressed from 17th nationally in 2019 to 5th in 2020, 3rd in the selection exam, and 1st in the final international team selection in 2021.",
+  "Represented Syria at the European Physics Olympiad (EuPhO 2020), International Distributed Physics Olympiad (IdPhO 2020), International Applied Physics Olympiad (IApPhO 2021), International Physics Olympiad (IPhO 2021), and Physics Cup 2021.",
+  "Earned an IPhO Bronze Medal, IApPhO Silver Medal, IdPhO Bronze Medal, EuPhO Honorable Mention, and Physics Cup Successful Participation Certificate.",
+  "Trained under intensive national camp programs covering mechanics, thermodynamics, electromagnetism, optics, modern physics, and experimental physics.",
+]
+textbooks = [
+  "Serway — Physics for Scientists and Engineers",
+  "Kleppner & Kolenkow — An Introduction to Mechanics",
+  "Griffiths — Introduction to Electrodynamics",
+  "Hecht — Optics",
+  "Salloum — General Physics (Arabic)",
+  "Irodov — Problems in General Physics",
+]
+
+[[education]]
+institution = "Syrian Youth Empowerment Initiative (SYE)"
+institution_link = ""
+degree = "Participant"
+period = "Mar 2020 - Mar 2022"
+country = "Remote"
+gpa = ""
+details = [
+  "Completed a two-year preparatory program covering academic skills, leadership development, and career readiness.",
+  "Received ongoing mentorship and advising from program alumni and facilitators.",
+]
+
+[[education]]
+institution = "Paper Airplanes Youth Exchange Program"
+institution_link = "https://www.paperairplanes.org/"
+degree = "Participant"
+period = "Oct 2020 - May 2021"
+country = "Remote"
+gpa = ""
+details = [
+  "Participated in a structured English tutoring and cultural exchange program connecting conflict-affected youth with volunteer tutors worldwide.",
+]
+
+# Standardized Tests
+[[tests]]
+name = "IELTS Academic"
+score = "8.5 / 9"
+breakdown = ""
+date = ""
+
+[[tests]]
+name = "SAT"
+score = "1520 / 1600"
+breakdown = "EBRW 720, Math 800"
+date = ""
+
+[[tests]]
+name = "Duolingo English Test (DET)"
+score = "140 / 160"
+breakdown = ""
+date = ""
+
+[[tests]]
+name = "TOEFL iBT"
+score = "104 / 120"
+breakdown = ""
+date = ""

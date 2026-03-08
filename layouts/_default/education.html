@@ -1,0 +1,179 @@
+{{ define "main" }}
+<div class="max-w-4xl mx-auto px-4 py-12">
+    <h1 class="text-5xl font-bold mb-8 text-text-primary-light dark:text-text-primary-dark">{{ .Title }}</h1>
+
+    <!-- Education Timeline -->
+    <div class="space-y-8">
+        {{ $educationData := index site.Data .Language.Lang "education" }}
+        {{ with $educationData.education }}
+            {{ range $i, $entry := . }}
+            <div class="edu-card group relative pl-8 before:content-[''] before:absolute before:left-0 before:top-0 before:w-[2px] before:h-full before:bg-border-secondary-light dark:before:bg-border-secondary-dark before:rounded-full">
+                <div class="absolute -left-1.5 top-0 w-2 h-2 bg-border-secondary-light dark:bg-border-secondary-dark rounded-full"></div>
+                <div class="p-6 rounded-lg bg-bg-primary-light dark:bg-bg-secondary-dark transition-all duration-300 border border-border-primary-light dark:border-border-primary-dark">
+                    <div class="edu-header flex items-start justify-between cursor-pointer" onclick="toggleEduDetails(this)">
+                        <div class="flex-grow">
+                            {{ if .institution }}
+                            <div class="text-text-secondary-light dark:text-text-secondary-dark text-lg mb-1">
+                                {{ if .institution_link }}
+                                <a href="{{ .institution_link }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xl font-medium text-text-secondary-light dark:text-text-secondary-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors duration-200" onclick="event.stopPropagation()">
+                                    {{ .institution }}
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-70 hover:opacity-100 transition-opacity duration-200">
+                                        <path d="M7 17l9.2-9.2M17 17V7H7"/>
+                                    </svg>
+                                </a>
+                                {{ else }}
+                                    <span class="text-xl font-medium">{{ .institution }}</span>
+                                {{ end }}
+                            </div>
+                            {{ end }}
+                            <h3 class="text-3xl font-semibold text-text-primary-light dark:text-text-primary-dark mb-1">{{ .degree }}</h3>
+                            <div class="text-text-secondary-light dark:text-text-secondary-dark text-lg">{{ .period }}</div>
+                            {{ if .country }}
+                            <div class="text-text-secondary-light dark:text-text-secondary-dark text-lg">{{ .country }}</div>
+                            {{ end }}
+                            {{ if .gpa }}
+                            <div class="text-text-secondary-light dark:text-text-secondary-dark text-lg mt-1">GPA: {{ .gpa }}</div>
+                            {{ end }}
+                        </div>
+                        {{ if or .details .textbooks }}
+                        <button class="toggle-edu p-1 text-text-secondary-light dark:text-text-secondary-dark hover:text-text-primary-light dark:hover:text-text-primary-dark transition-all duration-300 shrink-0 mt-1" aria-label="Toggle details">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        {{ end }}
+                    </div>
+                    <div class="edu-details collapsed">
+                        {{ if .details }}
+                        <div class="mt-4">
+                            <ul class="list-disc list-outside ml-5 space-y-2">
+                                {{ range .details }}
+                                <li class="text-text-secondary-light dark:text-text-secondary-dark text-lg leading-relaxed">{{ . }}</li>
+                                {{ end }}
+                            </ul>
+                        </div>
+                        {{ end }}
+
+                        {{/* Study Away — only for NYUAD (first entry) */}}
+                        {{ if eq $i 0 }}
+                        {{ $authorData := index site.Data $.Language.Lang "author" }}
+                        {{ with $authorData.study_away }}
+                        <div class="mt-6">
+                            <h4 class="text-xl font-semibold text-text-primary-light dark:text-text-primary-dark mb-3">Study Away</h4>
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                                {{ range . }}
+                                <div class="px-4 py-3 rounded-lg border border-border-primary-light dark:border-border-primary-dark bg-bg-primary-light dark:bg-bg-tertiary-dark">
+                                    <span class="text-sm font-semibold text-text-primary-light dark:text-text-primary-dark block">{{ .campus }}</span>
+                                    <span class="text-xs text-text-secondary-light dark:text-text-secondary-dark">{{ .period }}</span>
+                                </div>
+                                {{ end }}
+                            </div>
+                        </div>
+                        {{ end }}
+                        {{ end }}
+
+                        {{/* Coursework pills — only for NYUAD (first entry) */}}
+                        {{ if eq $i 0 }}
+                        {{ $authorData := index site.Data $.Language.Lang "author" }}
+                        {{ with $authorData.course_categories }}
+                        <div class="mt-6">
+                            <h4 class="text-xl font-semibold text-text-primary-light dark:text-text-primary-dark mb-3">Coursework</h4>
+                            {{ range . }}
+                            <div class="mb-4">
+                                <h5 class="text-lg font-medium text-text-secondary-light dark:text-text-secondary-dark mb-2">{{ .name }}</h5>
+                                <div class="flex flex-wrap gap-2">
+                                    {{ range .courses }}
+                                    <span class="px-3 py-1 text-sm bg-bg-primary-light dark:bg-bg-tertiary-dark text-text-secondary-light dark:text-text-secondary-dark rounded-full border border-border-primary-light dark:border-border-primary-dark">{{ . }}</span>
+                                    {{ end }}
+                                </div>
+                            </div>
+                            {{ end }}
+                        </div>
+                        {{ end }}
+                        {{ end }}
+
+                        {{/* Textbooks — for Physics Olympiad */}}
+                        {{ with .textbooks }}
+                        <div class="mt-6">
+                            <h4 class="text-xl font-semibold text-text-primary-light dark:text-text-primary-dark mb-3">Textbooks</h4>
+                            <ul class="list-disc list-outside ml-5 space-y-1">
+                                {{ range . }}
+                                <li class="text-text-secondary-light dark:text-text-secondary-dark text-lg leading-relaxed">{{ . }}</li>
+                                {{ end }}
+                            </ul>
+                        </div>
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+        {{ else }}
+            <div class="text-text-secondary-light dark:text-text-secondary-dark p-6 bg-bg-primary-light dark:bg-bg-secondary-dark rounded-lg border border-border-primary-light dark:border-border-primary-dark">
+                <p class="text-center">No education data found.</p>
+            </div>
+        {{ end }}
+    </div>
+
+    <!-- Standardized Tests -->
+    {{ $educationData := index site.Data .Language.Lang "education" }}
+    {{ with $educationData.tests }}
+    <div class="mt-12">
+        <h2 class="text-3xl font-bold mb-6 text-text-primary-light dark:text-text-primary-dark">Standardized Tests</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {{ range . }}
+            <div class="p-5 rounded-lg bg-bg-primary-light dark:bg-bg-secondary-dark border border-border-primary-light dark:border-border-primary-dark">
+                <h3 class="text-xl font-semibold text-text-primary-light dark:text-text-primary-dark mb-1">{{ .name }}</h3>
+                <div class="text-2xl font-bold text-accent-light dark:text-accent-dark">{{ .score }}</div>
+                {{ if .breakdown }}
+                <div class="text-text-secondary-light dark:text-text-secondary-dark text-sm mt-1">{{ .breakdown }}</div>
+                {{ end }}
+            </div>
+            {{ end }}
+        </div>
+    </div>
+    {{ end }}
+</div>
+
+<style>
+    .edu-details {
+        max-height: 5000px;
+        overflow: hidden;
+        transition: max-height 0.4s ease-in-out, opacity 0.3s ease, margin 0.3s ease;
+        opacity: 1;
+    }
+    .edu-details.collapsed {
+        max-height: 0;
+        opacity: 0;
+        margin-top: 0 !important;
+    }
+    .toggle-edu {
+        transition: transform 0.3s ease;
+        cursor: pointer;
+        background: none;
+        border: none;
+    }
+    .toggle-edu.rotated {
+        transform: rotate(180deg);
+    }
+    .edu-header {
+        user-select: none;
+    }
+    .edu-header a {
+        user-select: auto;
+    }
+</style>
+
+<script>
+function toggleEduDetails(header) {
+    var card = header.closest('.edu-card');
+    var details = card.querySelector('.edu-details');
+    var btn = card.querySelector('.toggle-edu');
+    if (details) {
+        details.classList.toggle('collapsed');
+    }
+    if (btn) {
+        btn.classList.toggle('rotated');
+    }
+}
+</script>
+{{ end }}

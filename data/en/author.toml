@@ -16,11 +16,6 @@ courses = [
   "Design and Innovation",
   "Computer Programming for Engineers",
   "Foundations of Science 1 & 2",
-  "Physics",
-  "Chemistry",
-  "Biology",
-  "Physics Lab",
-  "Chemistry Lab",
 ]
 
 [[course_categories]]

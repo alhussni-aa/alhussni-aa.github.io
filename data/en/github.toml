@@ -1,11 +1,2 @@
-# GitHub repositories to display on the projects page
-# Fetched client-side via GitHub API
-
+# GitHub username — used to construct repo URLs for public projects in projects.toml
 username = "alhussni-aa"
-repos = [
-  "room-designer-3000",
-  "tictactoe-on-budget",
-  "ECG-Heart-Monitor",
-  "Shake-Rattle-and-Roll",
-  "fpga-microprocessor",
-]

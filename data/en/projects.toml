@@ -1,11 +1,17 @@
 # Projects data file
-# Projects with an image get a featured card; projects without get a compact text card
-# Projects that have public GitHub repos are in github.toml (fetched client-side via API)
-# Order: capstone first, engineering projects, then creative/art at the end
+# Every project lives here. Public repos have a `github` field (repo name) which
+# makes the card link to GitHub. Private projects have no `github` field and will
+# eventually link to dedicated pages with screenshots.
+#
+# `image` is optional — projects with images get a featured card treatment.
+# Order: capstone first, engineering, then creative/artistic at the end.
+
+# --- Private projects (no public GitHub repo) ---
 
 [[projects]]
 title = "FR3 Sensing"
 description = "Capstone project — Machine learning-enabled multiband wireless sensing for activity recognition using FR3 spectrum CSI, under Prof. Marwa Chafii and Dr. Roberto Bomfin."
+github = ""
 link = ""
 image = ""
 tech = "Python, MATLAB"
@@ -13,20 +19,15 @@ tech = "Python, MATLAB"
 [[projects]]
 title = "Robotic Arm 3D Design"
 description = "Optimized the design of the first joint of a robotic arm for manufacturability. Designed 3D-printable components in SOLIDWORKS."
+github = ""
 link = ""
 image = ""
 tech = "SOLIDWORKS"
 
 [[projects]]
-title = "Parkinson's Symptoms Detector"
-description = "Developed an embedded sensor fusion system using STM32L4 (gyroscope/accelerometer) to detect Parkinson's disease dyskinesia and tremor. Implemented real-time signal processing in C with PlatformIO."
-link = ""
-image = ""
-tech = "C, STM32, PlatformIO"
-
-[[projects]]
 title = "IC 10 Analysis"
 description = "Gelfand Research Group — scripts to analyze variable sources in dwarf galaxy IC 10 by cross-matching LCO observations and constructing light curves."
+github = ""
 link = ""
 image = ""
 tech = "Python, Astropy"
@@ -34,6 +35,7 @@ tech = "Python, Astropy"
 [[projects]]
 title = "Visual Branch-and-Price"
 description = "A branch-and-price algorithm simulator for educational purposes for operations research classes. Shows a tree and lets you split at any variable."
+github = ""
 link = ""
 image = ""
 tech = "Python, Google OR-Tools, tkinter"
@@ -41,6 +43,7 @@ tech = "Python, Google OR-Tools, tkinter"
 [[projects]]
 title = "Office Scheduler"
 description = "An app to schedule shifts for an office under specific constraints — availability, fairness, consecutive shifts, etc. Uses CP-SAT from Google OR-Tools."
+github = ""
 link = ""
 image = ""
 tech = "Python, Google OR-Tools"
@@ -48,6 +51,7 @@ tech = "Python, Google OR-Tools"
 [[projects]]
 title = "CQTS AWG Experiments"
 description = "CQTS research — MATLAB code to study the time-dependent Schrodinger equation governing qubit evolution and generate ideal waveforms for exciting multi-spin-particle systems."
+github = ""
 link = ""
 image = ""
 tech = "MATLAB"
@@ -55,6 +59,7 @@ tech = "MATLAB"
 [[projects]]
 title = "PID Motor Controller"
 description = "Implemented a PID controller to control the position of a DC motor shaft, using an optical encoder and an Arduino board."
+github = ""
 link = ""
 image = ""
 tech = "Arduino"
@@ -62,13 +67,59 @@ tech = "Arduino"
 [[projects]]
 title = "Dryer Monitoring 3000"
 description = "IoT project for solving laundry problems on campus at NYUAD. End-to-end system using Seeed Studio XIAO ESP32C3 and DHT11 to detect dryer cycle completion and notify users via email/SMS."
+github = ""
 link = ""
 image = ""
 tech = "ESP32, IoT, Home Assistant"
 
+# --- Public projects (GitHub repos) ---
+
+[[projects]]
+title = "Parkinson's Symptoms Detector"
+description = "Real-time embedded sensor fusion system using STM32L4 (gyroscope/accelerometer) to detect Parkinson's disease dyskinesia and tremor. Implemented real-time signal processing in C with PlatformIO."
+github = "Shake-Rattle-and-Roll"
+link = ""
+image = ""
+tech = "C, STM32, PlatformIO"
+
+[[projects]]
+title = "ECG Heart Monitor"
+description = "PCB design for an ECG heart rate monitor. Electronics (ENGR-UH 3611) project."
+github = "ECG-Heart-Monitor"
+link = ""
+image = ""
+tech = "PCB Design, Altium Designer"
+
+[[projects]]
+title = "FPGA Microprocessor"
+description = "14-bit RISC microprocessor designed in VHDL with FPGA integration. Advanced Digital Logic (ENGR-UH 2310) project."
+github = "fpga-microprocessor"
+link = ""
+image = ""
+tech = "VHDL, FPGA"
+
+[[projects]]
+title = "Room Designer 3000"
+description = "Rearranging furniture made easy — an interactive room layout planner. Team project for Computer Programming for Engineers (ENGR-UH 1000)."
+github = "room-designer-3000"
+link = ""
+image = ""
+tech = "C#, Unity"
+
+[[projects]]
+title = "Tic-Tac-Toe on a Budget"
+description = "The famous game Tic-Tac-Toe, made with C++."
+github = "tictactoe-on-budget"
+link = ""
+image = ""
+tech = "C++"
+
+# --- Creative / artistic ---
+
 [[projects]]
 title = "Hisham FC"
 description = "Creative project. A website for our intramurals football club."
+github = ""
 link = "https://sites.google.com/nyu.edu/hisham/"
 image = "/images/hisham.jpg"
 tech = ""
@@ -76,6 +127,7 @@ tech = ""
 # [[projects]]
 # title = "CppCheckers"
 # description = "The famous American checkers, programmed in C++."
+# github = ""
 # link = ""
 # image = ""
 # tech = "C++"

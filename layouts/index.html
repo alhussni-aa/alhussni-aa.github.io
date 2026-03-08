@@ -110,42 +110,45 @@
         {{ warnf "No tech stack data found for language %q. Please define either data/%s/tech.(yaml|toml|json) or params.tech in config." .Language.Lang }}
     {{ end }}
 
-    <!-- Education Section (first entry from experience.toml = NYUAD) -->
-    {{ $experienceData := index site.Data .Language.Lang "experience" }}
-    {{ $experience := cond (and $experienceData $experienceData.experience) $experienceData.experience site.Params.experience }}
+    <!-- Education Section (first entry from education.toml = NYUAD) -->
+    {{ $educationData := index site.Data .Language.Lang "education" }}
+    {{ $education := cond (and $educationData $educationData.education) $educationData.education site.Params.education }}
 
-    {{ with $experience }}
+    {{ with $education }}
     {{ $edu := index . 0 }}
     <section>
         <h2 class="text-4xl font-bold mb-5">Education</h2>
         <div class="max-w-3xl mx-auto">
             <div class="p-5 rounded-lg bg-bg-primary-light dark:bg-bg-secondary-dark border border-border-primary-light dark:border-border-primary-dark">
                 <!-- University name + link -->
-                {{ if $edu.company }}
+                {{ if $edu.institution }}
                 <div class="text-text-secondary-light dark:text-text-secondary-dark text-lg mb-1">
-                    {{ if $edu.company_link }}
-                    <a href="{{ $edu.company_link }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 font-medium text-text-secondary-light dark:text-text-secondary-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors duration-200">
-                        {{ $edu.company }}
+                    {{ if $edu.institution_link }}
+                    <a href="{{ $edu.institution_link }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 font-medium text-text-secondary-light dark:text-text-secondary-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors duration-200">
+                        {{ $edu.institution }}
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-70 hover:opacity-100 transition-opacity duration-200">
                             <path d="M7 17l9.2-9.2M17 17V7H7"/>
                         </svg>
                     </a>
                     {{ else }}
-                        <span class="font-medium">{{ $edu.company }}</span>
+                        <span class="font-medium">{{ $edu.institution }}</span>
                     {{ end }}
                 </div>
                 {{ end }}
                 <!-- Degree -->
-                <h3 class="text-2xl font-semibold text-text-primary-light dark:text-text-primary-dark mb-1">{{ $edu.role }}</h3>
+                <h3 class="text-2xl font-semibold text-text-primary-light dark:text-text-primary-dark mb-1">{{ $edu.degree }}</h3>
                 <!-- Period + Country -->
                 <div class="text-text-secondary-light dark:text-text-secondary-dark">{{ $edu.period }}</div>
                 {{ if $edu.country }}
                 <div class="text-text-secondary-light dark:text-text-secondary-dark text-sm mb-3">{{ $edu.country }}</div>
                 {{ end }}
-                <!-- Responsibilities (GPA, Capstone, Study Away) -->
-                {{ if $edu.responsibilities }}
+                {{ if $edu.gpa }}
+                <div class="text-text-secondary-light dark:text-text-secondary-dark text-sm mb-3">GPA: {{ $edu.gpa }}</div>
+                {{ end }}
+                <!-- Details (Capstone, Study Away) -->
+                {{ if $edu.details }}
                 <ul class="list-disc list-outside ml-5 space-y-2 mt-2">
-                    {{ range $edu.responsibilities }}
+                    {{ range $edu.details }}
                     <li class="text-text-secondary-light dark:text-text-secondary-dark leading-relaxed">{{ . }}</li>
                     {{ end }}
                 </ul>
