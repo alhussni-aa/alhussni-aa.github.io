@@ -15,7 +15,7 @@ details = [
 
 [[education]]
 institution = "Syrian Physics Olympiad"
-institution_link = ""
+institution_link = "https://www.dcagency.org/"
 degree = "National Team Member"
 period = "Jan 2019 - Jul 2021"
 country = "Syria"
@@ -38,7 +38,7 @@ textbooks = [
 
 [[education]]
 institution = "Syrian Youth Empowerment Initiative (SYE)"
-institution_link = ""
+institution_link = "https://www.sye-initiative.org/"
 degree = "Participant"
 period = "Mar 2020 - Mar 2022"
 country = "Remote"

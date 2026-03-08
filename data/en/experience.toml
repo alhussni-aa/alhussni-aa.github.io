@@ -58,7 +58,7 @@ technologies = ["Cubical Agda", "MATLAB", "SpinQ"]
 [[experience]]
 role = "Senior Physics Coach"
 company = "Distinction and Creativity Agency - Syrian Physics Olympiad"
-company_link = ""
+company_link = "https://www.dcagency.org/"
 period = "Sep 2020 - Sep 2023"
 country = "Remote"
 responsibilities = [
