@@ -233,10 +233,10 @@ level = "Intermediate"
 # Publications
 [[publications]]
 title = "Dynamic nuclear polarization: State of the art and future possibilities with light activation"
-authors = ""
-venue = ""
-year = ""
-url = ""
+authors = "A. Javed, R. Jabbour, S. V. Sadasivan, S. Alsaghir, A. Alhussni, M. Jhamnani, A. Equbal"
+venue = "Chemical Physics Reviews"
+year = "2025"
+url = "https://pubs.aip.org/aip/cpr/article-abstract/6/2/021301/3342775/Dynamic-nuclear-polarization-State-of-the-art-and"
 
 [[voluntary]]
 organization = "IC @ NYU"

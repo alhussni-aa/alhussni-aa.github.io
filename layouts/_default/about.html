@@ -74,20 +74,14 @@
                     Publications
                 </h2>
             </div>
-            <div class="divide-y divide-border-primary-light dark:divide-border-primary-dark">
-                {{ range . }}
-                <div class="px-6 py-3.5">
-                    <div class="text-sm font-medium text-text-primary-light dark:text-text-primary-dark">
-                        {{ if and .url (ne .url "") }}
-                        <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="hover:text-accent-light dark:hover:text-accent-dark transition-colors underline underline-offset-2">{{ .title }}</a>
-                        {{ else }}
-                        {{ .title }}
-                        {{ end }}
-                    </div>
-                    {{ with .authors }}<p class="text-xs text-text-secondary-light dark:text-text-secondary-dark mt-0.5">{{ . }}</p>{{ end }}
-                    {{ with .venue }}<p class="text-xs text-text-secondary-light dark:text-text-secondary-dark">{{ . }}{{ with $.year }} ({{ . }}){{ end }}</p>{{ end }}
-                </div>
-                {{ end }}
+            <div class="px-6 py-4">
+                <ul class="list-disc list-outside ml-4 space-y-3">
+                    {{ range . }}
+                    <li class="text-sm text-text-primary-light dark:text-text-primary-dark">
+                        {{ with .authors }}<span class="text-text-secondary-light dark:text-text-secondary-dark">{{ . }}</span> {{ end }}{{ if and .url (ne .url "") }}<a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="font-medium hover:text-accent-light dark:hover:text-accent-dark transition-colors underline underline-offset-2">"{{ .title }}"</a>{{ else }}<span class="font-medium">"{{ .title }}"</span>{{ end }}{{ if or .venue .year }}, <span class="text-text-secondary-light dark:text-text-secondary-dark italic">{{ .venue }}{{ with .year }} ({{ . }}){{ end }}</span>{{ end }}.
+                    </li>
+                    {{ end }}
+                </ul>
             </div>
         </div>
     </section>
