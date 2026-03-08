@@ -153,13 +153,13 @@ date = "2023"
 
 # Certifications (displayed on About page)
 [[certifications]]
-title = "MATLAB Onramp"
-url = "https://matlabacademy.mathworks.com/progress/share/certificate.html?id=c0271aa4-cf93-4f59-8c04-dd495e9a0149"
+title = "Simulink Onramp"
+url = ""
 date = "2023"
 
 [[certifications]]
-title = "Simulink Onramp"
-url = "https://matlabacademy.mathworks.com/progress/share/certificate.html?id=7bbff5a1-4d46-4b1d-a5d6-14dc413e4a03"
+title = "Simscape Onramp"
+url = ""
 date = "2023"
 
 [[certifications]]
