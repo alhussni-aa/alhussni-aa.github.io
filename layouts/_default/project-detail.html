@@ -1,0 +1,158 @@
+{{ define "main" }}
+<div class="max-w-4xl mx-auto px-4 py-12">
+    <!-- Back link -->
+    <a href="{{ "projects" | relURL }}" class="inline-flex items-center gap-1.5 text-sm text-text-secondary-light dark:text-text-secondary-dark hover:text-accent-light dark:hover:text-accent-dark transition-colors mb-6">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+        Back to Projects
+    </a>
+
+    <!-- Title -->
+    <h1 class="text-4xl md:text-5xl font-bold mb-3 text-text-primary-light dark:text-text-primary-dark">{{ .Title }}</h1>
+    {{ with .Description }}
+    <p class="text-lg text-text-secondary-light dark:text-text-secondary-dark mb-10">{{ . }}</p>
+    {{ end }}
+
+    <!-- Content -->
+    <article class="project-prose">
+        {{ .Content }}
+    </article>
+</div>
+
+<style>
+    /* Project prose styling */
+    .project-prose {
+        font-size: 1.05rem;
+        line-height: 1.8;
+        color: #374151;
+    }
+    html.dark .project-prose {
+        color: #d1d5db;
+    }
+
+    /* Headings */
+    .project-prose h2 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-top: 2.5rem;
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid #e5e7eb;
+        color: #111827;
+    }
+    html.dark .project-prose h2 {
+        border-bottom-color: #374151;
+        color: #f3f4f6;
+    }
+    .project-prose h3 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-top: 1.75rem;
+        margin-bottom: 0.75rem;
+        color: #111827;
+    }
+    html.dark .project-prose h3 {
+        color: #f3f4f6;
+    }
+
+    /* Paragraphs */
+    .project-prose p {
+        margin-bottom: 1.25rem;
+    }
+
+    /* Bold */
+    .project-prose strong {
+        font-weight: 600;
+        color: #111827;
+    }
+    html.dark .project-prose strong {
+        color: #f3f4f6;
+    }
+
+    /* Links */
+    .project-prose a {
+        color: #0284c7;
+        text-decoration: underline;
+        text-underline-offset: 2px;
+    }
+    html.dark .project-prose a {
+        color: #38bdf8;
+    }
+
+    /* Lists */
+    .project-prose ul {
+        list-style-type: disc;
+        padding-left: 1.5rem;
+        margin-bottom: 1.25rem;
+    }
+    .project-prose ol {
+        list-style-type: decimal;
+        padding-left: 1.5rem;
+        margin-bottom: 1.25rem;
+    }
+    .project-prose li {
+        margin-bottom: 0.5rem;
+    }
+
+    /* Horizontal rule */
+    .project-prose hr {
+        border: none;
+        border-top: 1px solid #e5e7eb;
+        margin: 2rem 0;
+    }
+    html.dark .project-prose hr {
+        border-top-color: #374151;
+    }
+
+    /* Images */
+    .project-prose img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 0.5rem;
+        border: 1px solid #e5e7eb;
+        margin: 1rem 0 1.5rem 0;
+    }
+    html.dark .project-prose img {
+        border-color: #374151;
+    }
+
+    /* Tables */
+    .project-prose table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 1.5rem;
+        font-size: 0.95rem;
+    }
+    .project-prose th,
+    .project-prose td {
+        padding: 0.625rem 1rem;
+        text-align: left;
+        border-bottom: 1px solid #e5e7eb;
+    }
+    html.dark .project-prose th,
+    html.dark .project-prose td {
+        border-bottom-color: #374151;
+    }
+    .project-prose th {
+        font-weight: 600;
+        color: #111827;
+        background: #f9fafb;
+    }
+    html.dark .project-prose th {
+        color: #f3f4f6;
+        background: #1f2937;
+    }
+
+    /* Code */
+    .project-prose code {
+        font-size: 0.9em;
+        padding: 0.15em 0.4em;
+        border-radius: 0.25rem;
+        background: #f3f4f6;
+        color: #111827;
+    }
+    html.dark .project-prose code {
+        background: #1f2937;
+        color: #f3f4f6;
+    }
+</style>
+{{ end }}
