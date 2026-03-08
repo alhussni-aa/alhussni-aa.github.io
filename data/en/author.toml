@@ -153,12 +153,22 @@ date = "2023"
 
 # Certifications (displayed on About page)
 [[certifications]]
+title = "MATLAB Onramp"
+url = ""
+date = "2023"
+
+[[certifications]]
 title = "Simulink Onramp"
 url = ""
 date = "2023"
 
 [[certifications]]
 title = "Simscape Onramp"
+url = ""
+date = "2023"
+
+[[certifications]]
+title = "Solving Ordinary Differential Equations with MATLAB"
 url = ""
 date = "2023"
 
