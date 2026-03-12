@@ -8,20 +8,7 @@
     <!-- Primary -->
     <h2 class="text-2xl font-semibold mb-4 text-text-primary-light dark:text-text-primary-dark">Primary</h2>
     <div class="bg-bg-primary-light dark:bg-bg-secondary-dark p-8 rounded-lg border border-border-primary-light dark:border-border-primary-dark mb-10">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <!-- Email -->
-            {{ with .email }}
-            <a href="mailto:{{ . }}" class="contact-link flex items-center gap-4 p-4 rounded-lg bg-bg-primary-light dark:bg-bg-secondary-dark transition-all duration-300">
-                <svg class="w-7 h-7 text-text-secondary-light dark:text-text-secondary-dark shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.75">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                </svg>
-                <div class="min-w-0">
-                    <div class="text-text-secondary-light dark:text-text-secondary-dark hover:text-text-primary-light dark:hover:text-text-primary-dark transition-colors duration-300 truncate">Email</div>
-                    <div class="text-sm text-text-tertiary-light dark:text-text-tertiary-dark truncate">{{ . }}</div>
-                </div>
-            </a>
-            {{ end }}
-
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
             <!-- GitHub -->
             {{ with .github }}
             <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="contact-link flex items-center gap-4 p-4 rounded-lg bg-bg-primary-light dark:bg-bg-secondary-dark transition-all duration-300">
@@ -34,6 +21,32 @@
                 </div>
             </a>
             {{ end }}
+
+            <!-- University Email -->
+            {{ with .email_nyu }}
+            <a href="mailto:{{ . }}" class="contact-link flex items-center gap-4 p-4 rounded-lg bg-bg-primary-light dark:bg-bg-secondary-dark transition-all duration-300">
+                <svg class="w-7 h-7 text-text-secondary-light dark:text-text-secondary-dark shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.75">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+                <div class="min-w-0">
+                    <div class="text-text-secondary-light dark:text-text-secondary-dark hover:text-text-primary-light dark:hover:text-text-primary-dark transition-colors duration-300 truncate">University Email</div>
+                    <div class="text-sm text-text-tertiary-light dark:text-text-tertiary-dark truncate">{{ . }}</div>
+                </div>
+            </a>
+            {{ end }}
+
+            <!-- Professional Email -->
+            {{ with .email }}
+            <a href="mailto:{{ . }}" class="contact-link flex items-center gap-4 p-4 rounded-lg bg-bg-primary-light dark:bg-bg-secondary-dark transition-all duration-300">
+                <svg class="w-7 h-7 text-text-secondary-light dark:text-text-secondary-dark shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.75">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+                <div class="min-w-0">
+                    <div class="text-text-secondary-light dark:text-text-secondary-dark hover:text-text-primary-light dark:hover:text-text-primary-dark transition-colors duration-300 truncate">Professional Email</div>
+                    <div class="text-sm text-text-tertiary-light dark:text-text-tertiary-dark truncate">{{ . }}</div>
+                </div>
+            </a>
+            {{ end }}
         </div>
     </div>
 
@@ -41,6 +54,19 @@
     <h2 class="text-2xl font-semibold mb-4 text-text-primary-light dark:text-text-primary-dark">Additional</h2>
     <div class="bg-bg-primary-light dark:bg-bg-secondary-dark p-8 rounded-lg border border-border-primary-light dark:border-border-primary-dark">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <!-- Outlook Email -->
+            {{ with .email_outlook }}
+            <a href="mailto:{{ . }}" class="contact-link flex items-center gap-4 p-4 rounded-lg bg-bg-primary-light dark:bg-bg-secondary-dark transition-all duration-300">
+                <svg class="w-7 h-7 text-text-secondary-light dark:text-text-secondary-dark shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.75">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+                <div class="min-w-0">
+                    <div class="text-text-secondary-light dark:text-text-secondary-dark hover:text-text-primary-light dark:hover:text-text-primary-dark transition-colors duration-300 truncate">Outlook Email</div>
+                    <div class="text-sm text-text-tertiary-light dark:text-text-tertiary-dark truncate">{{ . }}</div>
+                </div>
+            </a>
+            {{ end }}
+
             <!-- Phone UAE -->
             {{ with .phone_uae }}
             <a href="tel:{{ replace . " " "" }}" class="contact-link flex items-center gap-4 p-4 rounded-lg bg-bg-primary-light dark:bg-bg-secondary-dark transition-all duration-300">
