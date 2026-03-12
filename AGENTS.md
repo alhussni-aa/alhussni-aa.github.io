@@ -10,7 +10,7 @@ Personal portfolio site for Abdullah Alhussni, built with Hugo + the `hugo-noir`
 - All projects live in `projects.toml` — public repos have a `github` field that links to GitHub; private projects will link to dedicated pages (with screenshots) once created
 - Altium Designer and Cadence Virtuoso use **custom SVG images** (Devicon has no icons for them)
 - Primary email: `aa10108@nyu.edu` (same as `abdullah.alhussni@nyu.edu`); personal: `alhussni.aa@gmail.com`
-- GPA is **3.641** (not 3.74)
+- GPA is **3.64** (not 3.74)
 - Leadership is a **separate page** from Experience — has its own template + data file
 - Education is a **separate page** from Experience — NYUAD lives in education.toml, not experience.toml
 - Motto/description: **"Wannabe polymath. Full-time caffeinator."**
