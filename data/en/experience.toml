@@ -1,7 +1,7 @@
 # Experience data - from resume
 
 [[experience]]
-role = "Crew Member"
+role = "Installation Assistant"
 company = "Khallouf Future Power"
 company_link = ""
 period = "Jun 2025"
@@ -45,11 +45,8 @@ period = "Aug 2024 - Dec 2024"
 country = "Abu Dhabi, UAE"
 responsibilities = [
   "Supported 10+ first-year students through comprehensive college transition programming, delivering 6 curriculum sessions covering self-discovery, wellness, intercultural competency, conflict transformation, and campus resource familiarization.",
-  "Led orientation and Marhaba Week activities, including welcome sessions, social media campaigns, city outings, and chaperone duties.",
-  "Organized community-building events, floor meetings, and off-campus excursions to deepen students' engagement with UAE culture and campus community.",
+  "Led orientation and Marhaba Week activities, including welcome sessions, social media campaigns, city outings, and chaperone duties; facilitated mandatory onboarding for incoming cohorts.",
   "Conducted individual check-ins and provided ongoing mentorship, emotional support, and conflict mediation within the residential community.",
-  "Collaborated with First-Year RAs and peer Weyak Facilitators to create an inclusive, supportive living and learning community.",
-  "Participated in comprehensive staff training, administrative coordination, and program planning to ensure program quality and student success.",
 ]
 technologies = []
 
@@ -61,10 +58,12 @@ period = "Jun 2023 - Jul 2024"
 country = "Abu Dhabi, UAE"
 responsibilities = [
   "Summer 2023: Worked with a team of 10+ graduate researchers on three topological quantum computing projects; contributed to writing mathematical proofs in Cubical Agda to formalize configuration spaces and braids.",
-  "Fall 2023, Spring 2024, and Summer 2024 (interdisciplinary Quantum eXploration Lab): Designed and optimized RF/optical hardware for nitrogen-vacancy (NV) center NMR/ESR spectroscopy; developed MATLAB models for spin system dynamics; prototyped light-activated DNP setups.",
+  "Fall 2023, Spring 2024, and Summer 2024 (interdisciplinary Quantum eXploration Lab): Simulated and optimized Dynamic Nuclear Polarization (DNP) pulse sequences using the Spinach library on High-Performance Computing (HPC) clusters.",
+  "Applied Optimal Control Theory and the GRAPE algorithm to design power- and time-efficient pulses for selective excitation in multi-spin systems.",
+  "Assisted in the procurement and assembly of a quantum diamond spectrometer for NV-center NMR/ESR spectroscopy, based on established literature (Bucher et al.).",
   "Co-authored peer-reviewed publication: \"Dynamic nuclear polarization: State of the art and future possibilities with light activation.\"",
 ]
-technologies = ["Cubical Agda", "MATLAB", "SpinQ"]
+technologies = ["Cubical Agda", "MATLAB", "Spinach"]
 
 [[experience]]
 role = "Senior Physics Coach"

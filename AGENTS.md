@@ -122,6 +122,7 @@ date = "..."
 title = "..."
 url = "..."
 date = "..."
+group = "technical"   # or "professional" — used to split certs into two groups on About page
 
 [[voluntary]]
 organization = "..."
@@ -211,6 +212,21 @@ description = "..."
 - [x] Fix stale `stackoverflow` URL in hugo.toml — changed to `stackexchange` key with correct Stack Exchange network profile URL
 - [x] Clean `themes/hugo-noir` submodule dirty state — restored `config.toml` and `package-lock.json` that were showing as deleted
 - [ ] Re-add Blog to nav menu when first post is published (infrastructure ready: `_index.md` + `_template.md` exist)
+- [x] Resume audit: 40-item cross-check between master resume and site data; fixed GPA, degree, KFP role, CQTS description (Spinach, HPC, GRAPE), Weyak trimmed, MSA/ASA text, Python cert
+- [x] Coursework restructured: "EECS Electives" and "Optional Electives" categories; correct ordering
+- [x] Project descriptions enhanced: FR3 Sensing, ECG Heart Monitor, FPGA Microprocessor, Room Designer 3000 (VR/Oculus), Dryer Monitoring 3000 (humidity/QR/3D-printed casing)
+- [x] Simscape added to tech.toml Scientific Computing & ML category
+- [x] Skills tiered: `tier = "proficient"` / `tier = "familiar"` field on each `[[categories]]` in tech.toml; About page template renders two sections with dot indicators
+- [x] Certifications grouped: `group = "technical"` / `group = "professional"` field on each `[[certifications]]` in author.toml; About page template renders two sub-sections with headers
+- [x] About page template updated: removed flat cert collapse (show more/less), replaced with grouped layout; skills rendered under Proficient/Familiar headers
+- [x] author.toml: 9 honors, 12 certifications (7 technical + 5 professional), 7 voluntary, 3 study_away
+
+## Future Work
+
+- **Interests section**: Add an Interests/Hobbies section to the About page or a dedicated page (football, coffee, reading, etc.)
+- **Extracurriculars section**: Consider a section for non-leadership extracurriculars (intramural sports, clubs, etc.)
+- **Career Summary / Objective**: Consider adding a brief career objective or summary to the homepage or About page
+- **Blog posts**: Infrastructure is ready (`_index.md` + `_template.md`); re-add Blog to nav menu when first post is published
 
 ## Screenshots TODO (for private project pages)
 

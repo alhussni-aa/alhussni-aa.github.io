@@ -21,10 +21,6 @@ courses = [
 [[course_categories]]
 name = "Electrical Engineering"
 courses = [
-  "Real-Time Embedded Systems (Graduate Level)",
-  "Electric Energy Conversion Systems",
-  "Applied Optimization",
-  "Applied Machine Learning",
   "Electronics",
   "Analog and Digital Communication Theory",
   "Advanced Circuits",
@@ -33,6 +29,22 @@ courses = [
   "Signals and Systems",
   "Electricity and Magnetism",
   "Fundamentals of Complex Variables",
+]
+
+[[course_categories]]
+name = "EECS Electives"
+courses = [
+  "Real-Time Embedded Systems (Graduate Level)",
+  "Electric Energy Conversion Systems",
+  "Applied Optimization",
+  "Applied Machine Learning",
+]
+
+[[course_categories]]
+name = "Optional Electives"
+courses = [
+  "Advanced AI and Machine Learning",
+  "Computer-Aided Design",
 ]
 
 [[course_categories]]
@@ -52,13 +64,6 @@ courses = [
   "Multivariable Calculus",
   "Linear Algebra",
   "Ordinary Differential Equations",
-]
-
-[[course_categories]]
-name = "General Electives"
-courses = [
-  "Advanced AI and Machine Learning",
-  "Computer-Aided Design",
 ]
 
 [[course_categories]]
@@ -156,61 +161,73 @@ date = "2023"
 title = "MATLAB Onramp"
 url = ""
 date = "2023"
+group = "technical"
 
 [[certifications]]
 title = "Simulink Onramp"
 url = ""
 date = "2023"
+group = "technical"
 
 [[certifications]]
 title = "Simscape Onramp"
 url = ""
 date = "2023"
+group = "technical"
 
 [[certifications]]
 title = "Solving Ordinary Differential Equations with MATLAB"
 url = ""
 date = "2023"
+group = "technical"
 
 [[certifications]]
 title = "CSWA (Certified SOLIDWORKS Associate)"
 url = ""
 date = ""
-
-[[certifications]]
-title = "Customer Service Excellence — Spearhead Training"
-url = ""
-date = ""
-
-[[certifications]]
-title = "Photoshop (Advanced)"
-url = ""
-date = ""
-
-[[certifications]]
-title = "CorelDRAW"
-url = ""
-date = ""
+group = "technical"
 
 [[certifications]]
 title = "Electronics (Advanced, Screens, and Troubleshooting)"
 url = ""
 date = ""
+group = "technical"
 
 [[certifications]]
-title = "Python (Beginner)"
+title = "Python (Beginner) (Online)"
 url = ""
 date = ""
+group = "technical"
+
+[[certifications]]
+title = "Customer Service Excellence — Spearhead Training"
+url = ""
+date = ""
+group = "professional"
+
+[[certifications]]
+title = "Photoshop (Advanced)"
+url = ""
+date = ""
+group = "professional"
+
+[[certifications]]
+title = "CorelDRAW"
+url = ""
+date = ""
+group = "professional"
 
 [[certifications]]
 title = "Accountancy (Beginner)"
 url = ""
 date = ""
+group = "professional"
 
 [[certifications]]
 title = "Abu Dhabi Volunteering License"
 url = ""
 date = ""
+group = "professional"
 
 # Voluntary Work (displayed on About page)
 

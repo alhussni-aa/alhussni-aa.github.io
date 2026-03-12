@@ -55,40 +55,50 @@ row2 = [
 
 [[categories]]
 name = "Programming"
+tier = "proficient"
 items = ["C++", "Python", "C", "C#", "VHDL", "Embedded C", "HTML", "Markdown", "Cubical Agda", "Bash"]
 
 [[categories]]
 name = "Scientific Computing & ML"
-items = ["PyTorch", "Keras", "scikit-learn", "NumPy", "Pandas", "Matplotlib", "MATLAB", "Simulink", "Anaconda", "Jupyter", "Kaggle", "GAMS", "Google OR-Tools", "PyPSA"]
+tier = "proficient"
+items = ["PyTorch", "Keras", "scikit-learn", "NumPy", "Pandas", "Matplotlib", "MATLAB", "Simulink", "Simscape", "Anaconda", "Jupyter", "Kaggle", "GAMS", "Google OR-Tools", "PyPSA"]
 
 [[categories]]
 name = "Electronics & EDA"
+tier = "proficient"
 items = ["Altium Designer", "Cadence Virtuoso", "LTspice", "KiCAD", "OpenDSS", "Sonnet Lite", "GNU Radio", "PCB Design & Soldering", "Digital & Analog Electronics Repair", "PlatformIO"]
 
 [[categories]]
 name = "MCUs & Embedded"
+tier = "proficient"
 items = ["Arduino", "ESP32", "ATOM LITE", "STM32", "Raspberry Pi", "FPGA Programming"]
 
 [[categories]]
-name = "Robotics, Simulation & VR"
-items = ["ROS & ROS2", "Rviz", "Gazebo", "Unity", "VR Design & Oculus Quest Programming", "Home Assistant"]
-
-[[categories]]
 name = "3D Design / CAD"
+tier = "proficient"
 items = ["SOLIDWORKS", "Blender", "OnShape", "Fusion 360"]
 
 [[categories]]
 name = "Tools & Systems"
+tier = "proficient"
 items = ["Git", "GitHub", "Docker", "Visual Studio Code", "Neovim", "LaTeX", "Overleaf", "Hugo", "Linux", "Ubuntu", "Kali Linux"]
 
 [[categories]]
+name = "Robotics, Simulation & VR"
+tier = "familiar"
+items = ["ROS & ROS2", "Rviz", "Gazebo", "Unity", "VR Design & Oculus Quest Programming", "Home Assistant"]
+
+[[categories]]
 name = "Creative & Design"
+tier = "familiar"
 items = ["Adobe Creative Suite", "Adobe Photoshop", "Adobe Illustrator", "Inkscape", "Canva", "CorelDRAW", "GIMP"]
 
 [[categories]]
 name = "Productivity"
+tier = "familiar"
 items = ["Microsoft Office", "Microsoft Word", "Microsoft Excel", "Microsoft PowerPoint", "Google Workspace", "Slate (Admissions CRM)", "WhenToWork (Employee Scheduling)"]
 
 [[categories]]
 name = "Other"
+tier = "familiar"
 items = ["Accountancy", "Touch Typing (+70 WPM)"]

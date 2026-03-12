@@ -27,17 +27,49 @@
                     Technical Skills
                 </h2>
             </div>
-            <div class="p-4 space-y-3">
-                {{ range . }}
+            <div class="p-4 space-y-4">
+                <!-- Proficient tier -->
                 <div>
-                    <h3 class="text-xs font-semibold text-text-secondary-light dark:text-text-secondary-dark uppercase tracking-wider mb-1.5">{{ .name }}</h3>
-                    <div class="flex flex-wrap gap-1.5">
-                        {{ range .items }}
-                        <span class="px-2.5 py-1 text-xs font-medium rounded-full border border-border-primary-light dark:border-border-primary-dark text-text-secondary-light dark:text-text-secondary-dark bg-bg-primary-light dark:bg-bg-tertiary-dark">{{ . }}</span>
+                    <h3 class="text-sm font-bold text-text-primary-light dark:text-text-primary-dark mb-2 flex items-center gap-1.5">
+                        <span class="inline-block w-2 h-2 rounded-full bg-accent-light dark:bg-accent-dark"></span>
+                        Proficient
+                    </h3>
+                    <div class="space-y-3 ml-3.5">
+                        {{ range . }}
+                        {{ if eq .tier "proficient" }}
+                        <div>
+                            <h4 class="text-xs font-semibold text-text-secondary-light dark:text-text-secondary-dark uppercase tracking-wider mb-1.5">{{ .name }}</h4>
+                            <div class="flex flex-wrap gap-1.5">
+                                {{ range .items }}
+                                <span class="px-2.5 py-1 text-xs font-medium rounded-full border border-border-primary-light dark:border-border-primary-dark text-text-secondary-light dark:text-text-secondary-dark bg-bg-primary-light dark:bg-bg-tertiary-dark">{{ . }}</span>
+                                {{ end }}
+                            </div>
+                        </div>
+                        {{ end }}
                         {{ end }}
                     </div>
                 </div>
-                {{ end }}
+                <!-- Familiar tier -->
+                <div class="pt-3 border-t border-border-primary-light dark:border-border-primary-dark">
+                    <h3 class="text-sm font-bold text-text-primary-light dark:text-text-primary-dark mb-2 flex items-center gap-1.5">
+                        <span class="inline-block w-2 h-2 rounded-full bg-text-secondary-light dark:bg-text-secondary-dark opacity-50"></span>
+                        Familiar
+                    </h3>
+                    <div class="space-y-3 ml-3.5">
+                        {{ range . }}
+                        {{ if eq .tier "familiar" }}
+                        <div>
+                            <h4 class="text-xs font-semibold text-text-secondary-light dark:text-text-secondary-dark uppercase tracking-wider mb-1.5">{{ .name }}</h4>
+                            <div class="flex flex-wrap gap-1.5">
+                                {{ range .items }}
+                                <span class="px-2.5 py-1 text-xs font-medium rounded-full border border-border-primary-light dark:border-border-primary-dark text-text-secondary-light dark:text-text-secondary-dark bg-bg-primary-light dark:bg-bg-tertiary-dark">{{ . }}</span>
+                                {{ end }}
+                            </div>
+                        </div>
+                        {{ end }}
+                        {{ end }}
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -125,8 +157,10 @@
 
     <!-- Certifications -->
     {{ with $authorData.certifications }}
-    {{ $totalCerts := len . }}
-    {{ $certPreview := 6 }}
+    {{ $allCerts := . }}
+    {{ $techCerts := where . "group" "technical" }}
+    {{ $profCerts := where . "group" "professional" }}
+    {{ $totalCerts := len $allCerts }}
     <section class="mb-6">
         <div class="bg-bg-primary-light dark:bg-bg-secondary-dark rounded-lg border border-border-primary-light dark:border-border-primary-dark overflow-hidden">
             <div class="px-6 pt-5 pb-3 border-b border-border-primary-light dark:border-border-primary-dark">
@@ -136,12 +170,16 @@
                     <span class="text-xs font-normal text-text-secondary-light dark:text-text-secondary-dark ml-1">{{ $totalCerts }}</span>
                 </h2>
             </div>
+            <!-- Technical -->
+            {{ with $techCerts }}
+            <div class="px-6 pt-3 pb-1">
+                <h3 class="text-xs font-semibold text-text-secondary-light dark:text-text-secondary-dark uppercase tracking-wider">Technical</h3>
+            </div>
             <div class="grid grid-cols-1 md:grid-cols-2">
                 {{ range $i, $cert := . }}
-                {{ $isHidden := ge $i $certPreview }}
                 {{ if and .url (ne .url "") }}
                 <a href="{{ .url }}" target="_blank" rel="noopener noreferrer"
-                   class="cert-item group flex items-center justify-between px-6 py-3 border-b border-border-primary-light dark:border-border-primary-dark hover:bg-bg-secondary-light dark:hover:bg-bg-tertiary-dark transition-colors duration-200 {{ if (modBool $i 2) }}md:border-l{{ end }} {{ if $isHidden }}certs-hidden{{ end }}">
+                   class="cert-item group flex items-center justify-between px-6 py-3 border-b border-border-primary-light dark:border-border-primary-dark hover:bg-bg-secondary-light dark:hover:bg-bg-tertiary-dark transition-colors duration-200 {{ if (modBool $i 2) }}md:border-l{{ end }}">
                     <div class="flex flex-col min-w-0">
                         <span class="text-sm font-medium text-text-primary-light dark:text-text-primary-dark group-hover:text-accent-light dark:group-hover:text-accent-dark transition-colors truncate">{{ .title }}</span>
                         {{ with .date }}<span class="text-xs text-text-secondary-light dark:text-text-secondary-dark">{{ . }}</span>{{ end }}
@@ -151,7 +189,7 @@
                     </svg>
                 </a>
                 {{ else }}
-                <div class="cert-item flex items-center px-6 py-3 border-b border-border-primary-light dark:border-border-primary-dark {{ if (modBool $i 2) }}md:border-l{{ end }} {{ if $isHidden }}certs-hidden{{ end }}">
+                <div class="cert-item flex items-center px-6 py-3 border-b border-border-primary-light dark:border-border-primary-dark {{ if (modBool $i 2) }}md:border-l{{ end }}">
                     <div class="flex flex-col min-w-0">
                         <span class="text-sm font-medium text-text-primary-light dark:text-text-primary-dark truncate">{{ .title }}</span>
                         {{ with .date }}<span class="text-xs text-text-secondary-light dark:text-text-secondary-dark">{{ . }}</span>{{ end }}
@@ -160,12 +198,34 @@
                 {{ end }}
                 {{ end }}
             </div>
-            {{ if gt $totalCerts $certPreview }}
-            <div class="px-6 py-3 border-t border-border-primary-light dark:border-border-primary-dark">
-                <button onclick="toggleSection(this, 'certs')" class="text-sm text-accent-light dark:text-accent-dark hover:underline underline-offset-2 flex items-center gap-1.5 section-toggle" data-section="certs" data-collapsed-text="Show all {{ $totalCerts }} certifications">
-                    <span class="toggle-label">Show all {{ $totalCerts }} certifications</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="toggle-chevron transition-transform duration-300"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                </button>
+            {{ end }}
+            <!-- Professional & Creative -->
+            {{ with $profCerts }}
+            <div class="px-6 pt-3 pb-1">
+                <h3 class="text-xs font-semibold text-text-secondary-light dark:text-text-secondary-dark uppercase tracking-wider">Professional & Creative</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2">
+                {{ range $i, $cert := . }}
+                {{ if and .url (ne .url "") }}
+                <a href="{{ .url }}" target="_blank" rel="noopener noreferrer"
+                   class="cert-item group flex items-center justify-between px-6 py-3 border-b border-border-primary-light dark:border-border-primary-dark hover:bg-bg-secondary-light dark:hover:bg-bg-tertiary-dark transition-colors duration-200 {{ if (modBool $i 2) }}md:border-l{{ end }}">
+                    <div class="flex flex-col min-w-0">
+                        <span class="text-sm font-medium text-text-primary-light dark:text-text-primary-dark group-hover:text-accent-light dark:group-hover:text-accent-dark transition-colors truncate">{{ .title }}</span>
+                        {{ with .date }}<span class="text-xs text-text-secondary-light dark:text-text-secondary-dark">{{ . }}</span>{{ end }}
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0 ml-2 opacity-30 group-hover:opacity-100 transition-opacity text-text-secondary-light dark:text-text-secondary-dark">
+                        <path d="M7 17l9.2-9.2M17 17V7H7"/>
+                    </svg>
+                </a>
+                {{ else }}
+                <div class="cert-item flex items-center px-6 py-3 border-b border-border-primary-light dark:border-border-primary-dark {{ if (modBool $i 2) }}md:border-l{{ end }}">
+                    <div class="flex flex-col min-w-0">
+                        <span class="text-sm font-medium text-text-primary-light dark:text-text-primary-dark truncate">{{ .title }}</span>
+                        {{ with .date }}<span class="text-xs text-text-secondary-light dark:text-text-secondary-dark">{{ . }}</span>{{ end }}
+                    </div>
+                </div>
+                {{ end }}
+                {{ end }}
             </div>
             {{ end }}
         </div>
@@ -262,20 +322,14 @@
 
     /* Collapsible sections */
     .honors-hidden,
-    .certs-hidden,
     .vol-hidden {
         display: none;
     }
-    .honors-hidden.show,
-    .certs-hidden.show,
-    .vol-hidden.show {
+    .honors-hidden.show {
         display: flex;
     }
     .vol-hidden.show {
         display: block;
-    }
-    .cert-item.certs-hidden.show {
-        display: flex;
     }
 
     /* Chevron rotation */

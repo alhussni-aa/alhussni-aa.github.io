@@ -10,7 +10,7 @@
 
 [[projects]]
 title = "FR3 Sensing"
-description = "Capstone project — Machine learning-enabled multiband wireless sensing for activity recognition using FR3 spectrum CSI, under Prof. Marwa Chafii and Dr. Roberto Bomfin."
+description = "Capstone project — Privacy-preserving activity recognition using multi-band Channel State Information from the FR3 spectrum. Covers the full pipeline: a Software-Defined Radio platform for synchronized data collection, signal preprocessing, and training ML classifiers that exploit complementary propagation characteristics across bands. Under Prof. Marwa Chafii and Dr. Roberto Bomfin."
 github = ""
 link = "/en/projects/fr3-sensing/"
 image = "/images/projects/capstone/loco_leak1.png"
@@ -82,7 +82,7 @@ date = "Dec 2023"
 
 [[projects]]
 title = "Dryer Monitoring 3000"
-description = "IoT project for solving laundry problems on campus at NYUAD. End-to-end system using Seeed Studio XIAO ESP32C3 and DHT11 to detect dryer cycle completion and notify users via email/SMS."
+description = "IoT project for solving laundry problems on campus at NYUAD. End-to-end system using Seeed Studio XIAO ESP32C3 and DHT11 to detect dryer cycle completion via humidity thresholds. Features a 3D-printed casing, QR-code interface, and Home Assistant integration for email/SMS notifications."
 github = ""
 link = ""
 image = ""
@@ -102,16 +102,16 @@ date = "May 2025"
 
 [[projects]]
 title = "ECG Heart Monitor"
-description = "PCB design for an ECG heart rate monitor. Electronics (ENGR-UH 3611) project."
+description = "Designed an ECG circuit to detect and amplify cardiac electrical signals using an instrumentation amplifier and Twin-T Notch and bandpass filters. Simulated in Cadence Virtuoso, PCB designed in Altium Designer. Also designed a wristwatch prototype — a miniaturized low-power version of the ECG monitor. Electronics (ENGR-UH 3611) project."
 github = "ECG-Heart-Monitor"
 link = ""
 image = ""
-tech = "PCB Design, Altium Designer"
+tech = "PCB Design, Altium Designer, Cadence Virtuoso"
 date = "Dec 2024"
 
 [[projects]]
 title = "FPGA Microprocessor"
-description = "14-bit RISC microprocessor designed in VHDL with FPGA integration. Advanced Digital Logic (ENGR-UH 2310) project."
+description = "Designed a 14-bit microprocessor in VHDL with 16 operations (arithmetic, logical, branching), multiple registers, and instruction memory. Implemented on an FPGA with a 7-segment display controller. Advanced Digital Logic (ENGR-UH 2310) project."
 github = "fpga-microprocessor"
 link = ""
 image = ""
@@ -120,11 +120,11 @@ date = "May 2024"
 
 [[projects]]
 title = "Room Designer 3000"
-description = "Rearranging furniture made easy — an interactive room layout planner. Team project for Computer Programming for Engineers (ENGR-UH 1000)."
+description = "A VR room layout planner for Meta Quest 2. Users rearrange furniture in virtual rooms using hand controllers, built with the Oculus Integration SDK and XR Interaction Toolkit in Unity. Team project for Computer Programming for Engineers (ENGR-UH 1000)."
 github = "room-designer-3000"
 link = ""
 image = ""
-tech = "C#, Unity"
+tech = "C#, Unity, Oculus SDK"
 date = "Dec 2022"
 
 [[projects]]
