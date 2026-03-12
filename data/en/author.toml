@@ -91,7 +91,6 @@ courses = [
 [author]
 name = "Abdullah Alhussni"
 location = "Abu Dhabi, UAE"
-address = "NYU Abu Dhabi, P.O. Box 129188, Saadiyat Island, Abu Dhabi, UAE"
 description = "Wannabe polymath. Full-time caffeinator."
 profile_image = "/images/profile.jpg"
 
