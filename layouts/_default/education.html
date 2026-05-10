@@ -54,8 +54,8 @@
                         </div>
                         {{ end }}
 
-                        {{/* Study Away — only for NYUAD (first entry) */}}
-                        {{ if eq $i 0 }}
+                        {{/* Study Away — only for NYUAD */}}
+                        {{ if eq .institution "New York University Abu Dhabi" }}
                         {{ $authorData := index site.Data $.Language.Lang "author" }}
                         {{ with $authorData.study_away }}
                         <div class="mt-6">
@@ -70,10 +70,8 @@
                             </div>
                         </div>
                         {{ end }}
-                        {{ end }}
 
-                        {{/* Coursework pills — only for NYUAD (first entry) */}}
-                        {{ if eq $i 0 }}
+                        {{/* Coursework pills — only for NYUAD */}}
                         {{ $authorData := index site.Data $.Language.Lang "author" }}
                         {{ with $authorData.course_categories }}
                         <div class="mt-6">

@@ -15,7 +15,7 @@ technologies = []
 role = "Research Assistant"
 company = "Gelfand Research Group"
 company_link = "https://nyuad.nyu.edu/en/academics/divisions/science/faculty/joseph-gelfand.html"
-period = "May 2025 - Present"
+period = "May 2025 - Dec 2025"
 country = "Remote"
 responsibilities = [
   "Contributed to the analysis of variable sources in dwarf galaxy IC 10 by cross-matching LCO observations, constructing light curves, and generating photometric diagrams to classify source types using Python and Astropy.",
@@ -26,7 +26,7 @@ technologies = ["Python", "Astropy"]
 role = "Admissions Ambassador"
 company = "NYU Abu Dhabi Admissions Office"
 company_link = "https://nyuad.nyu.edu/en/about/leadership-and-people/office-of-the-vice-chancellor/admissions.html"
-period = "Sep 2023 - Present"
+period = "Sep 2023 - May 2026"
 country = "Abu Dhabi, UAE / New York, USA"
 responsibilities = [
   "Area Lead for Marketing Communications (AY 23-24); Lead Ambassador for Budgeting and Scheduling (AY 25-26).",

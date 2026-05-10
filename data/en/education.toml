@@ -1,6 +1,18 @@
 # Education data
 
 [[education]]
+institution = "Erasmus Mundus Joint Master (EMJM)"
+institution_link = "https://www.emimep.eu/"
+degree = "European Master for Industry in Microwave Electronics and Photonics (EMIMEP)"
+period = "Sep 2026 - Jun 2028"
+country = "University of Limoges (France) & University of Brescia (Italy)"
+gpa = ""
+details = [
+  "Master of Science (M.Sc.) in Microwave Electronics and Photonics.",
+  "Erasmus Mundus Consortium Scholar: Awarded a full merit-based scholarship after ranking in the top tier of a highly competitive global selection process (Main List).",
+]
+
+[[education]]
 institution = "New York University Abu Dhabi"
 institution_link = "https://nyuad.nyu.edu/"
 degree = "B.Sc. in Electrical Engineering & Mathematics"
