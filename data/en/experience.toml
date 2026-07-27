@@ -1,6 +1,21 @@
 # Experience data - from resume
 
 [[experience]]
+role = "Controls Engineering Intern"
+company = "ASEC Automation (Qalaa Holdings) - Design & Automation / Panels Business Unit"
+company_link = ""
+period = "Jun 2026"
+country = "Cairo, Egypt"
+responsibilities = [
+  "Designed and simulated a sequential state machine for a chemical reactor utilizing a Siemens CPU 1512C-1 PN and TIA Portal V20 within an ISA-88/95 framework.",
+  "Programmed a 10-step solvent flow sequence and a 4-step powder delivery sequence utilizing Organization Blocks (OB), Function Blocks (FB), and Functions (FC).",
+  "Developed a digital operator interface using SIMATIC WinCC for an HMI TP700 Comfort SIPLUS panel to enable remote actuation and real-time state visualization.",
+  "Implemented a hardware abstraction layer for software-only simulation and integrated proprietary company control libraries via DI/DQ assignment blocks.",
+  "Presented the final simulated control architecture and library integration methodology to the Chief Executive Officer and engineering leadership.",
+]
+technologies = ["Siemens TIA Portal", "SIMATIC WinCC", "PLC", "HMI", "ISA-88/95"]
+
+[[experience]]
 role = "Installation Assistant"
 company = "Khallouf Future Power"
 company_link = ""
