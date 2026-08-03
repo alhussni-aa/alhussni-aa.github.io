@@ -3,6 +3,7 @@
 [[leadership]]
 role = "President"
 organization = "The Muslim Students Association / Coexistence Board - The Lantern Subcommittee"
+institution = "NYU Abu Dhabi"
 organization_link = ""
 period = "Aug 2025 - May 2026"
 responsibilities = [
@@ -15,6 +16,7 @@ responsibilities = [
 [[leadership]]
 role = "Co-Vice-President"
 organization = "The Muslim Students Association"
+institution = "NYU Abu Dhabi"
 organization_link = ""
 period = "Aug 2024 - Dec 2024"
 responsibilities = [
@@ -26,6 +28,7 @@ responsibilities = [
 [[leadership]]
 role = "Events Coordinator"
 organization = "The Arab Students Association"
+institution = "NYU Abu Dhabi"
 organization_link = ""
 period = "Jan 2023 - Dec 2023"
 responsibilities = [
@@ -36,10 +39,11 @@ responsibilities = [
 [[leadership]]
 role = "Events Coordinator"
 organization = "Al-Diwan"
+institution = "NYU Abu Dhabi"
 organization_link = ""
 period = "Sep 2023 - Dec 2023"
 responsibilities = [
-  "Contributed to organizing various events for the Al-Diwan student-interest group at NYUAD, an Arabic poetry group.",
+  "Contributed to organizing various events for the Al-Diwan student-interest group, an Arabic poetry group.",
   "Organized and participated in debates organized by the group.",
 ]
 
